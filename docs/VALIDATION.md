@@ -1,4 +1,4 @@
-# Initial extraction validation
+# Validation checkpoints
 
 Validated locally on 7 October 2026 with Node.js 24.18.0.
 
@@ -18,3 +18,17 @@ The validation source fixture was exported from local Git objects at the exact u
 A fresh clone of this repository at `d24d42bed2ae1ea47985b19550b3effd487393b7` and clean `npm ci --ignore-scripts` passed on Node.js 24.18.0. Build, freshness checks and focused tests passed with explicit `MANGROVE_SOURCE_ROOT` pointing to the retained installed upstream checkout at `d5e790d3b0318730fdbd270279f340f35a2833ab`.
 
 The generated maintenance JSON is byte-identical to the retained upstream output: 628,687 bytes; SHA256 `d910794d2864f8085169253e4f3a9629a91432756175f70f17326d4e5f1556bb`. The canonical asset-record hash remains `7bc8ab098383dc5ac6c008d46e5a15f1ef440c66cc028d44203fe554f271a04c`. This additional local compatibility result does not advance the executable source lock, prove a clean remote upstream installation or execute the extracted plugin natively. Construction migration has separate output and test gates.
+
+## Final remote setup
+
+Fresh remote checkouts at source `1639293738232ade132b442ab0fe983dec3d65d5` and toolkit `e39d58f2e5d87698a6ea4e96d8fe9ad53a09c3a0` passed their own locked installs and source CSS generation. All six commands (`build`, `check`, `test`, `build:kit`, `check:kit`, `test:kit`) passed. Independent review verified the actual heads, tracked-clean state, 23 recorded commands and six retained output hashes.
+
+Original and observed raw package files retain the two key-order changes introduced during setup. Duplicate-free typed comparison proved semantic equality before the original bytes were restored. This is not a blanket permission to rewrite package metadata.
+
+The final disabled expanded configuration passed all 1,817 current input guards and current module pins. Explicit reuse of the independently verified public cache was checked afresh across all 1,270 members. No new public download is claimed by this setup.
+
+Final remote expanded packet: **passed independent review**. The 210,368,334-byte packet has SHA256 `da7e0071f07ae553e68bf74c4bbf937a4ebbce6d24f5369e190fe0617255a2a6`; every byte matches the original after replacing only its top-level source revision. Review SHA256: `5253f78e47b82dd3b1d7b50f97be35503a593a3d5f3a5f39ef902a4a173e91f8`.
+
+Final remote supporting cohort: **all 19 passed independent review**. All 1,866 input hashes and identities remained unchanged. Review SHA256: `a64c6ea2cf7a79d3000a479f0f69d47452625f16432d96ff3bd0a8b8c510824c`. The earlier corrected private thin-source packet passed full comparison with only its true source revision changed; the earlier installed 19-test cohort passed independent review.
+
+These results establish source/tool extraction compatibility. Native rendering, fonts, edited reflow, canonical integration, publication and consumer acceptance remain separate. No native operation ran during this verification.

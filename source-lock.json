@@ -1,7 +1,7 @@
 {
   "version": 1,
   "repository": "https://github.com/unisdr/undrr-mangrove",
-  "revision": "a4bb46dafb7134a230e9c79fd26cd7306d2a6203",
+  "revision": "1639293738232ade132b442ab0fe983dec3d65d5",
   "pullRequest": "https://github.com/unisdr/undrr-mangrove/pull/1319",
   "baseRevision": "f5792a9f1164b262ff5c5fc961395300bc7b17f0",
   "sourceCohort": [
@@ -44,7 +44,8 @@
   "notes": [
     "This is an initial curated extraction, not the complete spike or its Git history.",
     "The token engine, YAML tokens, SCSS, JSX and source media remain owned by Mangrove.",
-    "Use MANGROVE_SOURCE_ROOT to select an installed source checkout; source guards still apply."
+    "Use MANGROVE_SOURCE_ROOT to select an installed source checkout; source guards still apply.",
+    "The revision field now selects the supported thin Mangrove integration. initialExtractionRevision and sourceCohort retain the original extraction provenance; sourceCohort is not the current input allowlist."
   ],
   "toolingCohorts": [
     {
@@ -317,5 +318,29 @@
       ],
       "actualInstalledRunReviewSHA256": "f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600"
     }
-  ]
+  ],
+  "initialExtractionRevision": "a4bb46dafb7134a230e9c79fd26cd7306d2a6203",
+  "supportedSourceProfile": "thin-integration",
+  "finalRemoteVerification": {
+    "sourceRevision": "1639293738232ade132b442ab0fe983dec3d65d5",
+    "toolExecutableRevision": "e39d58f2e5d87698a6ea4e96d8fe9ad53a09c3a0",
+    "sixCommandsVerified": true,
+    "sixCommandsAndExpandedPreparationReviewSHA256": "3a635e5b7600abf4e001146411a5a69d57e58ada010a2fa3495723f92dfa0963",
+    "node": "24.18.0",
+    "yarn": "4.17.0",
+    "referenceCacheScope": "Previously independently verified public retrieval; cache reused with fresh complete member verification.",
+    "referenceIndexSHA256": "32e9ad7bf5e256a0b283404f565aa1c9cb95ebce3238c71264c766013e3f6409",
+    "expandedExportVerified": true,
+    "supporting19Verified": true,
+    "nativeAcceptance": false,
+    "expandedPacketBytes": 210368334,
+    "expandedPacketSHA256": "da7e0071f07ae553e68bf74c4bbf937a4ebbce6d24f5369e190fe0617255a2a6",
+    "expandedNormalizedPacketSHA256": "f01e9a8e2700e3506c77f7dd0659b7f944e41f1703d01e0e7231b83bfa235b18",
+    "expandedOnlyPacketDelta": "Top-level source.revision",
+    "expandedExportReviewSHA256": "5253f78e47b82dd3b1d7b50f97be35503a593a3d5f3a5f39ef902a4a173e91f8",
+    "supporting19Passed": 19,
+    "supporting19ReviewSHA256": "a64c6ea2cf7a79d3000a479f0f69d47452625f16432d96ff3bd0a8b8c510824c",
+    "supportingInputRows": 1866,
+    "scope": "Local macOS source/tool migration validation. Native acceptance and reviewer merge acceptance remain separate."
+  }
 }

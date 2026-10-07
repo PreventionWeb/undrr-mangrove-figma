@@ -1,32 +1,27 @@
 # Repository split status
 
-Updated 7 October 2026. Repository migration is the current focus. Native Figma changes and publication are parked.
+Updated 7 October 2026. Repository split review is the current focus. Native Figma changes and publication remain parked.
 
-## Verified checkpoints
+## Completed migration evidence
 
-- Maintenance tooling and the normal 32-family/383-variant construction entry are migrated to this repository. Maintenance remains the default workflow.
-- Fresh remote source and toolkit checkouts at upstream `d5e790d3` and toolkit `1953670d` passed locked installation and all six maintenance/normal build, check and test commands. Generated source CSS, maintenance JSON, normal JSON and normal runtime matched the retained outputs exactly. This is a bounded checkpoint, not final feature-head validation.
-- The complete 3,161-file tracked upstream checkpoint is independently archived. Its checksum and preservation limits are in [the evidence index](../evidence/index.json). The upstream feature branch and separate native backups remain intact.
-- One unchanged original expanded exporter invocation completed successfully. Independent review verified its input pins, trace receipt, unchanged source inputs and complete packet: 139 draft families, 2,269 variants, six dependencies, 79,225 variables, 4,063 text definitions and 337 effects. The packet is 210,368,334 bytes with SHA256 `f01e9a8e2700e3506c77f7dd0659b7f944e41f1703d01e0e7231b83bfa235b18`.
-- Independent review reproduced the actual read classification. A cold loader replay produced 156 file-URL package reads matching the original opaque-read candidate paths and order. It identified the ambient parent package read as Browserslist configuration discovery during Babel target resolution. An explicit configuration refusal removed that discovery in a focused fixture with unchanged fixture output. This corroborates loader behaviour; it does not recover the original opaque arguments or prove complete exporter parity.
+- Maintenance is the default toolkit workflow. Normal construction is optional and contains 32 families and 383 finite variants; its retained JSON and runtime match exactly.
+- Expanded recipes are migrated with explicit source/tool/reference boundaries. The complete preserved-source packet contains 139 families, 2,269 variants, six dependencies, 79,225 variables, 4,063 text definitions and 337 effects. Its 210,368,334 bytes matched the original exporter output exactly. The corrected private thin-source export changed only the actual `source.revision`.
+- Public acquisition verified all nine release downloads and admitted all 1,270 members into a fresh cache. Licences, provenance and nonexecuting historical proof types are retained.
+- The installed finite supporting cohort passed all 19 tests with independent review. Other historical tooling remains explicitly accounted for in [the ownership index](TOOLING-OWNERSHIP.md); no all-tests claim is made.
+- The full 3,161-path upstream checkpoint, Git history and native backups are preserved separately. The thin source integration is pushed at `1639293738232ade132b442ab0fe983dec3d65d5`.
+- Fresh remote source and toolkit clones at that source head and `e39d58f2e5d87698a6ea4e96d8fe9ad53a09c3a0` passed their own locked dependency installation, source CSS generation and six maintenance/normal commands. Six output hashes are unchanged. Original and observed package bytes prove that only key ordering changed before restoration.
+- Final remote expanded preparation passed all 1,817 inputs and current module guards, using the actual source head. The committed cache verifier independently checked all 1,270 members under explicit cache reuse.
 
-- The expanded recipe cohort is extracted with 63 toolkit-owned source files and compact input metadata. One actual migrated export passed independent full-file comparison with the original 210,368,334-byte packet. All 188 operation pins and 1,817 source/tool/reference inputs remained unchanged before and after execution.
-- Seven private reference archives passed exact 1,270-member validation and actual whole-cache admission. Nine draft release assets, including the index and provenance sidecar, were uploaded and authenticated downloads matched all expected hashes. The reference package is now a [prerelease](https://github.com/PreventionWeb/undrr-mangrove-figma/releases/tag/mangrove-observed-reference-d5e790d3-v1). The reviewed fetch command downloaded all nine assets publicly and admitted all 1,270 members into a fresh cache. Independent review verified all nine downloads, observed redirect hosts, original identities and the complete fresh cache.
-- A private four-path thin source fixture passed locked installation and source CSS generation. Its minimal lock alignment adds eight workspace peer metadata lines without changing resolved dependencies. All 440 other source input bytes and four source runtime entry files match the preserved fixture. All six maintenance/normal commands pass against this fixture with exact retained outputs.
+## Ready for review
 
-## Remaining migration gates
+The final remote expanded export and all 19 supporting tests passed independent review. The complete packet differs from the preserved original only in the actual top-level source revision. All source, toolkit and reference input guards remained intact. [Validation](VALIDATION.md), [source provenance](../source-lock.json) and [the evidence index](../evidence/index.json) record the checked commits, output hashes and review digests.
 
-1. Verify the final remote thin-source checkout through the adopted [portable commands](EXPANDED-WORKFLOW.md). The corrected private thin-source export has passed independent whole-packet comparison. All 1,817 inputs and 62 historical body reconstructions verify; only `source.revision` differs. The original failed attempt remains preserved.
-2. Verify the supporting cohort from the final remote checkout. Independent review accepted the actual installed 19-test run and its unchanged post-run inputs. All 19 installed tests passed against the private thin fixture. The first preparation failed before output on an omitted dependency; the corrected finite closure preserves original source/reference guards and keeps full-producer execution disabled. Other historical tests remain separately accounted for in the ownership index.
-3. Complete final fresh-checkout setup using the verified public reference acquisition path. Preserve all licence/provenance records and nonexecuting historical proof types.
-4. Validate the final thin-source profile and final feature-head setup while retaining exact maintenance/normal output and complete expanded compatibility. The private fixture is a checkpoint, not a rewritten upstream PR.
-5. Account for remaining scripts, tests and documentation, and index historical evidence separately. Reduce [Mangrove PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319) by a normal commit only after migration and preservation gates pass. The reviewed private candidate now has four paths: token-engine exports, a documentation index link, Figma integration documentation and minimal existing workspace lock metadata alignment. Its base remains `spike/react-aria-surface`.
-6. Update both PR descriptions and acceptance criteria from the final reviewed trees. Changes to this repository remain in [draft PR #1](https://github.com/PreventionWeb/undrr-mangrove-figma/pull/1), targeting `main`.
+Repository split implementation and local verification are complete. Human acceptance and merge of [toolkit PR #1](https://github.com/PreventionWeb/undrr-mangrove-figma/pull/1) and [Mangrove PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319) remain pending. Both PRs stay draft. The Mangrove diff has four paths and retains its `spike/react-aria-surface` base.
+
+The inactive sources and historical contract documents are indexed rather than additional migration implementation gates. Final documentation and metadata commits retain the verified executable bytes.
 
 ## Acceptance boundary
 
-Additional bounded connector tests reproduce two original payload-budget failures exactly; see [the inherited transport gates](RELEASE-STATUS.md#inherited-connector-transport-gates). Their assertions remain intact and their failure is separate from extraction compatibility.
+The split establishes tooling ownership and reproducible source export. It does not establish expanded native rendering, native fonts, full-catalogue collection capacity, editable reflow, canonical integration, text/effect publication or consumer handoff. Those remain separate [release gates](RELEASE-STATUS.md). Existing connector payload-budget failures remain documented rather than waived.
 
-These checks establish migration evidence only. Expanded native rendering, fonts, capacity, page assembly, publication, consumer restoration and novice handoff remain separate [release gates](RELEASE-STATUS.md). Passing token publication or source recipes does not satisfy them. Actual local expanded reference admission has passed. Public reference retrieval and fresh cache admission have passed independent review. Upstream thinning has not occurred yet.
-
-GitHub listing endpoints may be suppressed. Status is checked through exact-number PR requests; listing responses are not used to claim queue completeness. Actions are unavailable, so verification is local.
+GitHub listing endpoints may be suppressed. Status uses exact-number PR requests, not empty listing responses. GitHub Actions are unavailable; verification is local.

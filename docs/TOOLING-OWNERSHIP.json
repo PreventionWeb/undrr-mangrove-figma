@@ -47,9 +47,10 @@
     "first19Launcher": "independently accepted; shared finite metadata preparation passed; root actual installed19/19 command passed, independent actual review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600",
     "otherOptionalGroups": "inactive until separately bound, reviewed and executed",
     "sourceFixtureMutationAuthority": "separate; resolver refusals do not replace original corruption assertions",
-    "actualInstalledFirst19Run": "Root actual installed command passed19/19 with exit0; independent actual-result review pending; final remote checkout remains pending."
+    "actualInstalledFirst19Run": "Root actual installed command passed19/19 with exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600; final remote checkout19 also passed independent review.",
+    "actualFinalRemoteFirst19Run": "All19 passed; all1866 inputs and original identities unchanged; independent review SHA256 a64c6ea2cf7a79d3000a479f0f69d47452625f16432d96ff3bd0a8b8c510824c"
   },
-  "thinInnerGuardCorrection": "R2 independently accepted; actual corrected thin fixture export independently accepted at 4c819. Full packet differs from original d5 only in source.revision; review SHA256 63bed84d55be141b91639d631be10588d975c65a21d025dce9d6f6d02748a183. Final remote source/tool checkout verification remains pending.",
+  "thinInnerGuardCorrection": "R2 independently accepted; actual corrected thin fixture export independently accepted at 4c819. Full packet differs from original d5 only in source.revision; review SHA256 63bed84d55be141b91639d631be10588d975c65a21d025dce9d6f6d02748a183. Final remote whole-packet comparison passed with only actual source.revision changed, review SHA256 5253f78e47b82dd3b1d7b50f97be35503a593a3d5f3a5f39ef902a4a173e91f8.",
   "inheritedCensusSHA256": "f0ec7689e581a53def0ec742bb6b6a5246b1cc4907ce2c8aa5548b95d705899a",
   "paths": [
     {
@@ -628,7 +629,7 @@
           "bytes": 7643,
           "sha256": "23725da4dce95c8be885304fd849080c92ce6304eb8053381d3bda9d6d5b1ab2"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -714,7 +715,7 @@
           "bytes": 15867,
           "sha256": "56ab9ee74602e850eecadd03ef9a514799c806ca3742d5873781dbc189ffd016"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -838,7 +839,7 @@
           "bytes": 16838,
           "sha256": "98bc999bd3bdfa857f270c7de92a6aa4c87d269c212a5c0c29499675cefbb69f"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -1285,7 +1286,7 @@
           "bytes": 5094,
           "sha256": "2e506e4c1b922d2a22afc43a77f69b6454d89f90ee1876befd46f210108ec23f"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -1542,7 +1543,7 @@
           "bytes": 13400,
           "sha256": "5153a52a4f9e6ef54b7ef1b7ba2258762263ebd0d2e9ff7296ac7c701c829864"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -1609,7 +1610,7 @@
           "bytes": 5490,
           "sha256": "58f49a24f590162a132f6e3b755e6c01807d3b8961a3cdc31b0e2dc586489314"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -1828,7 +1829,7 @@
           "bytes": 5456,
           "sha256": "b230d29ec9e0b3891e6c24ef0d3fc41029d0b60fdd9bd334988035c63fc0cf80"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -2332,7 +2333,7 @@
           "bytes": 4306,
           "sha256": "51a76e115605f1b0328f833bfce83614862babc58e964bdd902cf83ff33a81c8"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -2380,7 +2381,7 @@
           "bytes": 3621,
           "sha256": "5ca0a64530533dec47c5afa4736623845fddfbf49071e0efcba0afa898c155a6"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -2409,7 +2410,7 @@
           "bytes": 15061,
           "sha256": "819c09f6682b2043a41ecd7c4fd13a6bcb2c16f6642e8ccc8f3f430b2b3632c2"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -2457,7 +2458,7 @@
           "bytes": 4004,
           "sha256": "42af00a338d5a67f712ccf7ec7f66af7ca00019f6dd31fd36c0bc14862f1339e"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -2505,7 +2506,7 @@
           "bytes": 11569,
           "sha256": "2d061027e4ad4bcc0f45f4abf6d6f3f2e363e4cd98d92bf01412d00e96473e2d"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -2534,7 +2535,7 @@
           "bytes": 10879,
           "sha256": "51abb9889878e33d1e696a12d7f8474cbbf277bb93c29a8de52bfd89dfc67c04"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -2563,7 +2564,7 @@
           "bytes": 19198,
           "sha256": "e20a6ba76cec0b01414fe6eb871d91332445b786e758f45af55baa896d17c2b6"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -2649,7 +2650,7 @@
           "bytes": 21568,
           "sha256": "2fcb82547e7fbfae55830830bcba4689da83ae13bc6fd7eb2ab36d018f70fea6"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -3058,7 +3059,7 @@
           "bytes": 11101,
           "sha256": "254f8c40cd7866a954ce5772e28e142e43f415156be0d41a877cd27458752f9f"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -3125,7 +3126,7 @@
           "bytes": 8099,
           "sha256": "a68b44c3bef3ba06dacd46561f8000a0a4cc35e58cf33f96105a61ebda668be6"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -3154,7 +3155,7 @@
           "bytes": 11042,
           "sha256": "a6b065a94f43f2a565636b2c0fa3d0138975a6e7fc6fa62b9def4b2ea464294f"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -3183,7 +3184,7 @@
           "bytes": 7295,
           "sha256": "e91305ac1151df03bafdbe9f5254d8df1787b53187c8c2987b5b086626ec472f"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -3212,7 +3213,7 @@
           "bytes": 6348,
           "sha256": "0207aab1477ced46bff379803bfbc69098bcdef466e80e2e675f60d932b21ab0"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
@@ -3241,7 +3242,7 @@
           "bytes": 9409,
           "sha256": "b78093b629bbf0b73c27d7b7592ccb5291cadc35a8bb993dfcdd60999ead0f8e"
         },
-        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600.",
         "originalCheckpointPreserved": true
       }
     },
