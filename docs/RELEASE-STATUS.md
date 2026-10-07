@@ -22,6 +22,14 @@ The corrected full export report has SHA256 `4bf71b933019eb02702eae2c3b92d7e032e
 
 No new canonical scene changes or publication were performed by this status transfer. Token publication does not satisfy the separate component/style/page gates.
 
+## Source comparison preparation
+
+The 17 missing controlled CTA source references have now been captured in a browser: 11 Short states and six default-copy Long states, with 34 full-viewport/owner-overflow PNGs and per-owner markup, UTF16 text ranges, geometry and font observations. The actual run completed without target errors and finalized its HAR before closing the browser and server. Independent review verifies the collection, raw observations and cleanup within this controlled source fixture; native rendering and font equivalence remain open. The ready receipt has SHA256 `fd62a654d692ca7cbe85a60a31e09424a4747a7f4b248300977d4fa747bfb943`; the independent actual-result verdict has SHA256 `5b0cf48f07fcf641a87362b1f1e7982723d63f75db524ed34c16f883dfff7851`.
+
+The Long fixture retains the 260px source grid with the controlled `Browse all publications` copy; Short owners measure 174.90625px by 44px. One live source Roboto Bold response is retained as 64,740 bytes with SHA256 `8e44376b735dcc9027acbcc8a0df64c3f886a23529eff27b022f344d719e90f2`. Later HAR font-response entries omit bodies and do not prove byte equality. Browser font observations do not establish Figma font-byte or glyph equivalence. Existing Card/source differences and genuine native edit/reflow gates remain open.
+
+The next comparison must retain recorded origins, full caller surface, overflow, copy and motion state. Collection of these source images does not establish native raster acceptance. A previous capture candidate was held because failures could discard partial records or prevent HAR finalization; the revised harness passed independent failure-preservation checks before execution.
+
 ## Migration gates
 
 - The complete tracked upstream spike checkpoint is preserved and independently verified. Its Git history, untracked files and native backups remain separate; the upstream branch is intact.
