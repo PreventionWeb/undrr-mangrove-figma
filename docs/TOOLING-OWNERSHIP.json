@@ -17,8 +17,11 @@
     "docs": 101,
     "scripts": 4,
     "jsonSnapshots": 5,
-    "activeExactOriginalPathsObserved": 0,
-    "preparedOptionalSupportingSources": 140,
+    "reusableSupportingSourcesTotal": 140,
+    "sharedSelectedOptionalTests": 19,
+    "sharedDependencyOnlyBodies": 2,
+    "sharedOriginalRemainderPathsObserved": 21,
+    "supportingSourcesNotAdopted": 119,
     "proposedOptionalScripts": 4,
     "proposedContractDocs": 63,
     "priorityContractDocs": 11,
@@ -33,18 +36,20 @@
     "MIGRATION.md",
     "VALIDATION.md",
     "SPLIT-STATUS.md",
-    "RELEASE-STATUS.md"
+    "RELEASE-STATUS.md",
+    "SUPPORTING-TESTS.md"
   ],
   "supportingSourceStatus": {
     "mechanicalReadModuleBindings": 118,
     "privateOrdinaryAuthorChecksReported": 33,
     "whole140TestAcceptance": false,
-    "sharedSupportingAdoption": false,
-    "first19Launcher": "independently accepted; finite configured cohort adoption pending",
+    "sharedSupportingAdoption": "19 selected optional tests and two dependency-only module bodies; other119 reusable sources inactive",
+    "first19Launcher": "independently accepted; shared finite metadata preparation passed; root actual installed19/19 command passed, independent actual review passed, verdict SHA256 f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600",
     "otherOptionalGroups": "inactive until separately bound, reviewed and executed",
-    "sourceFixtureMutationAuthority": "separate; resolver refusals do not replace original corruption assertions"
+    "sourceFixtureMutationAuthority": "separate; resolver refusals do not replace original corruption assertions",
+    "actualInstalledFirst19Run": "Root actual installed command passed19/19 with exit0; independent actual-result review pending; final remote checkout remains pending."
   },
-  "thinInnerGuardCorrection": "R2 independently accepted as a finite preparation; review SHA256 4c9ed3752a6300b6deadcd6c8865a109fb1ed89df6c7da8b84f5061c85cb2740. Actual shared thin export previously failed the original authored package guard; corrected full-output success remains pending.",
+  "thinInnerGuardCorrection": "R2 independently accepted; actual corrected thin fixture export independently accepted at 4c819. Full packet differs from original d5 only in source.revision; review SHA256 63bed84d55be141b91639d631be10588d975c65a21d025dce9d6f6d02748a183. Final remote source/tool checkout verification remains pending.",
   "inheritedCensusSHA256": "f0ec7689e581a53def0ec742bb6b6a5246b1cc4907ce2c8aa5548b95d705899a",
   "paths": [
     {
@@ -605,16 +610,26 @@
       "sha256": "44253e5f943ce9427b551a0382b701b2752422c77479d5808fc51d9fd828e7cb",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "1e516414ffcd50e04221bacda706c7721ee1aa6b",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-absolute-start.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-absolute-start.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-absolute-start.cjs",
+          "bytes": 7643,
+          "sha256": "23725da4dce95c8be885304fd849080c92ce6304eb8053381d3bda9d6d5b1ab2"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -681,16 +696,26 @@
       "sha256": "7eb2bdca53ab79f5a3c49677a692ab83748fc3e3330a3bbd32e66600831fc918",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "3d7023607036ff15ef22b6de9f02b95417bde66e",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-alpha-mask.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-alpha-mask.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-alpha-mask.cjs",
+          "bytes": 15867,
+          "sha256": "56ab9ee74602e850eecadd03ef9a514799c806ca3742d5873781dbc189ffd016"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -795,8 +820,8 @@
       "sha256": "a1c504b3ddfbe73991f96857ac0a6b8ca983a5337d27c99f35cf335504b55f3d",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-dependency-only-source",
+      "nextAction": "Keep dependency-only export role and inactive own main; no extra test command.",
       "priorityContractPurpose": null,
       "adoptedAsActiveOriginal": false,
       "originalCheckpoint": {
@@ -805,6 +830,16 @@
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-card-content.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-card-content.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "dependency exports only; require.main main inactive",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-card-content.cjs",
+          "bytes": 16838,
+          "sha256": "98bc999bd3bdfa857f270c7de92a6aa4c87d269c212a5c0c29499675cefbb69f"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -1232,16 +1267,26 @@
       "sha256": "a787cc4a47e31ecd87614d843b5540bf27843850b0cadbb29bfb6f9bc32355cc",
       "cohort": "opt-in-capability-source-tests",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "734e610934cefad1a8d011d01c379342283eb7bd",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-experiment-target.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-experiment-target.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-experiment-target.cjs",
+          "bytes": 5094,
+          "sha256": "2e506e4c1b922d2a22afc43a77f69b6454d89f90ee1876befd46f210108ec23f"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -1479,16 +1524,26 @@
       "sha256": "69df699fe57ed267ac88dcf281f4675d38b8172b69b20045cd689961a2968d0f",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "bc989594daa28a629dfc1b847d46adaf91f35d50",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-gradient-transform.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-gradient-transform.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-gradient-transform.cjs",
+          "bytes": 13400,
+          "sha256": "5153a52a4f9e6ef54b7ef1b7ba2258762263ebd0d2e9ff7296ac7c701c829864"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -1536,16 +1591,26 @@
       "sha256": "2951161e693fcc376efd4173807204d7f804b5105ad6f8681f88fd6692344a93",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "664d2fe3a3876f97cbba4da93a913f8794178c1d",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-inherited-root.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-inherited-root.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-inherited-root.cjs",
+          "bytes": 5490,
+          "sha256": "58f49a24f590162a132f6e3b755e6c01807d3b8961a3cdc31b0e2dc586489314"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -1745,16 +1810,26 @@
       "sha256": "0c6215ea2ab7a16e8b3cf13a9728942f0da96103897fe184767b479123904636",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "7a1db07a9aa80c5ba352aa30b57b284d397d5311",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-media.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-media.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-media.cjs",
+          "bytes": 5456,
+          "sha256": "b230d29ec9e0b3891e6c24ef0d3fc41029d0b60fdd9bd334988035c63fc0cf80"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -2239,16 +2314,26 @@
       "sha256": "980d7de3778a32c0ed4a981cc9e37d36ebd5432a0a3a05e271d2e9f8043d49ac",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "9dac8869a56fc6162c87b9331cf47ebb778669d6",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-paragraph-indent.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-paragraph-indent.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-paragraph-indent.cjs",
+          "bytes": 4306,
+          "sha256": "51a76e115605f1b0328f833bfce83614862babc58e964bdd902cf83ff33a81c8"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -2277,16 +2362,26 @@
       "sha256": "a8b0b23c7d381bbc36c55444c903198e02deea31db9ce444f04500a398541db9",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "8cf10bef0f4ed2dfc1cac156f3166863cbc4c673",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-preserved-review-width.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-preserved-review-width.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-preserved-review-width.cjs",
+          "bytes": 3621,
+          "sha256": "5ca0a64530533dec47c5afa4736623845fddfbf49071e0efcba0afa898c155a6"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -2296,16 +2391,26 @@
       "sha256": "99eccdb72401320cef8930d387f8acfeba718f20f1b1c45417a960c6f443e2b1",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "ee4ad589c1977896ca135706db164a919bb1488b",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-preview-access.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-preview-access.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-preview-access.cjs",
+          "bytes": 15061,
+          "sha256": "819c09f6682b2043a41ecd7c4fd13a6bcb2c16f6642e8ccc8f3f430b2b3632c2"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -2334,16 +2439,26 @@
       "sha256": "f28a2afc5b737c8a2aa9182f59d3a64fa63cfc48247ea2726174b01529fe618f",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "4365177a078382ea53d10a71c5adb29dec88f04c",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-rich-paragraph-indent.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-rich-paragraph-indent.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-rich-paragraph-indent.cjs",
+          "bytes": 4004,
+          "sha256": "42af00a338d5a67f712ccf7ec7f66af7ca00019f6dd31fd36c0bc14862f1339e"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -2372,16 +2487,26 @@
       "sha256": "ba011df05b2acfc192b43ad22617ae75697cefd6c2ef528a4302c9aaaf00f7ab",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "a55aee0986f0de4bd39abef98ca109e891a3b8b9",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-rich-text-alpha.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-rich-text-alpha.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-rich-text-alpha.cjs",
+          "bytes": 11569,
+          "sha256": "2d061027e4ad4bcc0f45f4abf6d6f3f2e363e4cd98d92bf01412d00e96473e2d"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -2391,16 +2516,26 @@
       "sha256": "71c6513e7ac75814f83d580988064279bc45a0a55bfa282fdce9dedd776dbada",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "c778b2a2d1fcbe0e13b9262c06d0d557744cf37e",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-rich-text-offset.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-rich-text-offset.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-rich-text-offset.cjs",
+          "bytes": 10879,
+          "sha256": "51abb9889878e33d1e696a12d7f8474cbbf277bb93c29a8de52bfd89dfc67c04"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -2410,16 +2545,26 @@
       "sha256": "34d4a9632dfa23bdeb944c3943f7f3a8ecc411cc93d1fc3dfe77689cbfb9ee74",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "bf70332b92a290d083d8c8c59717c528a22d5c70",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-rich-text.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-rich-text.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-rich-text.cjs",
+          "bytes": 19198,
+          "sha256": "e20a6ba76cec0b01414fe6eb871d91332445b786e758f45af55baa896d17c2b6"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -2486,8 +2631,8 @@
       "sha256": "2fcb82547e7fbfae55830830bcba4689da83ae13bc6fd7eb2ab36d018f70fea6",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-dependency-only-source",
+      "nextAction": "Keep dependency-only export role and inactive own main; no extra test command.",
       "priorityContractPurpose": null,
       "adoptedAsActiveOriginal": false,
       "originalCheckpoint": {
@@ -2496,6 +2641,16 @@
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-search-results.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-search-results.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "dependency exports only; require.main main inactive",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-search-results.cjs",
+          "bytes": 21568,
+          "sha256": "2fcb82547e7fbfae55830830bcba4689da83ae13bc6fd7eb2ab36d018f70fea6"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -2885,16 +3040,26 @@
       "sha256": "276a03f881a464b7c2318473339c1a051c6d25c282ef46932341f5fbb768c6fd",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "10ffd226a0657d2d6022412a7ed1098d54c699d7",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-svg-sizing.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-svg-sizing.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-svg-sizing.cjs",
+          "bytes": 11101,
+          "sha256": "254f8c40cd7866a954ce5772e28e142e43f415156be0d41a877cd27458752f9f"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -2942,16 +3107,26 @@
       "sha256": "1d1473b65e0744cf94a029e6b0850c1980fb8613c2138832259507ab17392bf3",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "0df550cfef419a77123e8203106eb115a7cd834b",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-text-case-connector.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-text-case-connector.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-text-case-connector.cjs",
+          "bytes": 8099,
+          "sha256": "a68b44c3bef3ba06dacd46561f8000a0a4cc35e58cf33f96105a61ebda668be6"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -2961,16 +3136,26 @@
       "sha256": "235c3870ebcda157e11851e2ef9835e84ce6fddd88c82fd372f7a7a6954315fc",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "599ee77e86ec7ae0cb527e879bf52bb32479da7b",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-text-case.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-text-case.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-text-case.cjs",
+          "bytes": 11042,
+          "sha256": "a6b065a94f43f2a565636b2c0fa3d0138975a6e7fc6fa62b9def4b2ea464294f"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -2980,16 +3165,26 @@
       "sha256": "4d9a0e5fee56484410b5421ef81a2e2b5bdb865f33c5ef0f3cbb1284a458f556",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "0771b7d9e4638270b9ee2f57402aa5d85f69cc25",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-text-decoration-inheritance.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-text-decoration-inheritance.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-text-decoration-inheritance.cjs",
+          "bytes": 7295,
+          "sha256": "e91305ac1151df03bafdbe9f5254d8df1787b53187c8c2987b5b086626ec472f"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -2999,16 +3194,26 @@
       "sha256": "1d2ac5e24e82da3840556dda52767acea8a421e08896cfe7374c1695d2c99028",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "af66e925a7ea659b07e4470ce733087fa98da966",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-text-property-defaults.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-text-property-defaults.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-text-property-defaults.cjs",
+          "bytes": 6348,
+          "sha256": "0207aab1477ced46bff379803bfbc69098bcdef466e80e2e675f60d932b21ab0"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -3018,16 +3223,26 @@
       "sha256": "eda03c8762309a0ef3f0612c28c6f9c6111e8aa416d8de1cd24f8220f7b2be59",
       "cohort": "later-focused-regression-cohort",
       "recommendation": "migrate-active-supporting-test-source",
-      "state": "prepared-optional-supporting-source",
-      "nextAction": "Private originals only; bind source/tool/reference and owned fixture mutation authority, preserve assertions, then review named runnable groups.",
+      "state": "shared-optional-test-source",
+      "nextAction": "Require actual installed named-cohort command terminal and guard records; no all140 or native acceptance.",
       "priorityContractPurpose": null,
-      "adoptedAsActiveOriginal": false,
+      "adoptedAsActiveOriginal": true,
       "originalCheckpoint": {
         "revision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
         "gitBlob": "cc71a58367418d9d744d945fa51c2f2152757403",
         "url": "https://github.com/unisdr/undrr-mangrove/blob/d5e790d3b0318730fdbd270279f340f35a2833ab/examples/figma-plugin/dev/mock-text-thickness.cjs",
         "archiveMember": "examples/figma-plugin/dev/mock-text-thickness.cjs",
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
+      },
+      "sharedAdoption": {
+        "role": "named optional test",
+        "currentPin": {
+          "path": "examples/figma-plugin/dev/mock-text-thickness.cjs",
+          "bytes": 9409,
+          "sha256": "b78093b629bbf0b73c27d7b7592ccb5291cadc35a8bb993dfcdd60999ead0f8e"
+        },
+        "actualSharedTestRun": "Root actual installed cohort passed19/19 exit0; independent actual-result review pending.",
+        "originalCheckpointPreserved": true
       }
     },
     {
@@ -4816,5 +5031,6 @@
         "archiveSHA256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18"
       }
     }
-  ]
+  ],
+  "contractDocumentAdoptionRequiredToCompleteBoundedSplit": false
 }

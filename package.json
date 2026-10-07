@@ -19,7 +19,9 @@
     "test:hooks": "node scripts/test-git-hooks.cjs",
     "prepare:expanded": "node scripts/prepare-figma-expanded.cjs",
     "export:expanded": "node scripts/export-figma-expanded.cjs",
-    "fetch:references": "node scripts/fetch-figma-references.cjs"
+    "fetch:references": "node scripts/fetch-figma-references.cjs",
+    "prepare:supporting:first19": "node scripts/prepare-supporting-cohort.cjs",
+    "test:supporting:first19": "node scripts/test-supporting-cohort.cjs"
   },
   "dependencies": {
     "@babel/parser": "7.28.5",

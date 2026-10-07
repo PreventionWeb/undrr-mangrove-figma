@@ -243,11 +243,16 @@
       "reviewedPrivateRevision": "R7",
       "independentReviewSHA256": "72eb261553b020aab4f5ef45921b18a917c374724a46aad1b7eaff5dd74aa0b0",
       "modeledExportBranches": 14,
-      "actualPortableExportVerified": false,
+      "actualPortableExportVerified": true,
       "notes": [
         "Exact reviewed modules adopted; default maintenance and normal construction remain separate.",
         "Thin integration checks actual Git HEAD and finite source content; final upstream revision remains pending."
-      ]
+      ],
+      "actualThinSourceRevision": "4c81980a8d37ea877722421f22bb7d8f53feeb72",
+      "actualThinPacketSHA256": "9139038975e487300b9a976b6560a60c28ff97edc2343d0c4de52bf9c46d396c",
+      "actualThinNormalizedPacketSHA256": "f01e9a8e2700e3506c77f7dd0659b7f944e41f1703d01e0e7231b83bfa235b18",
+      "actualThinOnlyPacketDelta": "source.revision",
+      "actualThinIndependentReviewSHA256": "63bed84d55be141b91639d631be10588d975c65a21d025dce9d6f6d02748a183"
     },
     {
       "name": "reference-fetch",
@@ -287,6 +292,30 @@
         "Reference font/licence guards and every other source comparison remain exact.",
         "Immutable reference audit/provenance records remain historical. New actual thin-source export is required."
       ]
+    },
+    {
+      "name": "supporting-first19",
+      "extractedFromRevision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
+      "advertisedTests": 19,
+      "dependencyHelperMainsActive": false,
+      "launcherReviewSHA256": "937ad30bc2af7a1d4d4247a548aa5b299a90c5ddeebd93618f453057821702bf",
+      "preparerReviewSHA256": "0d94fddd0b8e3e2b16d11f5ed944e52d79bbb8f6976ff65e785abee85d558174",
+      "actualPreparationReviewSHA256": "443967bae2479255a01d67c58df150e9d1eb6ed7f88ea369c9b31cb49de011ee",
+      "actualInstalledTestsVerified": true,
+      "paths": [
+        "scripts/prepare-supporting-cohort.cjs",
+        "scripts/test-supporting-cohort.cjs",
+        "scripts/figma-supporting-test-inputs.cjs",
+        "scripts/supporting-first19.json",
+        "scripts/supporting-first19-declarations.json"
+      ],
+      "notes": [
+        "Optional finite test cohort; default workflows unchanged.",
+        "Two imported fixture helper bodies are dependencies, not additional advertised tests.",
+        "Original failed preparation is retained; corrected actual preparation preserves all original 1817 inputs and adds the finite required closure.",
+        "All 19 installed tests passed independent review. Final remote checkout remains a separate gate."
+      ],
+      "actualInstalledRunReviewSHA256": "f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600"
     }
   ]
 }

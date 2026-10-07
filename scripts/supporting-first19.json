@@ -1,0 +1,136 @@
+{
+  "format": "mangrove-supporting-test-cohort-v1",
+  "id": "supporting-first19",
+  "scope": "Optional current-tool tests only; not full catalogue producer, native, or all140 acceptance",
+  "execution": "explicit source-root/config/config-SHA required; production helper configured checks remain",
+  "tests": [
+    {
+      "name": "mock-gradient-transform",
+      "path": "examples/figma-plugin/dev/mock-gradient-transform.cjs",
+      "bytes": 13400,
+      "sha256": "5153a52a4f9e6ef54b7ef1b7ba2258762263ebd0d2e9ff7296ac7c701c829864"
+    },
+    {
+      "name": "mock-svg-sizing",
+      "path": "examples/figma-plugin/dev/mock-svg-sizing.cjs",
+      "bytes": 11101,
+      "sha256": "254f8c40cd7866a954ce5772e28e142e43f415156be0d41a877cd27458752f9f"
+    },
+    {
+      "name": "mock-text-decoration-inheritance",
+      "path": "examples/figma-plugin/dev/mock-text-decoration-inheritance.cjs",
+      "bytes": 7295,
+      "sha256": "e91305ac1151df03bafdbe9f5254d8df1787b53187c8c2987b5b086626ec472f"
+    },
+    {
+      "name": "mock-absolute-start",
+      "path": "examples/figma-plugin/dev/mock-absolute-start.cjs",
+      "bytes": 7643,
+      "sha256": "23725da4dce95c8be885304fd849080c92ce6304eb8053381d3bda9d6d5b1ab2"
+    },
+    {
+      "name": "mock-alpha-mask",
+      "path": "examples/figma-plugin/dev/mock-alpha-mask.cjs",
+      "bytes": 15867,
+      "sha256": "56ab9ee74602e850eecadd03ef9a514799c806ca3742d5873781dbc189ffd016"
+    },
+    {
+      "name": "mock-rich-text-offset",
+      "path": "examples/figma-plugin/dev/mock-rich-text-offset.cjs",
+      "bytes": 10879,
+      "sha256": "51abb9889878e33d1e696a12d7f8474cbbf277bb93c29a8de52bfd89dfc67c04"
+    },
+    {
+      "name": "mock-paragraph-indent",
+      "path": "examples/figma-plugin/dev/mock-paragraph-indent.cjs",
+      "bytes": 4306,
+      "sha256": "51a76e115605f1b0328f833bfce83614862babc58e964bdd902cf83ff33a81c8"
+    },
+    {
+      "name": "mock-rich-paragraph-indent",
+      "path": "examples/figma-plugin/dev/mock-rich-paragraph-indent.cjs",
+      "bytes": 4004,
+      "sha256": "42af00a338d5a67f712ccf7ec7f66af7ca00019f6dd31fd36c0bc14862f1339e"
+    },
+    {
+      "name": "mock-text-case",
+      "path": "examples/figma-plugin/dev/mock-text-case.cjs",
+      "bytes": 11042,
+      "sha256": "a6b065a94f43f2a565636b2c0fa3d0138975a6e7fc6fa62b9def4b2ea464294f"
+    },
+    {
+      "name": "mock-text-property-defaults",
+      "path": "examples/figma-plugin/dev/mock-text-property-defaults.cjs",
+      "bytes": 6348,
+      "sha256": "0207aab1477ced46bff379803bfbc69098bcdef466e80e2e675f60d932b21ab0"
+    },
+    {
+      "name": "mock-text-thickness",
+      "path": "examples/figma-plugin/dev/mock-text-thickness.cjs",
+      "bytes": 9409,
+      "sha256": "b78093b629bbf0b73c27d7b7592ccb5291cadc35a8bb993dfcdd60999ead0f8e"
+    },
+    {
+      "name": "mock-rich-text",
+      "path": "examples/figma-plugin/dev/mock-rich-text.cjs",
+      "bytes": 19198,
+      "sha256": "e20a6ba76cec0b01414fe6eb871d91332445b786e758f45af55baa896d17c2b6"
+    },
+    {
+      "name": "mock-rich-text-alpha",
+      "path": "examples/figma-plugin/dev/mock-rich-text-alpha.cjs",
+      "bytes": 11569,
+      "sha256": "2d061027e4ad4bcc0f45f4abf6d6f3f2e363e4cd98d92bf01412d00e96473e2d"
+    },
+    {
+      "name": "mock-text-case-connector",
+      "path": "examples/figma-plugin/dev/mock-text-case-connector.cjs",
+      "bytes": 8099,
+      "sha256": "a68b44c3bef3ba06dacd46561f8000a0a4cc35e58cf33f96105a61ebda668be6"
+    },
+    {
+      "name": "mock-preview-access",
+      "path": "examples/figma-plugin/dev/mock-preview-access.cjs",
+      "bytes": 15061,
+      "sha256": "819c09f6682b2043a41ecd7c4fd13a6bcb2c16f6642e8ccc8f3f430b2b3632c2"
+    },
+    {
+      "name": "mock-preserved-review-width",
+      "path": "examples/figma-plugin/dev/mock-preserved-review-width.cjs",
+      "bytes": 3621,
+      "sha256": "5ca0a64530533dec47c5afa4736623845fddfbf49071e0efcba0afa898c155a6"
+    },
+    {
+      "name": "mock-media",
+      "path": "examples/figma-plugin/dev/mock-media.cjs",
+      "bytes": 5456,
+      "sha256": "b230d29ec9e0b3891e6c24ef0d3fc41029d0b60fdd9bd334988035c63fc0cf80"
+    },
+    {
+      "name": "mock-experiment-target",
+      "path": "examples/figma-plugin/dev/mock-experiment-target.cjs",
+      "bytes": 5094,
+      "sha256": "2e506e4c1b922d2a22afc43a77f69b6454d89f90ee1876befd46f210108ec23f"
+    },
+    {
+      "name": "mock-inherited-root",
+      "path": "examples/figma-plugin/dev/mock-inherited-root.cjs",
+      "bytes": 5490,
+      "sha256": "58f49a24f590162a132f6e3b755e6c01807d3b8961a3cdc31b0e2dc586489314"
+    }
+  ],
+  "additionalSourceInputs": [
+    {
+      "logicalPath": "stories/assets/images/card-image.png",
+      "owner": "source",
+      "executionAllowed": false,
+      "bytes": 9161,
+      "sha256": "e3d23f030f00549a051e0ff0be3981ed222fb14bc29dfd7bd3d16138c2ae63a1",
+      "scope": "Exact tracked clean source asset required by supporting mock-media only; not producer observed reference membership"
+    }
+  ],
+  "unrunFullProducerOptIns": [
+    "mock-cloud-draft-experiment",
+    "mock-component-drafts"
+  ]
+}

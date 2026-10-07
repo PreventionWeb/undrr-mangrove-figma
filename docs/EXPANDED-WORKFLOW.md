@@ -43,7 +43,7 @@ npm run prepare:expanded -- \
 
 Here `--sidecar` means the compact input-admission manifest. The reference provenance/licence sidecar is a separate required reference-delivery input.
 
-`preserved-spike` accepts only `d5e790d3b0318730fdbd270279f340f35a2833ab`. `thin-integration` checks the actual supplied Git revision and admits only the known source package and minimal workspace-lock changes, retaining the other 440 source pins. The thin upstream PR has not yet been committed. Its final supported revision and complete packet comparison remain pending. Four historical package/lock pins in AuthorImage, CodeBlock and Logo have a reviewed finite compatibility mapping. It checks real current source bytes against the admitted source row and permits only the known thin package/lock pairs. Other source checks and reference font/licence comparisons remain exact; immutable audit records retain their historical pins.
+`preserved-spike` accepts only `d5e790d3b0318730fdbd270279f340f35a2833ab`. `thin-integration` checks the actual supplied Git revision and admits only the known source package and minimal workspace-lock changes, retaining the other 440 source pins. The thin upstream PR has not yet been committed. Its final supported remote revision remains pending. The private thin-source packet comparison has passed. Four historical package/lock pins in AuthorImage, CodeBlock and Logo have a reviewed finite compatibility mapping. It checks real current source bytes against the admitted source row and permits only the known thin package/lock pairs. Other source checks and reference font/licence comparisons remain exact; immutable audit records retain their historical pins.
 
 Preparation writes an ownership marker, expanded manifest, disabled configuration and preparation receipt. It does not invoke the exporter. Use the exact config path and checksum returned by successful preparation:
 
@@ -54,6 +54,8 @@ npm run export:expanded -- \
   --execute
 ```
 
+The full export constructs and serializes the complete packet before writing it. The verified private thin-source run took about 22 minutes and produced a 210 MB packet. Maintenance and normal construction have separate smaller workflows.
+
 Export verifies the prepared configuration and current command modules, rechecks source/cache inputs, creates an exclusive attempt journal and invokes the existing exporter once. It retains stdout, stderr, terminal status, packet digest, final guards and an operation receipt. Failed operations retain their owned evidence. Existing packet files and attempts are refused; use a new directory for another attempt.
 
 ## Verified scope
@@ -62,4 +64,4 @@ The migrated full export at the preserved source checkpoint is byte-identical to
 
 The portable commands have independent review covering complete real disabled preparations, 19 focused command/profile cases, two additional dependency/base negatives, four returned-Git ownership/metadata faults and 14 modeled export branches. Modeled branches do not count as actual exports. The finite Tag path mapping preserves the historical logical citation while reading the exact tracked lowercase source filename. Linux execution remains unverified.
 
-Shared-command thin-source export and final checkout verification remain required before claiming the split is portable. See [split status](SPLIT-STATUS.md) and [native release gates](RELEASE-STATUS.md).
+The corrected shared-command export at private thin revision `4c81980a8d37ea877722421f22bb7d8f53feeb72` passed independent complete-byte comparison. Its packet is 210,368,334 bytes with SHA256 `9139038975e487300b9a976b6560a60c28ff97edc2343d0c4de52bf9c46d396c`. Replacing only the top `source.revision` with the original revision restores the complete original SHA256. All other bytes are identical. Final remote checkout verification remains required before claiming the split is portable. See [split status](SPLIT-STATUS.md) and [native release gates](RELEASE-STATUS.md).

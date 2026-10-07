@@ -1,0 +1,10 @@
+'use strict';
+// TEST-ONLY current toolkit observation; production historical read API remains unchanged.
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');const hash=b=>crypto.createHash('sha256').update(b).digest('hex');let active;
+function configured(){if(active)return active;const pin=process.env.MANGROVE_EXPANDED_INPUTS_CONFIG_SHA256,configBytes=fs.readFileSync(process.env.MANGROVE_EXPANDED_INPUTS_CONFIG);assert.equal(hash(configBytes),pin);const c=JSON.parse(configBytes),manifestBytes=fs.readFileSync(c.manifestPath);assert.equal(hash(manifestBytes),c.manifestSHA256);const m=JSON.parse(manifestBytes),rows=new Map(m.files.map(r=>[r.logicalPath,r]));const ctx=require('./figma-expanded-inputs.cjs').configured();
+ function key(request){const abs=path.resolve(String(request));for(const root of [ctx.sourceRoot,ctx.toolRoot,ctx.referenceRoot])if(abs.startsWith(root+'/'))return path.relative(root,abs).split(path.sep).join('/');throw Error('Supporting input outside explicit authorities');}
+ function read(site,receiver,...args){const r=rows.get(key(args[0]));assert(r,'Unmapped supporting input');if(r.owner!=='tool')return ctx.readFileSync(site,receiver,...args);const target=ctx.inputPath(site,args[0]);const raw=fs.readFileSync(target);assert.equal(raw.length,r.bytes);assert.equal(hash(raw),r.sha256,'Current toolkit input changed');const result=Reflect.apply(receiver.readFileSync,receiver,[target,...args.slice(1)]);const encoding=typeof args[1]==='string'?args[1]:args[1]?.encoding;const got=Buffer.isBuffer(result)?result:Buffer.from(result,encoding||'utf8');assert.equal(hash(got),r.sha256,'Current toolkit observed bytes changed');assert.equal(ctx.inputPath(site,args[0]),target);return result;}
+ function modulePath(site,request,caller){return ctx.modulePath(site,request,caller);}
+ active=Object.freeze({sourceRoot:ctx.sourceRoot,toolRoot:ctx.toolRoot,referenceRoot:ctx.referenceRoot,read,modulePath,inputPath:ctx.inputPath});return active;
+}
+module.exports={configured};
