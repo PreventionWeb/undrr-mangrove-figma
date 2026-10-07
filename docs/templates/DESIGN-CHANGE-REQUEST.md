@@ -1,6 +1,6 @@
 # Design change request
 
-Copy this template into the issue or PR for a bounded manual Figma-to-Mangrove Storybook change. Follow the [design-to-code runbook](../DESIGN-TO-CODE.md). Use “not applicable” with a reason for fields outside the selected work; do not infer whole-kit reconstruction or publication from this request.
+Copy this template into the issue or PR for a bounded manual Figma-to-Mangrove Storybook change. Follow the [design-to-code runbook](../DESIGN-TO-CODE.md). For a minor change, use the [small handoff example](../DESIGN-HANDOFF-EXAMPLE.md) to keep the record proportionate. Use “not applicable” with a reason for fields outside the selected work; do not infer whole-kit reconstruction or publication from this request.
 
 ## Intended outcome
 
@@ -72,9 +72,10 @@ Record whether each difference is an approved change, unmatched comparison input
 Complete only when source-to-Figma maintenance or publication is separately requested.
 
 - Toolkit and Mangrove revisions, reviewed output differences:
-- Target file/checkpoint and native backup:
+- Target file, exact main-component page/checkpoint and native backup:
 - Selected families/assets, dependency closure and affected shared users:
 - Manual ownership decisions and handback disposition:
+- Expected non-null set/variant IDs for each existing family/dependency on the active page:
 - Before/after IDs, keys, links, bindings, modes and recorded geometry:
 - Full operation reports, repeat-build outcome and saved online checkpoint:
 - Rendering, fonts/glyphs and supported edited-content/reflow evidence:

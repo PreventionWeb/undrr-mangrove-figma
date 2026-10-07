@@ -21,7 +21,9 @@
     "export:expanded": "node scripts/export-figma-expanded.cjs",
     "fetch:references": "node scripts/fetch-figma-references.cjs",
     "prepare:supporting:first19": "node scripts/prepare-supporting-cohort.cjs",
-    "test:supporting:first19": "node scripts/test-supporting-cohort.cjs"
+    "test:supporting:first19": "node scripts/test-supporting-cohort.cjs",
+    "test:kit:extraction": "node examples/figma-plugin/dev/mock-kit-migration.cjs",
+    "test:kit:behavior": "node examples/figma-plugin/dev/mock-kit.cjs && node examples/figma-plugin/dev/mock-kit-layout.cjs && node examples/figma-plugin/dev/mock-kit-canvas-flow.cjs && node examples/figma-plugin/dev/mock-ui-layout.cjs && node examples/figma-plugin/dev/mock-review-export.cjs && node examples/figma-plugin/dev/mock-font-defaults-integration.cjs"
   },
   "dependencies": {
     "@babel/parser": "7.28.5",

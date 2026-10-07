@@ -2,7 +2,7 @@
 
 Use this runbook when a designer changes selected Figma components or screens and asks a developer or coding agent to reproduce those changes in Mangrove. The normal handoff is a bounded, manual code change, sometimes including a new component. Full kit reconstruction is uncommon and is not a prerequisite.
 
-Start with the [design change request template](templates/DESIGN-CHANGE-REQUEST.md). Keep the request, comparison decisions and completion record in the issue or PR so another contributor can continue without reconstructing the conversation.
+Start with the [design change request template](templates/DESIGN-CHANGE-REQUEST.md), or the [small handoff example](DESIGN-HANDOFF-EXAMPLE.md) for a proportionate record. Keep the request, comparison decisions and completion record in the issue or PR so another contributor can continue without reconstructing the conversation.
 
 ## Authority and ownership
 

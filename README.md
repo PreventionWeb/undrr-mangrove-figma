@@ -56,6 +56,8 @@ Import `examples/figma-plugin/manifest.json` as a development plugin and use gen
 
 See [optional supporting tests](docs/SUPPORTING-TESTS.md) for the separately prepared, finite 19-test cohort.
 
+For deliberate future output changes, use the [historical extraction versus maintenance test routes](docs/COMPONENT-MAINTENANCE.md#intentional-output-changes-and-test-baselines); the aggregate seed check deliberately retains its original hashes and counts.
+
 The normal JSON and runtime match their preserved upstream bytes; this establishes extraction compatibility, not native rendering, edits or publication. Compiler/parser dependencies are installed locally in this toolkit. Mangrove supplies its own token engine, source components, styles and media; the build does not read upstream Figma tooling.
 
 ## Ownership and migration

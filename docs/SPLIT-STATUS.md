@@ -25,3 +25,7 @@ The inactive sources and historical contract documents are indexed rather than a
 The split establishes tooling ownership and reproducible source export. It does not establish expanded native rendering, native fonts, full-catalogue collection capacity, editable reflow, canonical integration, text/effect publication or consumer handoff. Those remain separate [release gates](RELEASE-STATUS.md). Existing connector payload-budget failures remain documented rather than waived.
 
 GitHub listing endpoints may be suppressed. Status uses exact-number PR requests, not empty listing responses. GitHub Actions are unavailable; verification is local.
+
+## Companion merge link handoff
+
+Upstream workflow links use an immutable toolkit commit during review so branch deletion does not break them. When the companion toolkit PR is merged and its docs exist on `main`, update those upstream links to the durable merged destination before accepting the upstream PR. This link handoff is separate from source compatibility and native acceptance.

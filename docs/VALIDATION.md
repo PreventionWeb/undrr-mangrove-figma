@@ -40,3 +40,9 @@ Three independent source/runbook audits identified missing manual design-to-code
 The only executable-source change in this pass corrects a stale freshness diagnostic from `yarn build:figma-tokens` to `npm run build:kit`. It does not change generated packets or plugin runtimes. Prior expanded export and remote-install receipts remain historical evidence at their recorded revisions; this pass does not rerun or newly accept the expanded/native cohorts.
 
 All six local maintenance/normal build, freshness and test commands passed after the diagnostic change, including retained normal DTO/runtime pins and the maintenance asset digest. Touched Markdown passed Prettier; local links, copy checks and `git diff --check` passed. No expanded export or native canvas update/publication was performed in this workflow-hardening pass.
+
+## Independent red-team follow-up
+
+A second independent review found two operational documentation gaps: component ownership/build lookup is page-local, and the normal aggregate begins with immutable extraction hashes/counts that deliberately fail for intended future output changes. The runbook now requires the recorded main-component page and matching non-null existing set/variant IDs before rebuilding, with deliberate new-family creation distinguished from an absent existing main. No cross-page runtime scan or identity migration is introduced.
+
+Named `test:kit:extraction` and `test:kit:behavior` commands exactly partition the existing unchanged aggregate. Both passed on the supported seed inputs. No test assertion or historical compatibility fixture was changed; future intentional output changes require reviewed behavioural coverage and separate current-baseline evidence. A small illustrative handoff example explains proportionate scope without supplying invented acceptance results. Documentation formatting/link/diff checks pass; native and human acceptance remain open.
