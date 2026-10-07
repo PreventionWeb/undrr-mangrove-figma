@@ -6,7 +6,7 @@ This optional workflow exports 139 recipe families and 2,269 variants. It is sep
 
 Install this toolkit with `npm ci`. Install the selected Mangrove source checkout using its own locked dependency workflow, build its source CSS, and run `npm run build:kit` here with `MANGROVE_SOURCE_ROOT` set to that checkout. Tokens, styles, source components, media and React dependencies remain owned by Mangrove.
 
-Preparation requires an explicit source revision, the checked-in compact admission manifest and its SHA256, an approved reference index and its SHA256, and a successful committed-cache receipt and its SHA256. The reference prerelease contains the exact required inputs, indexed by checksum with per-path provenance and licence records. Public retrieval and complete fresh-checkout setup are still undergoing verification.
+Preparation requires an explicit source revision, the checked-in compact admission manifest and its SHA256, an approved reference index and its SHA256, and a successful committed-cache receipt and its SHA256. The reference prerelease contains the exact required inputs, indexed by checksum with per-path provenance and licence records. Public retrieval and complete cache admission have passed independent review; final fresh-checkout setup remains pending.
 
 ## Fetch reference inputs
 
@@ -21,7 +21,7 @@ npm run fetch:references -- \
 
 The command pins all nine release assets, verifies the index and provenance/licence sidecar, and admits all seven archives through the complete owned-cache verifier. It returns the exact `cacheAdmission` paths and checksums needed below. It preserves download and admission journals, including partial failures. Reference data is read-only; historical code proof is never executed. Retained UNKNOWN/unapproved provenance labels remain explicit and are not a blanket licence assignment.
 
-The download command has 12 offline wrapper cases and 14 provider fixtures plus independent review. Public retrieval remains a separate actual check. Default maintenance and normal construction do not download this package.
+The download command has 12 offline wrapper cases and 14 provider fixtures plus independent review. Actual public retrieval and complete 1,270-member cache admission have also passed independent review. Default maintenance and normal construction do not download this package.
 
 ## Prepare and export
 
@@ -43,7 +43,7 @@ npm run prepare:expanded -- \
 
 Here `--sidecar` means the compact input-admission manifest. The reference provenance/licence sidecar is a separate required reference-delivery input.
 
-`preserved-spike` accepts only `d5e790d3b0318730fdbd270279f340f35a2833ab`. `thin-integration` checks the actual supplied Git revision and admits only the known source package and minimal workspace-lock changes, retaining the other 440 source pins. The thin upstream PR has not yet been committed. Its final supported revision and complete packet comparison remain pending.
+`preserved-spike` accepts only `d5e790d3b0318730fdbd270279f340f35a2833ab`. `thin-integration` checks the actual supplied Git revision and admits only the known source package and minimal workspace-lock changes, retaining the other 440 source pins. The thin upstream PR has not yet been committed. Its final supported revision and complete packet comparison remain pending. Four historical package/lock pins in AuthorImage, CodeBlock and Logo have a reviewed finite compatibility mapping. It checks real current source bytes against the admitted source row and permits only the known thin package/lock pairs. Other source checks and reference font/licence comparisons remain exact; immutable audit records retain their historical pins.
 
 Preparation writes an ownership marker, expanded manifest, disabled configuration and preparation receipt. It does not invoke the exporter. Use the exact config path and checksum returned by successful preparation:
 
@@ -62,4 +62,4 @@ The migrated full export at the preserved source checkpoint is byte-identical to
 
 The portable commands have independent review covering complete real disabled preparations, 19 focused command/profile cases, two additional dependency/base negatives, four returned-Git ownership/metadata faults and 14 modeled export branches. Modeled branches do not count as actual exports. The finite Tag path mapping preserves the historical logical citation while reading the exact tracked lowercase source filename. Linux execution remains unverified.
 
-Fresh release retrieval, shared-command thin-source export and final checkout verification remain required before claiming the split is portable. See [split status](SPLIT-STATUS.md) and [native release gates](RELEASE-STATUS.md).
+Shared-command thin-source export and final checkout verification remain required before claiming the split is portable. See [split status](SPLIT-STATUS.md) and [native release gates](RELEASE-STATUS.md).

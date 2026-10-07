@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "status": "Historical index only; no evidence uploaded to this repository yet",
+  "status": "Historical deliveries and current checksum-pinned reference prerelease; native acceptance remains separate",
   "sourceRevision": "a4bb46dafb7134a230e9c79fd26cd7306d2a6203",
   "upstreamParkingPoint": "https://github.com/unisdr/undrr-mangrove/blob/a4bb46dafb7134a230e9c79fd26cd7306d2a6203/examples/figma-plugin/holistic/PARKING-POINT-2026-10-07.md",
   "packages": [
@@ -42,6 +42,22 @@
       "downloadUrl": null,
       "independentVerdictSHA256": "3ea7a528e7c6e139939f4f652a0e8f0e8e756783bb654a3da0a8891bc9c7c258",
       "scope": "Every tracked Git blob, executable bit and symlink verified. Git history, ignored/untracked files and native backups remain separately preserved. No clean reference retrieval or full portable dependency closure established."
+    },
+    {
+      "kind": "observed-expanded-reference-inputs",
+      "status": "published prerelease; public download and complete cache admission independently verified",
+      "sourceRevision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
+      "releaseURL": "https://github.com/PreventionWeb/undrr-mangrove-figma/releases/tag/mangrove-observed-reference-d5e790d3-v1",
+      "parts": 7,
+      "members": 1270,
+      "memberBytes": 403167148,
+      "nonexecutingHistoricalCodeProofs": 85,
+      "indexBytes": 869361,
+      "indexSHA256": "32e9ad7bf5e256a0b283404f565aa1c9cb95ebce3238c71264c766013e3f6409",
+      "provenanceSidecarBytes": 2803922,
+      "provenanceSidecarSHA256": "eb579c932b2b356cc141240acd568cfdf44935320221d219e7076036f3bd69dd",
+      "publicRetrievalIndependentVerdictSHA256": "f7cc66e3934e1f99ed52a7a62296e28d71fa39b9032be43e2e268bec9bebdb8e",
+      "scope": "Observed immutable read-only inputs only. UNKNOWN/unapproved provenance records remain explicit. No native, font, rendering, publication or final fresh-checkout acceptance follows."
     }
   ],
   "currentDocumentationCheckpoint": "d5e790d3b0318730fdbd270279f340f35a2833ab"

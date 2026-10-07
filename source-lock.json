@@ -260,9 +260,33 @@
       "independentReviewSHA256": "8ddf2e724d766e97663717f62612cdf315e772275139c6b7d99e8937d9106220",
       "offlineWrapperCases": 12,
       "offlineProviderCases": 14,
-      "publicRetrievalVerified": false,
+      "publicRetrievalVerified": true,
       "referenceIndexSHA256": "32e9ad7bf5e256a0b283404f565aa1c9cb95ebce3238c71264c766013e3f6409",
-      "referenceProvenanceSidecarSHA256": "eb579c932b2b356cc141240acd568cfdf44935320221d219e7076036f3bd69dd"
+      "referenceProvenanceSidecarSHA256": "eb579c932b2b356cc141240acd568cfdf44935320221d219e7076036f3bd69dd",
+      "actualPublicRetrievalPeerSHA256": "f7cc66e3934e1f99ed52a7a62296e28d71fa39b9032be43e2e268bec9bebdb8e",
+      "releaseURL": "https://github.com/PreventionWeb/undrr-mangrove-figma/releases/tag/mangrove-observed-reference-d5e790d3-v1"
+    },
+    {
+      "name": "thin-authored-source-guard-compatibility",
+      "paths": [
+        "examples/figma-plugin/holistic/assets/author-image/recipes.cjs",
+        "scripts/figma-code-block-recipes.cjs",
+        "scripts/figma-expanded-inputs.cjs",
+        "scripts/figma-logo-recipes.cjs",
+        "scripts/prepare-figma-expanded.cjs",
+        "contracts/expanded-inputs.compact.json"
+      ],
+      "independentReviewSHA256": "4c9ed3752a6300b6deadcd6c8865a109fb1ed89df6c7da8b84f5061c85cb2740",
+      "sourcePinCases": 33,
+      "historicalBodyProofs": 62,
+      "actualInnerGuardSnippetCases": 6,
+      "changedManifestToolRows": 3,
+      "compactSHA256": "a71b7382d3a503da5d3b9c85ea3fe1ce6fdc0511509157cbcdd09742b22365a0",
+      "notes": [
+        "Admits only reviewed package/lock historical-to-current pairs under thin-integration after checking genuine current source bytes.",
+        "Reference font/licence guards and every other source comparison remain exact.",
+        "Immutable reference audit/provenance records remain historical. New actual thin-source export is required."
+      ]
     }
   ]
 }

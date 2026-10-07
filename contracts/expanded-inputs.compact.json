@@ -1,7 +1,7 @@
 {
   "version": 1,
   "format": "expanded-admission-sets",
-  "expandedManifestSHA256": "5b39332d69bdcf0e205bfc0666c46c9fbbe376e2398b9bb582512fe117e977d5",
+  "expandedManifestSHA256": "22dace459696d8274110ab425c21b0cd67e14d83bcc9daca2d3fef9328482edf",
   "admissionSets": {
     "sha256-2eb8f323a731bc6acf1f633f74b3c3c3ab051eb48a8d9abe41ee836141f98917": [
       "examples/figma-plugin/holistic/assets/author-image/profiles.json.gz"
@@ -5920,55 +5920,95 @@
       {
         "logicalPath": "examples/figma-plugin/holistic/assets/author-image/recipes.cjs",
         "owner": "tool",
-        "bytes": 20743,
-        "sha256": "198af0df7eb8339836b27fabe9081a0d78a872b054aeec4f3d5347e46a5d2181",
+        "bytes": 20828,
+        "sha256": "5260bec19f3e8bb1b4170e8180fbd2a79fab2f020c250c096fe5aa20d6395556",
         "executionAllowed": true,
         "historicalSHA256": "f5c4a3ae0723faf866ace29813abac23d00272706ff01984edcf060cc1323f51",
         "historicalBytes": 20078,
         "bodyMapping": {
-          "currentSHA256": "198af0df7eb8339836b27fabe9081a0d78a872b054aeec4f3d5347e46a5d2181",
+          "currentSHA256": "5260bec19f3e8bb1b4170e8180fbd2a79fab2f020c250c096fe5aa20d6395556",
           "originalSHA256": "f5c4a3ae0723faf866ace29813abac23d00272706ff01984edcf060cc1323f51",
           "originalBytes": 20078,
           "reverseEdits": [
             {
-              "start": 13,
-              "end": 104,
+              "start": 12,
+              "end": 103,
               "originalBase64": ""
             },
             {
               "start": 290,
-              "end": 427,
-              "originalBase64": "ZnMucmVhZEZpbGVTeW5jKHBhdGguam9pbihfX2Rpcm5hbWUsJ3Byb2ZpbGVzLmpzb24uZ3onKSk="
+              "end": 297,
+              "originalBase64": "Zg=="
+            },
+            {
+              "start": 312,
+              "end": 387,
+              "originalBase64": ""
             },
             {
               "start": 1226,
-              "end": 1364,
-              "originalBase64": "ZnMucmVhZEZpbGVTeW5jKHBhdGguam9pbihfX2Rpcm5hbWUsJ3Byb2ZpbGVzLmpzb24uZ3onKSk="
+              "end": 1233,
+              "originalBase64": "Zg=="
+            },
+            {
+              "start": 1248,
+              "end": 1324,
+              "originalBase64": ""
             },
             {
               "start": 1573,
-              "end": 1721,
-              "originalBase64": "ZnMucmVhZEZpbGVTeW5jKHBhdGguam9pbihfX2Rpcm5hbWUsJ3Jhdy1zb3VyY2UtY2FwdHVyZXMudGFyLmd6Jykp"
+              "end": 1580,
+              "originalBase64": "Zg=="
+            },
+            {
+              "start": 1595,
+              "end": 1671,
+              "originalBase64": ""
             },
             {
               "start": 1906,
-              "end": 2045,
-              "originalBase64": "ZnMucmVhZEZpbGVTeW5jKHBhdGguam9pbihfX2Rpcm5hbWUsJ3NvdXJjZS1hdWRpdC5qc29uJykp"
+              "end": 1913,
+              "originalBase64": "Zg=="
+            },
+            {
+              "start": 1928,
+              "end": 2004,
+              "originalBase64": ""
             },
             {
               "start": 2302,
-              "end": 2421,
-              "originalBase64": "ZnMucmVhZEZpbGVTeW5jKHBhdGguam9pbihyb290LG5hbWUpKQ=="
+              "end": 2309,
+              "originalBase64": "Zg=="
             },
             {
-              "start": 3231,
-              "end": 3380,
-              "originalBase64": "ZnMucmVhZEZpbGVTeW5jKHBhdGguam9pbihfX2Rpcm5hbWUsJ3NvdXJjZS1mb250LWlucHV0LXBpbnMuanNvbicpKQ=="
+              "start": 2324,
+              "end": 2400,
+              "originalBase64": ""
             },
             {
-              "start": 3613,
-              "end": 3733,
-              "originalBase64": "ZnMucmVhZEZpbGVTeW5jKHBhdGguam9pbihyb290LG5hbWUpKQ=="
+              "start": 2425,
+              "end": 2510,
+              "originalBase64": ""
+            },
+            {
+              "start": 3316,
+              "end": 3323,
+              "originalBase64": "Zg=="
+            },
+            {
+              "start": 3338,
+              "end": 3414,
+              "originalBase64": ""
+            },
+            {
+              "start": 3698,
+              "end": 3705,
+              "originalBase64": "Zg=="
+            },
+            {
+              "start": 3720,
+              "end": 3797,
+              "originalBase64": ""
             }
           ],
           "derivation": "Exact accepted character transform mapped through UTF16-to-UTF8 boundaries"
@@ -6347,25 +6387,35 @@
       {
         "logicalPath": "scripts/figma-code-block-recipes.cjs",
         "owner": "tool",
-        "bytes": 17984,
-        "sha256": "9792d85faabe775176e51aaf42a181dcd4706141aa655940be54be1a35ef120c",
+        "bytes": 18066,
+        "sha256": "17932495f5e7f74fd1c4542da1a70fcb15025182768c5a1c0a7fb9ba1d44a83b",
         "executionAllowed": true,
         "historicalSHA256": "9b12e8a46b4ceb310df3dfcf13d094c84fbe3729b4c2424864197196643fb255",
         "historicalBytes": 17858,
         "bodyMapping": {
-          "currentSHA256": "9792d85faabe775176e51aaf42a181dcd4706141aa655940be54be1a35ef120c",
+          "currentSHA256": "17932495f5e7f74fd1c4542da1a70fcb15025182768c5a1c0a7fb9ba1d44a83b",
           "originalSHA256": "9b12e8a46b4ceb310df3dfcf13d094c84fbe3729b4c2424864197196643fb255",
           "originalBytes": 17858,
           "reverseEdits": [
             {
-              "start": 13,
-              "end": 83,
+              "start": 12,
+              "end": 82,
               "originalBase64": ""
             },
             {
               "start": 607,
-              "end": 698,
-              "originalBase64": "ZnMucmVhZEZpbGVTeW5jKHBhdGguam9pbihyb290LCBmKSk="
+              "end": 614,
+              "originalBase64": "Zg=="
+            },
+            {
+              "start": 629,
+              "end": 679,
+              "originalBase64": ""
+            },
+            {
+              "start": 985,
+              "end": 1067,
+              "originalBase64": ""
             }
           ],
           "derivation": "Exact accepted character transform mapped through UTF16-to-UTF8 boundaries"
@@ -7045,25 +7095,35 @@
       {
         "logicalPath": "scripts/figma-logo-recipes.cjs",
         "owner": "tool",
-        "bytes": 9003,
-        "sha256": "7b898f75ac08067ccb284cbc2d10026abaa408a312d613cbfeb352ca0e49ffb2",
+        "bytes": 9100,
+        "sha256": "e635f386fce6222aaff399ad05104548c300033a3b30753aeae2dbb0227e48f4",
         "executionAllowed": true,
         "historicalSHA256": "0dddb2964a2492109af588efc0406511a34c58b1ada1dd8748e8344429382cb2",
         "historicalBytes": 8883,
         "bodyMapping": {
-          "currentSHA256": "7b898f75ac08067ccb284cbc2d10026abaa408a312d613cbfeb352ca0e49ffb2",
+          "currentSHA256": "e635f386fce6222aaff399ad05104548c300033a3b30753aeae2dbb0227e48f4",
           "originalSHA256": "0dddb2964a2492109af588efc0406511a34c58b1ada1dd8748e8344429382cb2",
           "originalBytes": 8883,
           "reverseEdits": [
             {
-              "start": 13,
-              "end": 83,
+              "start": 12,
+              "end": 82,
               "originalBase64": ""
             },
             {
               "start": 526,
-              "end": 614,
-              "originalBase64": "ZnMucmVhZEZpbGVTeW5jKHBhdGguam9pbihyb290LCBmaWxlKSk="
+              "end": 533,
+              "originalBase64": "Zg=="
+            },
+            {
+              "start": 548,
+              "end": 592,
+              "originalBase64": ""
+            },
+            {
+              "start": 919,
+              "end": 1016,
+              "originalBase64": ""
             }
           ],
           "derivation": "Exact accepted character transform mapped through UTF16-to-UTF8 boundaries"

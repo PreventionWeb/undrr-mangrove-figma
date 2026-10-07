@@ -18,7 +18,7 @@ function buildCodeBlockRecipes({ root, modes, variables, styles }) {
   if (sha(read(ASSET + 'provenance.json')) !== PROVENANCE) fail('provenance');
   const provenance = JSON.parse(read(ASSET + 'provenance.json'));
   for (const [f, h] of Object.entries(provenance.sourceHashes))
-    if (sha(read(f)) !== h) fail(f);
+    if (f==='package.json'||f==='yarn.lock' ? !mgInputs.sourcePinMatches(f, read(f), h) : sha(read(f)) !== h) fail(f);
   for (const [f, h] of Object.entries(provenance.assets))
     if (sha(read(ASSET + f)) !== h) fail(f);
   if (

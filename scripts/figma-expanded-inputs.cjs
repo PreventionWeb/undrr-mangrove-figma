@@ -49,6 +49,16 @@ function createAuthority(config,manifest){
   const bytes=Buffer.isBuffer(result)?result:Buffer.from(result,encoding||'utf8');assert.equal(bytes.length,r.bytes,'Input size drift');assert.equal(digest(bytes),r.sha256,'Input byte drift');
   if(!r.bodyMapping)return result;const actual=reconstruct(bytes,r.bodyMapping);return Buffer.isBuffer(result)?actual:actual.toString(encoding||'utf8');
  }
+ function sourcePinMatches(logicalPath,bytes,expected){
+  fenceRoots();assert(Buffer.isBuffer(bytes),'Authored source bytes required');const r=rows.get(logicalPath);assert(r&&r.owner==='source'&&r.executionAllowed===false&&!r.bodyMapping,'Authored source row required');assert.equal(bytes.length,r.bytes,'Authored current source size drift');assert.equal(digest(bytes),r.sha256,'Authored current source byte drift');
+  const expectedHash=typeof expected==='string'?expected:expected?.sha256,expectedBytes=typeof expected==='string'?undefined:expected?.bytes;assert(/^[0-9a-f]{64}$/.test(expectedHash||'')&&(expectedBytes===undefined||Number.isInteger(expectedBytes)),'Authored historical pin shape');
+  if(digest(bytes)===expectedHash&&(expectedBytes===undefined||bytes.length===expectedBytes))return true;
+  if(config.sourceProfile!=='thin-integration')return false;
+  const finite={
+   'package.json':[12530,'d68bf61e5d78334ec5ec069cf80c757eb2e292afeda686e6cef63ade20352519',12365,'9e4411c8ec2825ce4628b9df7c7b5f2797df9b6e39ef9c2693c7da1284fc2589'],
+   'yarn.lock':[665294,'e1a0d72b1ea55b1534031eeb7f503a3249ceac567814785caabf9755feb919f9',665248,'6ab1441db299c8aa604003743da1e668c9b752b8f07a6833e7b7731f9c3c55f0']
+  };const p=finite[logicalPath];return !!p&&expectedHash===p[1]&&(expectedBytes===undefined||expectedBytes===p[0])&&r.bytes===p[2]&&r.sha256===p[3];
+ }
  function readOutputSync(siteID,receiver,...args){fenceRoots();assert(sites.get(siteID)?.kind==='output-check','Unknown output read site');return Reflect.apply(receiver.readFileSync,receiver,[outputPath(args[0]),...args.slice(1)]);}
  function inputPath(siteID,request){return selected(siteID,request).file;}
  function modulePath(siteID,request,caller){
@@ -59,7 +69,7 @@ function createAuthority(config,manifest){
  function preflight(){fenceRoots();for(const r of rows.values()){const file=path.join(roots[r.owner],physical(r)),real=fs.realpathSync(file);assert(inside(real,roots[r.owner])&&fs.statSync(real).isFile(),'Preflight input authority');const raw=fs.readFileSync(real);assert.equal(raw.length,r.bytes,'Preflight size drift');assert.equal(digest(raw),r.sha256,'Preflight hash drift');if(r.bodyMapping)reconstruct(raw,r.bodyMapping);}return{files:rows.size,complete:true};}
  function sourceRuntimeRequire(specifier,filename){fenceRoots();assert(config.sourceRuntimeSpecifiers?.includes(specifier),'Undeclared source runtime package');assert(inside(path.resolve(filename),roots.source),'Source runtime owner outside source root');const dependencyRoot=fs.realpathSync(config.sourceDependencyRoot);assert(inside(dependencyRoot,roots.source),'Source dependencies outside source authority');const sourceRequire=createRequire(filename),resolved=sourceRequire.resolve(specifier);assert(inside(fs.realpathSync(resolved),dependencyRoot),'Source runtime package escaped its dependency authority');return sourceRequire(specifier);}
  function requireProducerAuthorization(){fenceRoots();assert.equal(config.exporterExecutionAuthorized,true,'Expanded producer execution is disabled pending reviewed root authorization');verifyConfiguredCache(config,manifest);}
- return Object.freeze({...authority,outputPath,sourceMetadata,readFileSync,readOutputSync,inputPath,modulePath,preflight,requireProducerAuthorization,sourceRuntimeRequire});
+ return Object.freeze({...authority,outputPath,sourceMetadata,readFileSync,sourcePinMatches,readOutputSync,inputPath,modulePath,preflight,requireProducerAuthorization,sourceRuntimeRequire});
 }
 let active;
 function configured(){

@@ -16,7 +16,7 @@ function buildLogoRecipes({ root, modes, variables, styles }) {
   if (sha(read(ASSET + 'provenance.json')) !== PROVENANCE) fail('provenance');
   const provenance = JSON.parse(read(ASSET + 'provenance.json'));
   for (const [file, hash] of Object.entries(provenance.sourceHashes))
-    if (sha(read(file)) !== hash) fail(file);
+    if (file==='package.json'||file==='yarn.lock' ? !mgInputs.sourcePinMatches(file, read(file), hash) : sha(read(file)) !== hash) fail(file);
   for (const [file, hash] of Object.entries(provenance.assets))
     if (sha(read(ASSET + file)) !== hash) fail(file);
   if (
