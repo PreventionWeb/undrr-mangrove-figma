@@ -6,7 +6,7 @@ This initial scaffold extracts the reduced variable/style maintenance implementa
 
 ## Setup
 
-Use Node.js 22 or later. Prepare an installed Mangrove source checkout at the revision in `source-lock.json`. That checkout owns its token engine and source dependencies; follow its installation instructions. You can keep it beside this repository.
+Use Node.js 22.18 or later within the 22 series, or Node.js 24.11 or later. Prepare an installed Mangrove source checkout at the revision in `source-lock.json`. That checkout owns its token engine and source dependencies; follow its installation instructions. You can keep it beside this repository.
 
 ```sh
 npm ci
