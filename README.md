@@ -2,7 +2,7 @@
 
 Source-backed Figma maintenance tooling for [Mangrove](https://github.com/unisdr/undrr-mangrove).
 
-This initial scaffold extracts the reduced variable/style maintenance implementation from [draft PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319), pinned in [source-lock.json](source-lock.json). It includes the exporter, importer, maintenance interface and focused mock tests. The full component builder, expanded catalogue and bulk evidence have not been migrated. This extraction does not establish new native Figma acceptance or publication.
+This initial scaffold extracts the reduced variable/style maintenance implementation from [draft PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319), pinned in [source-lock.json](source-lock.json). It includes the exporter, importer, maintenance interface and focused mock tests. The normal construction entry is now migrated separately from maintenance; its source catalogue contains 32 families and 383 finite variants. The expanded 139-family catalogue and bulk reference/evidence inputs have not been migrated. This extraction does not establish new native Figma acceptance or publication.
 
 ## Setup
 
@@ -23,6 +23,20 @@ The source path is explicit: this project does not copy or maintain a second set
 After building, import `examples/figma-plugin/maintenance/manifest.json` as a development plugin in the Figma desktop app. Use the generated `examples/figma-plugin/mangrove-maintenance-tokens.json` for variables/styles maintenance. Generated data and runtime bundles are ignored by Git.
 
 The exporter currently produces 520 variables, 102 text definitions and eight effects across five brands. These are source-definition counts, not a claim that every asset has native rendering or publication acceptance. Mock tests verify exporter and importer behaviour; they do not verify native Figma rendering or consumer updates.
+
+## Normal kit construction
+
+The optional construction entry prepares the original bounded kit from the same explicit Mangrove source checkout:
+
+```sh
+npm run build:kit
+npm run check:kit
+npm run test:kit
+```
+
+Import `examples/figma-plugin/manifest.json` as a development plugin and use generated `examples/figma-plugin/mangrove-variables.json` for this entry. Construction is separate from occasional variable/style maintenance and retains the [native release gates](docs/RELEASE-STATUS.md). The expanded catalogue, page recipes and bulk reference inputs remain later migration cohorts.
+
+The normal JSON and runtime match their preserved upstream bytes; this establishes extraction compatibility, not native rendering, edits, publication or a clean remote upstream source installation. Compiler/parser dependencies are installed locally in this toolkit. Mangrove supplies its own token engine, source components, styles and media; the build does not read upstream Figma tooling.
 
 ## Ownership and migration
 

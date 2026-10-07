@@ -16,6 +16,20 @@ The reduced maintenance implementation has been copied from the exact upstream c
 
 The upstream maintenance merge manifest is retained as provenance in `source-lock.json`, not as an assertion that those files should also land in the component repository.
 
+## Normal construction cohort
+
+The normal 32-family/383-variant exporter, runtime and bounded connector compiler now live here with focused harnesses. Mangrove source reads use `MANGROVE_SOURCE_ROOT`; compiler/parser dependencies and Figma helper reads use this toolkit. Maintenance remains the default build/test workflow, with optional `build:kit`, `check:kit` and `test:kit` commands. Expanded recipes and their bulk inputs remain later cohorts.
+
+The normal JSON (14,776,426 bytes; SHA256 `4525e54bda48ecf28fc2503e534a132658ebc4ab7f26d8845be07713bc965943`) and full runtime (1,051,949 bytes; SHA256 `0954833c96b7ae710fc6876469e3bc72ba7c892dd03d4292e809bc4abf5082fd`) match the retained upstream output exactly. The initial source-only fixture exposed a remaining upstream Figma helper read; the corrected FormAction precision guard now reads the toolkit helper and still refuses changed precision or source mapping. Layout/canvas harnesses load their existing required helpers. Passing extraction checks do not close native release gates.
+
+The historical FormAction packet citation `scripts/figma-maintenance-foundations.cjs:20` remains unchanged for byte compatibility. Its guarded current helper belongs to this toolkit at line 21. The explicit mapping and cohort paths are in `source-lock.json`; the original source compatibility revision and initial extraction provenance remain intact. No upstream Figma helper is required in the source-only footprint.
+
+## Preservation checkpoint
+
+The complete tracked upstream source at `d5e790d3` is preserved in `Mangrove-upstream-spike-d5e790d3-20261007.tar.gz` (262,166,740 bytes; SHA256 `0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18`). Independent review verifies all 3,161 tracked paths, Git blob identities, byte sizes, executable bits and symlinks. The upstream branch remains intact. Git history, untracked files, native `.fig` backups and earlier evidence packages remain separate and preserved.
+
+This archive has no release download URL yet. It does not establish clean reference retrieval, a portable installation or native acceptance. Its checksum and scope are recorded in [the evidence index](../evidence/index.json).
+
 ## Next steps
 
 1. Complete a clean-download source/reference workflow and native acceptance for the extracted maintenance entry. Keep the complete output comparison as a migration gate for later cohorts.

@@ -4,3 +4,5 @@ examples/figma-plugin/mangrove-maintenance-tokens.json
 examples/figma-plugin/maintenance/build/
 evidence/downloads/
 .DS_Store
+examples/figma-plugin/build/
+examples/figma-plugin/mangrove-variables.json

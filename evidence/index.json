@@ -30,6 +30,18 @@
       "downloadUrl": null,
       "independentVerdictSHA256": "e11c631c7297b3a02b77a74f3730d2ee8e57abaa3c80d3bcb8555633ef8ad0be",
       "scope": "Selected review evidence only; no import, supported installation, complete portable dependency closure or source/native/publication equivalence."
+    },
+    {
+      "kind": "complete-tracked-upstream-spike-source",
+      "status": "independently verified local archive; not uploaded",
+      "filename": "Mangrove-upstream-spike-d5e790d3-20261007.tar.gz",
+      "bytes": 262166740,
+      "trackedFiles": 3161,
+      "sha256": "0ca899f0f75e80c33b0f9959111152311279f21a29321a1e4a09245f3f627a18",
+      "sourceRevision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
+      "downloadUrl": null,
+      "independentVerdictSHA256": "3ea7a528e7c6e139939f4f652a0e8f0e8e756783bb654a3da0a8891bc9c7c258",
+      "scope": "Every tracked Git blob, executable bit and symlink verified. Git history, ignored/untracked files and native backups remain separately preserved. No clean reference retrieval or full portable dependency closure established."
     }
   ],
   "currentDocumentationCheckpoint": "d5e790d3b0318730fdbd270279f340f35a2833ab"
