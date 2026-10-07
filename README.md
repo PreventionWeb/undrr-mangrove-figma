@@ -24,6 +24,8 @@ After building, import `examples/figma-plugin/maintenance/manifest.json` as a de
 
 The exporter currently produces 520 variables, 102 text definitions and eight effects across five brands. These are source-definition counts, not a claim that every asset has native rendering or publication acceptance. Mock tests verify exporter and importer behaviour; they do not verify native Figma rendering or consumer updates.
 
+See [the maintenance runbook](docs/MAINTENANCE.md) for inspection, saved reports, component ownership and bounded publication/consumer checks.
+
 ## Normal kit construction
 
 The optional construction entry prepares the original bounded kit from the same explicit Mangrove source checkout:
