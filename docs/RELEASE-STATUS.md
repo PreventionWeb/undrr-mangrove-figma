@@ -30,15 +30,13 @@ The Long fixture retains the 260px source grid with the controlled `Browse all p
 
 The next comparison must retain recorded origins, full caller surface, overflow, copy and motion state. Collection of these source images does not establish native raster acceptance. A previous capture candidate was held because failures could discard partial records or prevent HAR finalization; the revised harness passed independent failure-preservation checks before execution.
 
-## Migration gates
+## Migration and routine maintenance acceptance
 
-- The complete tracked upstream spike checkpoint is preserved and independently verified. Its Git history, untracked files and native backups remain separate; the upstream branch is intact.
-- Review executable source and capture dependencies cohort by cohort; preserve output and identity compatibility.
-- Verify required reference-package downloads and a build from a clean checkout. Local historical paths are not retrieval URLs.
-- Keep maintenance and construction entry points separate, with explicit source revision and compatibility checks.
-- Reconcile the thin Mangrove PR with its `spike/react-aria-surface` base and retain only the necessary source contracts, integration and documentation.
+Repository split implementation and local reproducibility checks are complete; human review remains pending. Use [split status](SPLIT-STATUS.md) for the current migration outcome and [the evidence index](../evidence/index.json) for historical receipts. The selected local 78-file package is review evidence, not a plugin installation or a portable dependency closure; it has not been uploaded as a release asset.
 
-The selected local 78-file evidence package is indexed in [evidence/index.json](../evidence/index.json). It is review evidence, not a Figma file to import, a supported plugin installation or a complete portable dependency closure. It has not been uploaded as a release asset.
+For an occasional change, use the task-sized records in [design-to-code handoff](DESIGN-TO-CODE.md), [selected component maintenance](COMPONENT-MAINTENANCE.md) or [variable/style maintenance](MAINTENANCE.md). Apply the native gates relevant to the affected assets and requested release. Unrelated whole-catalogue/page goals are separate; this does not waive fonts, supported edits, identity or consumer checks for a component actually being released.
+
+Fresh-agent source/runbook audits can establish that instructions are navigable. They do not replace a novice performing the native plugin operation, designer acceptance of Storybook output or consumer publication acceptance.
 
 ## Inherited connector transport gates
 

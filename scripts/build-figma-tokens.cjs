@@ -113,7 +113,7 @@ function main(argv) {
       .map(([file]) => path.relative(TOOL_ROOT, file));
     if (stale.length)
       throw new Error(
-        `Stale or missing output: ${stale.join(', ')}. Close the plugin and run yarn build:figma-tokens.`
+        `Stale or missing output: ${stale.join(', ')}. Close the plugin and run npm run build:kit.`
       );
     process.stdout.write(
       'build-figma-tokens: JSON and plugin runtime are current; no files changed\n'

@@ -4,6 +4,22 @@ Source-backed Figma maintenance tooling for [Mangrove](https://github.com/unisdr
 
 This repository owns the extracted variable/style maintenance implementation from [draft PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319), pinned in [source-lock.json](source-lock.json). It includes the exporter, importer, maintenance interface and focused mock tests. The normal construction entry is now migrated separately from maintenance; its source catalogue contains 32 families and 383 finite variants. The expanded 139-family/2,269-variant recipe source is now extracted and has complete packet parity. Its reviewed preparation/export commands are available; public reference retrieval has passed and the optional 19-test supporting cohort is available. This extraction does not establish new native Figma acceptance or publication.
 
+## Start with the requested change
+
+This is a seed kit with occasional maintenance, not a requirement to keep regenerating every Figma component from Storybook. A designer can change Figma and ask a developer to implement the selected result manually in Mangrove. Code remains the executable source; the approved Figma checkpoint supplies design intent. There is no automatic reverse synchronisation.
+
+| Request                                                 | Start here                                                                                                       | Tooling needed                                                                                             |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Designer changed a component or proposed a new one      | [Design-to-code handoff](docs/DESIGN-TO-CODE.md) and [request template](docs/templates/DESIGN-CHANGE-REQUEST.md) | Work in Mangrove and review the selected Storybook stories; no Figma rebuild is required                   |
+| Update source-backed variables or styles in Figma       | [Maintenance runbook](docs/MAINTENANCE.md)                                                                       | `npm run build`, `npm run check`, `npm test`; maintenance plugin                                           |
+| Bring an existing supported component change into Figma | [Selected component maintenance](docs/COMPONENT-MAINTENANCE.md)                                                  | `npm run build:kit`, `npm run check:kit`, `npm run test:kit`; normal plugin with explicit family selection |
+| Introduce a new Figma family                            | [Adapter extension checklist](docs/COMPONENT-MAINTENANCE.md)                                                     | Implement and review a finite recipe; source stories alone do not generate a native family                 |
+| Explore expanded families or page patterns              | [Expanded workflow](docs/EXPANDED-WORKFLOW.md)                                                                   | Optional guarded export; not a prerequisite for routine maintenance                                        |
+
+Use [Figma file orientation](docs/FIGMA-FILES.md) to distinguish the canonical kit, consumer, latest rehearsal and preserved artifacts.
+
+For a new agent, read `AGENTS.md`, this table and the applicable runbook first. Record the two repository revisions, exact Figma nodes or story IDs, intended scope and ownership before changing anything. Use the request template as the acceptance record. Migration receipts and broad release history are supporting evidence, not the normal task list.
+
 ## Setup
 
 Use Node.js 22.18 or later within the 22 series, or Node.js 24.11 or later. Prepare an installed Mangrove source checkout at supported revision `1639293738232ade132b442ab0fe983dec3d65d5`, recorded separately from initial extraction provenance in `source-lock.json`. That checkout owns its token engine and source dependencies; follow its installation instructions. You can keep it beside this repository.
@@ -16,7 +32,7 @@ npm run check
 npm test
 ```
 
-The source path is explicit: this project does not copy or maintain a second set of Mangrove tokens or component styles. Existing source guards report incompatible inputs. The pin records the supported source checkpoint; selecting another revision requires output comparison and review.
+The source path is explicit: this project does not copy or maintain a second set of Mangrove tokens or component styles. The pin records the known compatible source checkpoint. Default maintenance/normal commands check required paths, token-engine exports and selected source representation guards; they do not enforce complete Git revision or source-lock hash equality. Selecting another revision is a deliberate compatibility review: record the candidate revision and intended output changes, keep unexpected differences unresolved, and update the supported pin only after review. Expanded preparation separately enforces its explicit revision and byte-admission contracts. Do not bypass a source guard or replace hashes simply to make a candidate pass.
 
 ## Figma maintenance plugin
 

@@ -1,6 +1,6 @@
 # Repository split status
 
-Updated 7 October 2026. Repository split review is the current focus. Native Figma changes and publication remain parked.
+Updated 7 October 2026. Repository split review remains pending. The current handoff now prioritises occasional maintenance and manual designer-to-Storybook changes; see the README request table. Native canvas changes and publication remain parked.
 
 ## Completed migration evidence
 
@@ -18,7 +18,7 @@ The final remote expanded export and all 19 supporting tests passed independent 
 
 Repository split implementation and local verification are complete. Human acceptance and merge of [toolkit PR #1](https://github.com/PreventionWeb/undrr-mangrove-figma/pull/1) and [Mangrove PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319) remain pending. Both PRs stay draft. The Mangrove diff has four paths and retains its `spike/react-aria-surface` base.
 
-The inactive sources and historical contract documents are indexed rather than additional migration implementation gates. Final documentation and metadata commits retain the verified executable bytes.
+The inactive sources and historical contract documents are indexed rather than additional migration implementation gates. The earlier final documentation and metadata commits retain the verified executable bytes. The later workflow-hardening pass changes runbooks/navigation and one stale build-command diagnostic; all six local commands pass with retained generated-output pins. A fresh-agent read-only scenario dry-run passed, while human novice/native acceptance remains open.
 
 ## Acceptance boundary
 
