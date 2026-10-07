@@ -18,6 +18,19 @@
       "downloadUrl": null,
       "sha256": "3ba8ec31f90cde23b5d3c868bbc05b8238bf57fef3ba1d019c33f328890afbec",
       "checksumSource": "upstream PR description; verification pending"
+    },
+    {
+      "kind": "selected-card-cta-release-evidence",
+      "status": "independently verified local delivery; not uploaded",
+      "filename": "Mangrove-Card-CTA-evidence-d5e790d3-20261007.zip",
+      "bytes": 4549422,
+      "files": 78,
+      "sha256": "ecbca8dfaff06be010565920699de138668b69d0214a5c632e68a3ec5f979cf9",
+      "sourceRevision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
+      "downloadUrl": null,
+      "independentVerdictSHA256": "e11c631c7297b3a02b77a74f3730d2ee8e57abaa3c80d3bcb8555633ef8ad0be",
+      "scope": "Selected review evidence only; no import, supported installation, complete portable dependency closure or source/native/publication equivalence."
     }
-  ]
+  ],
+  "currentDocumentationCheckpoint": "d5e790d3b0318730fdbd270279f340f35a2833ab"
 }
