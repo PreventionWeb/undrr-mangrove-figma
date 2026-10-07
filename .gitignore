@@ -1,0 +1,6 @@
+node_modules/
+.cache/
+examples/figma-plugin/mangrove-maintenance-tokens.json
+examples/figma-plugin/maintenance/build/
+evidence/downloads/
+.DS_Store
