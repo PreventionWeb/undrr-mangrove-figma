@@ -10,10 +10,13 @@
   "scripts": {
     "build": "node scripts/build-figma-maintenance.cjs",
     "check": "node scripts/build-figma-maintenance.cjs --check",
-    "test": "node examples/figma-plugin/dev/mock-maintenance-export.cjs && node examples/figma-plugin/dev/mock-maintenance.cjs",
+    "test": "node examples/figma-plugin/dev/mock-maintenance-export.cjs && node examples/figma-plugin/dev/mock-maintenance.cjs && npm run test:hooks",
     "build:kit": "node scripts/build-figma-tokens.cjs",
     "check:kit": "node scripts/build-figma-tokens.cjs --check",
-    "test:kit": "node examples/figma-plugin/dev/mock-kit-migration.cjs && node examples/figma-plugin/dev/mock-kit.cjs && node examples/figma-plugin/dev/mock-kit-layout.cjs && node examples/figma-plugin/dev/mock-kit-canvas-flow.cjs && node examples/figma-plugin/dev/mock-ui-layout.cjs && node examples/figma-plugin/dev/mock-review-export.cjs && node examples/figma-plugin/dev/mock-font-defaults-integration.cjs"
+    "test:kit": "node examples/figma-plugin/dev/mock-kit-migration.cjs && node examples/figma-plugin/dev/mock-kit.cjs && node examples/figma-plugin/dev/mock-kit-layout.cjs && node examples/figma-plugin/dev/mock-kit-canvas-flow.cjs && node examples/figma-plugin/dev/mock-ui-layout.cjs && node examples/figma-plugin/dev/mock-review-export.cjs && node examples/figma-plugin/dev/mock-font-defaults-integration.cjs",
+    "prepare": "node scripts/setup-git-hooks.cjs",
+    "hooks:install": "node scripts/setup-git-hooks.cjs",
+    "test:hooks": "node scripts/test-git-hooks.cjs"
   },
   "dependencies": {
     "@babel/parser": "7.28.5",
