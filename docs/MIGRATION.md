@@ -32,12 +32,16 @@ This archive has no release download URL yet. It does not establish clean refere
 
 ## Next steps
 
-1. Complete a clean-download source/reference workflow and native acceptance for the extracted maintenance entry. Keep the complete output comparison as a migration gate for later cohorts.
-2. Preserve an immutable complete upstream spike checkpoint and independently verify an archive before changing or removing its branch.
-3. Audit full builder dependencies and classify captured files as required inputs, small test fixtures, reproducible outputs or historical evidence. Some source-footprint captures are executable recipe inputs and cannot simply be deleted.
-4. Migrate the builder and recipes in independently reviewable cohorts. Keep experimental catalogue work separate from the maintenance entry.
-5. Package required bulk reference inputs as release assets. Index exact file names, byte sizes, SHA256 digests, source revisions, provenance and retrieval URLs. Verify downloading and building from a clean checkout before claiming portability.
-6. Reduce upstream PR #1319 to necessary source/export changes, with links to this repository and the preserved checkpoint. Reconcile the intended base with the separate React Aria work.
+See [the current split status](SPLIT-STATUS.md) for verified checkpoints, unresolved input boundaries and final migration gates.
+
+1. Resolve observed expanded input ownership and loader dependencies, including opaque reads and ambient configuration discovery.
+2. Migrate expanded recipes, supporting tests and operational tooling in independently reviewed cohorts with exact output compatibility. Keep experimental catalogue work separate from maintenance.
+3. Package required bulk reference inputs as immutable release assets. Index exact membership, byte sizes, SHA256 digests, source revisions, licences, provenance and retrieval URLs.
+4. Verify downloading and building from fresh checkouts at the final toolkit head before claiming portability. Check the complete expanded packet and retain exact maintenance/normal outputs and refusal behaviour.
+5. Account for all remaining tooling and index historical evidence. Preserve the complete tracked upstream checkpoint, Git history and separate native backups.
+6. Reduce upstream PR #1319 to necessary source/export changes and integration documentation, with links to this repository and the preserved checkpoint. Retain its `spike/react-aria-surface` base.
+
+Native acceptance remains a separate release gate. It is not required to demonstrate repository relocation, and relocation does not close it.
 
 ## Acceptance limits
 
