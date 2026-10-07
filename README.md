@@ -33,3 +33,11 @@ The exporter currently produces 520 variables, 102 text definitions and eight ef
 See [local validation](docs/VALIDATION.md), [the migration plan](docs/MIGRATION.md), [evidence index](evidence/index.json) and [upstream parking point](https://github.com/unisdr/undrr-mangrove/blob/a4bb46dafb7134a230e9c79fd26cd7306d2a6203/examples/figma-plugin/holistic/PARKING-POINT-2026-10-07.md). The upstream spike remains the historical reference until migration is complete.
 
 Licensed under Apache-2.0; extracted source retains its upstream provenance.
+
+## Contribution commits
+
+Pull requests merge by squash only. Use a Conventional Commit subject, for example `fix(importer): preserve style identities`. The squash title defaults to the PR title and its message includes the constituent commit messages.
+
+`npm install` / `npm ci` install the checked-in `commit-msg` hook through the `prepare` script. If lifecycle scripts are disabled, run `npm run hooks:install` manually. The hook validates the subject while allowing human and AI attribution lines unchanged, including `Co-authored-by: Claude …`, `Co-authored-by: Codex …`, `AI-Contributed-by: …`, generated-by lines and session references. Attribution is optional and is never inferred or injected. Run `npm run test:hooks` to check this policy.
+
+Local hooks do not run when GitHub creates a squash commit; review the final squash message to retain the desired contribution lines.

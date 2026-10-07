@@ -1,0 +1,47 @@
+#!/bin/sh
+#
+# commit-msg hook — enforces Conventional Commits and allows AI contribution attribution.
+#
+# Activated for everyone via `core.hooksPath` (set by the package.json "prepare"
+# script on `npm install`). To run it manually: git config core.hooksPath githooks
+#
+# The subject line must follow Conventional Commits. Body text, human/AI
+# Co-authored-by trailers, AI-Contributed-by, generated-by and session lines
+# are accepted without rewriting or adding attribution.
+#
+# Bypass in a genuine emergency with `git commit --no-verify` (records nothing).
+
+msg_file="$1"
+
+# The authored message only: drop git's comment lines (`#`) and everything below
+# a `# ---- >8 ----` scissors line, neither of which ends up in the final commit.
+authored=$(sed -e '/^#\{1,\} \{0,\}-\{1,\} \{0,\}>8 \{0,\}-\{1,\}/,$d' -e '/^#/d' "$msg_file")
+
+# First non-empty line is the subject.
+subject=$(printf '%s\n' "$authored" | sed -e '/^[[:space:]]*$/d' | sed -n '1p')
+
+fail() {
+  printf '\n\033[31mcommit-msg rejected:\033[0m %s\n\n' "$1" >&2
+}
+
+# --- Exemptions: git-generated subjects that are not authored feature commits ---
+case "$subject" in
+  "Merge "*|"Revert \""*|"fixup! "*|"squash! "*|"amend! "*)
+    exit 0
+    ;;
+esac
+
+# --- Check 1: Conventional Commits subject ---
+# type(optional-scope)!: description   (description must be non-empty)
+conventional='^(feat|fix|docs|chore|test|refactor|style|perf|build|ci|revert)(\([a-z0-9._/-]+\))?(!)?: .+'
+if ! printf '%s' "$subject" | grep -Eq "$conventional"; then
+  fail "subject line is not a Conventional Commit."
+  printf '  Got:      %s\n' "$subject" >&2
+  printf '  Expected: type(optional-scope): description\n' >&2
+  printf '  Types:    feat fix docs chore test refactor style perf build ci revert\n' >&2
+  printf '  Example:  fix(theming): resolve broken IRP button hover token\n\n' >&2
+  exit 1
+fi
+
+# Contribution trailers and generated-by/session lines are allowed unchanged.
+exit 0

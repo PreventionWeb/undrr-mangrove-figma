@@ -1,3 +1,5 @@
 # Agent instructions
 
 Read README.md, docs/MIGRATION.md and source-lock.json before changing source boundaries. Keep Mangrove tokens and styles upstream; use MANGROVE_SOURCE_ROOT rather than copying them. Run npm run build, npm run check and npm test for maintenance implementation changes. Preserve exact output and identity compatibility when extracting code. Do not equate mock checks with native acceptance. Do not commit generated bundles, bulk captures or historical evidence. Record source revisions and checksums for evidence packages. Upstream checkpoints and Figma publication must not be changed merely to complete a migration.
+
+Use Conventional Commit subjects. AI contribution trailers are allowed and optional; retain accurately supplied attribution. Run npm run test:hooks when changing commit policy.
