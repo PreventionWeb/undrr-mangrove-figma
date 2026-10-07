@@ -18,7 +18,7 @@ The upstream maintenance merge manifest is retained as provenance in `source-loc
 
 ## Normal construction cohort
 
-The normal 32-family/383-variant exporter, runtime and bounded connector compiler now live here with focused harnesses. Mangrove source reads use `MANGROVE_SOURCE_ROOT`; compiler/parser dependencies and Figma helper reads use this toolkit. Maintenance remains the default build/test workflow, with optional `build:kit`, `check:kit` and `test:kit` commands. Expanded recipes and their bulk inputs remain later cohorts.
+The normal 32-family/383-variant exporter, runtime and bounded connector compiler now live here with focused harnesses. Mangrove source reads use `MANGROVE_SOURCE_ROOT`; compiler/parser dependencies and Figma helper reads use this toolkit. Maintenance remains the default build/test workflow, with optional `build:kit`, `check:kit` and `test:kit` commands. Expanded recipes have now been extracted separately; their external reference delivery and supporting workflow migration are still in progress.
 
 The normal JSON (14,776,426 bytes; SHA256 `4525e54bda48ecf28fc2503e534a132658ebc4ab7f26d8845be07713bc965943`) and full runtime (1,051,949 bytes; SHA256 `0954833c96b7ae710fc6876469e3bc72ba7c892dd03d4292e809bc4abf5082fd`) match the retained upstream output exactly. The initial source-only fixture exposed a remaining upstream Figma helper read; the corrected FormAction precision guard now reads the toolkit helper and still refuses changed precision or source mapping. Layout/canvas harnesses load their existing required helpers. Passing extraction checks do not close native release gates.
 
