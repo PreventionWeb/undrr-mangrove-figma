@@ -2,7 +2,7 @@
 
 Source-backed Figma maintenance tooling for [Mangrove](https://github.com/unisdr/undrr-mangrove).
 
-This initial scaffold extracts the reduced variable/style maintenance implementation from [draft PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319), pinned in [source-lock.json](source-lock.json). It includes the exporter, importer, maintenance interface and focused mock tests. The normal construction entry is now migrated separately from maintenance; its source catalogue contains 32 families and 383 finite variants. The expanded 139-family/2,269-variant recipe source is now extracted and has complete packet parity. Its portable setup, supporting test migration and reference delivery remain in progress. This extraction does not establish new native Figma acceptance or publication.
+This initial scaffold extracts the reduced variable/style maintenance implementation from [draft PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319), pinned in [source-lock.json](source-lock.json). It includes the exporter, importer, maintenance interface and focused mock tests. The normal construction entry is now migrated separately from maintenance; its source catalogue contains 32 families and 383 finite variants. The expanded 139-family/2,269-variant recipe source is now extracted and has complete packet parity. Its reviewed preparation/export commands are available; supporting test migration and reference delivery remain in progress. This extraction does not establish new native Figma acceptance or publication.
 
 ## Setup
 
@@ -36,7 +36,7 @@ npm run check:kit
 npm run test:kit
 ```
 
-Import `examples/figma-plugin/manifest.json` as a development plugin and use generated `examples/figma-plugin/mangrove-variables.json` for this entry. Construction is separate from occasional variable/style maintenance and retains the [native release gates](docs/RELEASE-STATUS.md). The expanded recipe cohort includes page patterns and remains an optional workflow. Its portable entry and external reference delivery are still being completed.
+Import `examples/figma-plugin/manifest.json` as a development plugin and use generated `examples/figma-plugin/mangrove-variables.json` for this entry. Construction is separate from occasional variable/style maintenance and retains the [native release gates](docs/RELEASE-STATUS.md). The expanded recipe cohort includes page patterns and remains an optional workflow. See [the expanded workflow](docs/EXPANDED-WORKFLOW.md) for explicit preparation/export commands. External reference delivery and final portability verification are still being completed.
 
 The normal JSON and runtime match their preserved upstream bytes; this establishes extraction compatibility, not native rendering, edits, publication or a clean remote upstream source installation. Compiler/parser dependencies are installed locally in this toolkit. Mangrove supplies its own token engine, source components, styles and media; the build does not read upstream Figma tooling.
 

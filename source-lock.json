@@ -231,6 +231,23 @@
         "note": "Compact metadata expands to the exact reviewed manifest. Payloads remain external. Portable setup and supporting test cohorts are separate migration gates."
       },
       "acceptance": "Complete migrated packet is byte-identical to the preserved original in an installed source-only fixture with an admitted seven-part local cache. This does not establish public retrieval, final thin-source parity or native acceptance."
+    },
+    {
+      "name": "expanded-portable-commands",
+      "paths": [
+        "scripts/prepare-figma-expanded.cjs",
+        "scripts/export-figma-expanded.cjs",
+        "scripts/figma-expanded-compact.cjs",
+        "scripts/figma-expanded-inputs.cjs"
+      ],
+      "reviewedPrivateRevision": "R7",
+      "independentReviewSHA256": "72eb261553b020aab4f5ef45921b18a917c374724a46aad1b7eaff5dd74aa0b0",
+      "modeledExportBranches": 14,
+      "actualPortableExportVerified": false,
+      "notes": [
+        "Exact reviewed modules adopted; default maintenance and normal construction remain separate.",
+        "Thin integration checks actual Git HEAD and finite source content; final upstream revision remains pending."
+      ]
     }
   ]
 }
