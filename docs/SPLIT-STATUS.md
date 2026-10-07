@@ -21,6 +21,8 @@ Updated 7 October 2026. Repository migration is the current focus. Native Figma 
 
 ## Acceptance boundary
 
+Additional bounded connector tests reproduce two original payload-budget failures exactly; see [the inherited transport gates](RELEASE-STATUS.md#inherited-connector-transport-gates). Their assertions remain intact and their failure is separate from extraction compatibility.
+
 These checks establish migration evidence only. Expanded native rendering, fonts, capacity, page assembly, publication, consumer restoration and novice handoff remain separate [release gates](RELEASE-STATUS.md). Passing token publication or source recipes does not satisfy them. No upstream thinning or expanded reference admission has occurred yet.
 
 GitHub listing endpoints may be suppressed. Status is checked through exact-number PR requests; listing responses are not used to claim queue completeness. Actions are unavailable, so verification is local.

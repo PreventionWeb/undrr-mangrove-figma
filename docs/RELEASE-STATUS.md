@@ -39,3 +39,9 @@ The next comparison must retain recorded origins, full caller surface, overflow,
 - Reconcile the thin Mangrove PR with its `spike/react-aria-surface` base and retain only the necessary source contracts, integration and documentation.
 
 The selected local 78-file evidence package is indexed in [evidence/index.json](../evidence/index.json). It is review evidence, not a Figma file to import, a supported plugin installation or a complete portable dependency closure. It has not been uploaded as a release asset.
+
+## Inherited connector transport gates
+
+Two additional bounded tests fail at the preserved upstream checkpoint and during private migration preparation with the same payload sizes: `mock-connector-scopes.cjs` produces a 49,327-byte Editorial CTA payload against its 49,000-byte headroom assertion; `scripts/test-figma-coincident-connector.cjs` produces 51,755 bytes against the unchanged 50,000-byte production ceiling. The selected Editorial CTA code and complete metadata are byte-identical between original and extracted toolchains. Its code SHA256 is `257c197eef0c52f4472ad20d18ff2b678cf9d3dd33e11e7061e806e657d19234`.
+
+These are inherited optional transport gates, not demonstrated extraction regressions. The assertions and production ceiling remain intact. The passing default maintenance/normal workflows and earlier bounded connector comparisons do not establish acceptance of these additional scopes. Splitting repositories does not resolve them.
