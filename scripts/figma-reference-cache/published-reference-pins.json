@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "repository": "PreventionWeb/undrr-mangrove-figma",
+  "releaseTag": "mangrove-observed-reference-d5e790d3-v1",
+  "allowedHosts": [
+    "github.com",
+    "release-assets.githubusercontent.com"
+  ],
+  "memberSetSHA256": "7490441cc0e7254971963e5eb1d4cf5a1ccda454e891509b83fdf20994de8bf0",
+  "assets": [
+    {
+      "name": "reference-part-01.tar.gz",
+      "url": "https://github.com/PreventionWeb/undrr-mangrove-figma/releases/download/mangrove-observed-reference-d5e790d3-v1/reference-part-01.tar.gz",
+      "bytes": 2088099,
+      "sha256": "bd7fe7639fab5a90e7353b2e84f1efa42d3dfd8dd7dc5affa225cda60e218b53"
+    },
+    {
+      "name": "reference-part-02.tar.gz",
+      "url": "https://github.com/PreventionWeb/undrr-mangrove-figma/releases/download/mangrove-observed-reference-d5e790d3-v1/reference-part-02.tar.gz",
+      "bytes": 20978337,
+      "sha256": "3d930384aadaccd1316818a750bfd8180077155202b2549642cc2d6c3138f8b1"
+    },
+    {
+      "name": "reference-part-03.tar.gz",
+      "url": "https://github.com/PreventionWeb/undrr-mangrove-figma/releases/download/mangrove-observed-reference-d5e790d3-v1/reference-part-03.tar.gz",
+      "bytes": 7219818,
+      "sha256": "65e7f77a43cfe027803999be87eb038f8128799b563fcc6759868484d263039d"
+    },
+    {
+      "name": "reference-part-04.tar.gz",
+      "url": "https://github.com/PreventionWeb/undrr-mangrove-figma/releases/download/mangrove-observed-reference-d5e790d3-v1/reference-part-04.tar.gz",
+      "bytes": 3046640,
+      "sha256": "934d7965d7abc1c44720ac9ab619921c2eaaca04ad94b4e497dc21284deaa3a4"
+    },
+    {
+      "name": "reference-part-05.tar.gz",
+      "url": "https://github.com/PreventionWeb/undrr-mangrove-figma/releases/download/mangrove-observed-reference-d5e790d3-v1/reference-part-05.tar.gz",
+      "bytes": 4743779,
+      "sha256": "ce7c7bef04d7ab6551a5e58048e1e00f6ed6e2e7011cc7674f0a5743ace5dada"
+    },
+    {
+      "name": "reference-part-06.tar.gz",
+      "url": "https://github.com/PreventionWeb/undrr-mangrove-figma/releases/download/mangrove-observed-reference-d5e790d3-v1/reference-part-06.tar.gz",
+      "bytes": 34924047,
+      "sha256": "52b38422710dffbac7715d864d31b07c7af208b40e324a187c0fefae1ef5403f"
+    },
+    {
+      "name": "reference-part-07.tar.gz",
+      "url": "https://github.com/PreventionWeb/undrr-mangrove-figma/releases/download/mangrove-observed-reference-d5e790d3-v1/reference-part-07.tar.gz",
+      "bytes": 3452443,
+      "sha256": "11f23053c13675c215e1a5e6601bef71a899ac257afc493e41721027b775b7a8"
+    },
+    {
+      "name": "bundle-index.json",
+      "url": "https://github.com/PreventionWeb/undrr-mangrove-figma/releases/download/mangrove-observed-reference-d5e790d3-v1/bundle-index.json",
+      "bytes": 869361,
+      "sha256": "32e9ad7bf5e256a0b283404f565aa1c9cb95ebce3238c71264c766013e3f6409"
+    },
+    {
+      "name": "provenance-license-index.json",
+      "url": "https://github.com/PreventionWeb/undrr-mangrove-figma/releases/download/mangrove-observed-reference-d5e790d3-v1/provenance-license-index.json",
+      "bytes": 2803922,
+      "sha256": "eb579c932b2b356cc141240acd568cfdf44935320221d219e7076036f3bd69dd"
+    }
+  ]
+}

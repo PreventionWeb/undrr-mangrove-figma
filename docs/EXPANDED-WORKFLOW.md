@@ -6,7 +6,22 @@ This optional workflow exports 139 recipe families and 2,269 variants. It is sep
 
 Install this toolkit with `npm ci`. Install the selected Mangrove source checkout using its own locked dependency workflow, build its source CSS, and run `npm run build:kit` here with `MANGROVE_SOURCE_ROOT` set to that checkout. Tokens, styles, source components, media and React dependencies remain owned by Mangrove.
 
-Preparation requires an explicit source revision, the checked-in compact admission manifest and its SHA256, an approved reference index and its SHA256, and a successful committed-cache receipt and its SHA256. Reference release delivery is still being completed. The authenticated draft downloads and local admission rehearsal do not establish public retrieval. There is currently no complete fresh-checkout setup claim.
+Preparation requires an explicit source revision, the checked-in compact admission manifest and its SHA256, an approved reference index and its SHA256, and a successful committed-cache receipt and its SHA256. The reference prerelease contains the exact required inputs, indexed by checksum with per-path provenance and licence records. Public retrieval and complete fresh-checkout setup are still undergoing verification.
+
+## Fetch reference inputs
+
+Use the optional download command with an explicit source checkout, an existing external cache parent and a new download directory outside protected roots:
+
+```sh
+npm run fetch:references -- \
+  --source-root /absolute/path/to/undrr-mangrove \
+  --cache-parent /absolute/path/to/reference-cache-parent \
+  --output /absolute/path/to/new-reference-download-directory
+```
+
+The command pins all nine release assets, verifies the index and provenance/licence sidecar, and admits all seven archives through the complete owned-cache verifier. It returns the exact `cacheAdmission` paths and checksums needed below. It preserves download and admission journals, including partial failures. Reference data is read-only; historical code proof is never executed. Retained UNKNOWN/unapproved provenance labels remain explicit and are not a blanket licence assignment.
+
+The download command has 12 offline wrapper cases and 14 provider fixtures plus independent review. Public retrieval remains a separate actual check. Default maintenance and normal construction do not download this package.
 
 ## Prepare and export
 
@@ -39,12 +54,12 @@ npm run export:expanded -- \
   --execute
 ```
 
-Export verifies the prepared configuration and current command modules, rechecks source/cache inputs, creates an exclusive attempt journal and invokes the existing exporter once. It retains stdout, stderr, terminal status, packet digest, final guards and an operation receipt. Failed operations retain their owned evidence. Existing output and attempts are refused; use a new directory for another attempt.
+Export verifies the prepared configuration and current command modules, rechecks source/cache inputs, creates an exclusive attempt journal and invokes the existing exporter once. It retains stdout, stderr, terminal status, packet digest, final guards and an operation receipt. Failed operations retain their owned evidence. Existing packet files and attempts are refused; use a new directory for another attempt.
 
 ## Verified scope
 
 The migrated full export at the preserved source checkpoint is byte-identical to the original: 210,368,334 bytes, SHA256 `f01e9a8e2700e3506c77f7dd0659b7f944e41f1703d01e0e7231b83bfa235b18`. That actual export used the independently reviewed migration runner. It does not by itself verify this newly adopted portable command end to end.
 
-The portable commands have independent review covering complete real disabled preparations, 19 focused command/profile cases, two additional dependency/base negatives, four returned-root faults and 14 modeled export branches. Modeled branches do not count as actual exports. The finite Tag path mapping preserves the historical logical citation while reading the exact tracked lowercase source filename. Linux execution remains unverified.
+The portable commands have independent review covering complete real disabled preparations, 19 focused command/profile cases, two additional dependency/base negatives, four returned-Git ownership/metadata faults and 14 modeled export branches. Modeled branches do not count as actual exports. The finite Tag path mapping preserves the historical logical citation while reading the exact tracked lowercase source filename. Linux execution remains unverified.
 
 Fresh release retrieval, shared-command thin-source export and final checkout verification remain required before claiming the split is portable. See [split status](SPLIT-STATUS.md) and [native release gates](RELEASE-STATUS.md).

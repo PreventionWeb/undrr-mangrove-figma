@@ -248,6 +248,21 @@
         "Exact reviewed modules adopted; default maintenance and normal construction remain separate.",
         "Thin integration checks actual Git HEAD and finite source content; final upstream revision remains pending."
       ]
+    },
+    {
+      "name": "reference-fetch",
+      "paths": [
+        "scripts/fetch-figma-references.cjs",
+        "scripts/figma-reference-cache/download-provider.cjs",
+        "scripts/figma-reference-cache/run-local-admission.cjs",
+        "scripts/figma-reference-cache/published-reference-pins.json"
+      ],
+      "independentReviewSHA256": "8ddf2e724d766e97663717f62612cdf315e772275139c6b7d99e8937d9106220",
+      "offlineWrapperCases": 12,
+      "offlineProviderCases": 14,
+      "publicRetrievalVerified": false,
+      "referenceIndexSHA256": "32e9ad7bf5e256a0b283404f565aa1c9cb95ebce3238c71264c766013e3f6409",
+      "referenceProvenanceSidecarSHA256": "eb579c932b2b356cc141240acd568cfdf44935320221d219e7076036f3bd69dd"
     }
   ]
 }
