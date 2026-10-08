@@ -19,6 +19,12 @@ One reviewer should assess the consolidated evidence for the bounded release. Ch
 
 Use exhaustive recovery checks when changing the importer, layout algorithm, ownership/identity handling, source boundary or existing topology, or when a native failure leaves partial state. Preserve failed reports and backups, inspect the full affected closure and shared users, and rehearse in an unpublished copy. Require separately reviewed recovery and repeat evidence before releasing. These deeper checks diagnose a changed mechanism; they are not the default ceremony for every occasional component update.
 
+### Remaining tooling simplification
+
+The report and review process above is available now. A single maintained native import entry for the selected Tag and Card/CTA profiles is still an implementation follow-up. Their source exporters are maintained, but the separately reviewed native adapters remain evidence tools. Do not treat their successful releases as proof that the default construction plugin supports them.
+
+Reuse `scripts/build-figma-connector.cjs` and the shared plugin modules for a selected native runner that loads the source profile, target configuration and baseline, performs preservation comparisons automatically and produces this one report. Start with Tag's finite review and HUG sizing policy. Card also requires the optional effect-surface capability and native packaging that loads media separately. Keep the normal 32-family/383-variant registry unchanged, generated bundles and bulk snapshots outside Git, and verify native equivalence after extracting these shared hooks. Avoid retaining copied historical runtime bodies as another maintenance path.
+
 ## Choose the source and adapter
 
 Record the actual Mangrove and toolkit Git revisions, intended family and variants, brand modes, affected shared styles, and library/consumer checkpoints. Record the exact page containing the existing main set and its expected set/variant node IDs. Set `MANGROVE_SOURCE_ROOT` to the installed Mangrove checkout; do not copy its tokens or styles into this toolkit.
