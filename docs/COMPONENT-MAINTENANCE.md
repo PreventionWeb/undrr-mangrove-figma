@@ -135,3 +135,19 @@ The first command downloads the authored UNDRR story image only when its cache i
 The initial selected profile SHA256 is `699346318e4e8c7187a92b38cb9d03faa7caa21f6a45352e5ed3f39dd8a7b6f3`. Its collection, modes, variables, styles and every component recipe field exactly match the reviewed mapped packet above. Its full hash differs because it contains honest selected-profile provenance instead of unrelated historical catalogue metadata. Source/mode/media refusal tests and unchanged default 32-family extraction checks pass.
 
 **This profile exports recipes only.** Its required `source-effect-surface-v1` capability is not present in the default maintained construction runtime. Do not load it into that runtime and infer support. The canonical integration above used a separately reviewed selected native adapter; that adapter is not supplied by the default construction commands. Future source changes still require reviewing the selected adapter and satisfying the affected release gates. Neither this exporter nor its tests publish library assets. Deliberate source changes require reviewing input guards, output differences and the current native admission baseline.
+
+## Selected Tag source profile
+
+The finite `tag-static-five-tones-v1` profile regenerates static intrinsic Latin SPAN Tags from the supported Mangrove checkout: Default, Secondary, Outline, Accent and Subtle. It includes all five brand modes, 29 transitive recipe/style/review variables, one text style and no effects. All five main recipes share the owning `Label` property with default `Organization`; the review examples retain their distinct source labels. Seven source file hashes guard the Tag stylesheet, stories, shared values and declared Roboto Condensed font inventory.
+
+After setting `MANGROVE_SOURCE_ROOT`, run:
+
+```sh
+npm run build:kit:tag -- --output /tmp/mangrove-tag-source.json
+npm run build:kit:tag -- --check --output /tmp/mangrove-tag-source.json
+npm run test:kit:tag:source
+```
+
+The initial profile SHA256 is `81bca4b741fb6288beaa2388916389e9bde8ed26be23e06f95ceb193508b3ad6`. Its collection, modes, whole variable records, style and component recipe fields exactly match the preserved Tag rehearsal packet. Its selected-profile provenance excludes unrelated historical catalogue metadata. Source/hash/mode/alias refusal checks pass, and the default 32-family/383-variant extraction remains unchanged. No generated packet is committed or written to the normal export path.
+
+**This is source preparation only.** The profile is not admitted by the default construction commands, and its source tests do not accept a new native build or publication. A separately reviewed finite adapter, unpublished rehearsal, canonical absence/identity checks, repeat verification, scoped publication and genuine consumer validation are still required for the current integration. Historical recipe evidence fields remain unchanged; they do not establish current acceptance. Linked interactions, badges, grouped containers, constrained long-label wrapping, RTL/Arabic, forced colours and motion are outside this profile. Requested CSS weight 500 resolves to the source's bundled Regular 400 face. Historical native intrinsic widths differ fractionally from browser widths; no rounding fix or font-byte/pixel-equivalence claim is made.

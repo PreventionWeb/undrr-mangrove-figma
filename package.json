@@ -21,7 +21,9 @@
     "test:kit:behavior": "node examples/figma-plugin/dev/mock-kit.cjs && node examples/figma-plugin/dev/mock-kit-layout.cjs && node examples/figma-plugin/dev/mock-kit-canvas-flow.cjs && node examples/figma-plugin/dev/mock-ui-layout.cjs && node examples/figma-plugin/dev/mock-review-export.cjs && node examples/figma-plugin/dev/mock-font-defaults-integration.cjs",
     "test:kit:card-cta": "node examples/figma-plugin/dev/mock-card-cta-integration.cjs",
     "build:kit:card-cta": "node scripts/build-figma-card-cta.cjs",
-    "test:kit:card-cta:source": "node examples/figma-plugin/dev/mock-card-cta-source.cjs"
+    "test:kit:card-cta:source": "node examples/figma-plugin/dev/mock-card-cta-source.cjs",
+    "build:kit:tag": "node scripts/build-figma-tag.cjs",
+    "test:kit:tag:source": "node examples/figma-plugin/dev/mock-tag-source.cjs"
   },
   "dependencies": {
     "@babel/parser": "7.28.5",
