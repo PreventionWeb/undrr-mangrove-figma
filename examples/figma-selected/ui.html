@@ -1,0 +1,143 @@
+<!doctype html><meta charset="utf-8" /><style>
+  body {
+    font: 13px system-ui;
+    margin: 20px;
+  }
+  label {
+    display: block;
+    margin: 16px 0;
+  }
+  button {
+    margin: 8px 8px 8px 0;
+  }
+  pre {
+    white-space: pre-wrap;
+    max-height: 100px;
+    overflow: auto;
+  }
+</style>
+<h2>Selected Tag rebuild</h2>
+<p>
+  Rebuild an existing accepted five-Tone Tag library. The source and foundations
+  must match. The runner checks all recorded pages, assets and links. It does
+  not publish.
+</p>
+<label
+  >Target configuration <input id="config" type="file" accept=".json" /></label
+><label
+  >Full native baseline <input id="baseline" type="file" accept=".json"
+/></label>
+<label
+  ><input id="association" type="checkbox" /> I checked the current file URL and
+  page against the configuration.</label
+><label
+  ><input id="approval" type="checkbox" /> Rebuild the existing selected Tag
+  only, with unchanged source.</label
+>
+<button id="capture">Capture baseline</button><button id="run">Rebuild</button
+><button id="save" disabled>Save report</button
+><button id="checkpoint" disabled>Save failure checkpoint</button
+><button id="close">Close</button>
+<pre id="status">Ready</pre>
+<script>
+  let report, checkpoint;
+  const el = (id) => document.getElementById(id);
+  function save(value, name) {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(
+      new Blob([JSON.stringify(value, null, 2)], { type: "application/json" }),
+    );
+    a.download = name;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+  el("run").onclick = async () => {
+    try {
+      const c = el("config").files[0],
+        b = el("baseline").files[0];
+      if (!c || !b || !el("association").checked || !el("approval").checked)
+        throw Error("Choose both inputs and confirm the target and rebuild.");
+      el("run").disabled = true;
+      el("status").textContent = "Reading configuration (" + c.size + " bytes)";
+      const configRaw = await c.text();
+      el("status").textContent =
+        "Reading baseline (" + (b.size / 1048576).toFixed(1) + " MiB)";
+      const baselineRaw = await b.text();
+      el("status").textContent = "Sending inputs; waiting for Figma validation";
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      parent.postMessage(
+        {
+          pluginMessage: {
+            type: "selected-tag-rebuild",
+            configRaw,
+            baselineRaw,
+            associationConfirmed: true,
+            rebuildApproved: true,
+          },
+        },
+        "*",
+      );
+    } catch (e) {
+      el("status").textContent = String(e);
+      el("run").disabled = false;
+    }
+  };
+  el("capture").onclick = async () => {
+    try {
+      const c = el("config").files[0];
+      if (!c || !el("association").checked)
+        throw Error(
+          "Choose target configuration and confirm current file/page.",
+        );
+      el("capture").disabled = true;
+      el("status").textContent =
+        "Reading target configuration (" + c.size + " bytes)";
+      const configRaw = await c.text();
+      el("status").textContent = "Sending capture request; waiting for Figma";
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      parent.postMessage(
+        {
+          pluginMessage: {
+            type: "selected-tag-capture",
+            configRaw,
+            associationConfirmed: true,
+          },
+        },
+        "*",
+      );
+    } catch (e) {
+      el("status").textContent = String(e);
+      el("capture").disabled = false;
+    }
+  };
+  el("save").onclick = () =>
+    save(report, "mangrove-selected-tag-rebuild-report.json");
+  el("checkpoint").onclick = () =>
+    save(checkpoint, "mangrove-selected-tag-rebuild-checkpoint.json");
+  el("close").onclick = () =>
+    parent.postMessage({ pluginMessage: { type: "close" } }, "*");
+  onmessage = ({ data }) => {
+    const m = data.pluginMessage;
+    if (!m) return;
+    if (m.type === "stage")
+      el("status").textContent = m.stage + (m.nodes ? " " + m.nodes : "");
+    if (m.type === "checkpoint") {
+      checkpoint = m.report;
+      el("checkpoint").disabled = false;
+    }
+    if (m.type === "report" || m.type === "snapshot") {
+      el("capture").disabled = false;
+      report = m.report;
+      el("save").disabled = false;
+      el("run").disabled = false;
+      el("status").textContent =
+        (report.complete
+          ? m.type === "snapshot"
+            ? "Read-only capture complete. Preservation has not been checked."
+            : "Recorded preservation passed. Native visual review remains separate."
+          : "Incomplete or refused.") +
+        "\n" +
+        (report.errors || []).join("\n");
+    }
+  };
+</script>

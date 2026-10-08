@@ -1001,6 +1001,7 @@ async function buildConnector({
   checkFonts = false,
   doc,
   experimentFileKey,
+  selectedNative = false,
 } = {}) {
   if (!['build', 'import', 'diagnostics', 'inspect'].includes(operation))
     throw new Error(
@@ -1061,6 +1062,12 @@ async function buildConnector({
     throw new Error(
       'Import batches require unique variableIds/styleIds and at least one selected ID.'
     );
+  if (
+    selectedNative &&
+    (operation !== 'build' || requested.length !== 1 || requested[0] !== 'tag' ||
+      variantIds !== undefined || experimentFileKey !== undefined)
+  )
+    throw new Error('Selected native compiler supports complete existing Tag only.');
   // Use the importer source contract before narrowing away other brand values.
   const caseSource = fs.readFileSync(path.join(PLUGIN, 'importer.js'), 'utf8');
   const caseStart = caseSource.indexOf('function validateMangroveTextCase(');
@@ -1587,7 +1594,7 @@ async function buildConnector({
       fs.readFileSync(path.join(PLUGIN, 'kit-svg-sizing.js'), 'utf8') + '\n;\n';
   let packedDocument = subset;
   if (runtime) {
-    const runtimeSource = fs.readFileSync(path.join(PLUGIN, runtime), 'utf8');
+    let runtimeSource = fs.readFileSync(path.join(PLUGIN, runtime), 'utf8');
     if (absoluteStartEnabled) {
       const start = runtimeSource.indexOf(
           'function mgAbsolutePlan(tree, parent) {'
@@ -1614,6 +1621,8 @@ async function buildConnector({
         ...subset,
         connectorSvgPlans: verifiedSvgPlans(subset, runtimeSource, doc),
       };
+    if (selectedNative)
+      runtimeSource = require('./lib/selected-native-builder.cjs').selectedNativeBuilder(runtimeSource);
     source +=
       (operation === 'build'
         ? specializeBuilder(runtimeSource, subset)

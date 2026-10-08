@@ -6,3 +6,5 @@ evidence/downloads/
 .DS_Store
 examples/figma-plugin/build/
 examples/figma-plugin/mangrove-variables.json
+
+examples/figma-selected/build/

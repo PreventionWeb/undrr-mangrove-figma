@@ -23,7 +23,9 @@
     "build:kit:card-cta": "node scripts/build-figma-card-cta.cjs",
     "test:kit:card-cta:source": "node examples/figma-plugin/dev/mock-card-cta-source.cjs",
     "build:kit:tag": "node scripts/build-figma-tag.cjs",
-    "test:kit:tag:source": "node examples/figma-plugin/dev/mock-tag-source.cjs"
+    "test:kit:tag:source": "node examples/figma-plugin/dev/mock-tag-source.cjs",
+    "build:selected": "node scripts/build-figma-selected.cjs",
+    "test:selected": "node examples/figma-selected/test.cjs && node examples/figma-selected/controller-model.test.cjs && node examples/figma-selected/progress.test.cjs"
   },
   "dependencies": {
     "@babel/parser": "7.28.5",
