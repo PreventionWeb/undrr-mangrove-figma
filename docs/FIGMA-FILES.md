@@ -17,6 +17,10 @@ The 8 October release checkpoints were saved and read back in native Version his
 
 [Earlier Tag, Section Header and search-state experiment](https://www.figma.com/design/GbVTvFbuWjoJr6Bf5t4fhg) remains an exploratory artifact. Use the published canonical Tag above; Section Header and search-state integration remain pending. It contains only a small native subset, not the full 139-family recipe catalogue.
 
+## Designer pilot
+
+The consumer file now has a separate [Designer pilot / PreventionWeb resources page](https://www.figma.com/design/wOTLILmiXUI3uzG2BdPUxB?node-id=68-432), with editable desktop and phone compositions using genuine published Book Card, Tag and Editorial CTA instances. Its copy and cover images are illustrative. Human usability and design approval remain pending; follow the [pilot brief](DESIGNER-PILOT.md). Existing finite validation stages remain on Page 1 and keep their recorded acceptance scope.
+
 ## Retired rehearsals and status labels
 
 On 8 October 2026, four superseded Card/CTA rehearsals were retired from active use in place. Their Figma file names now start with `ARCHIVED` and include `use main kit Zgjq8pQ0FMT8d6dhw9M5bt`. The labels were verified in the refreshed online file manager. Use the canonical kit and consumer validation file above for current work.
