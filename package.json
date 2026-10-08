@@ -18,7 +18,8 @@
     "hooks:install": "node scripts/setup-git-hooks.cjs",
     "test:hooks": "node scripts/test-git-hooks.cjs",
     "test:kit:extraction": "node examples/figma-plugin/dev/mock-kit-migration.cjs",
-    "test:kit:behavior": "node examples/figma-plugin/dev/mock-kit.cjs && node examples/figma-plugin/dev/mock-kit-layout.cjs && node examples/figma-plugin/dev/mock-kit-canvas-flow.cjs && node examples/figma-plugin/dev/mock-ui-layout.cjs && node examples/figma-plugin/dev/mock-review-export.cjs && node examples/figma-plugin/dev/mock-font-defaults-integration.cjs"
+    "test:kit:behavior": "node examples/figma-plugin/dev/mock-kit.cjs && node examples/figma-plugin/dev/mock-kit-layout.cjs && node examples/figma-plugin/dev/mock-kit-canvas-flow.cjs && node examples/figma-plugin/dev/mock-ui-layout.cjs && node examples/figma-plugin/dev/mock-review-export.cjs && node examples/figma-plugin/dev/mock-font-defaults-integration.cjs",
+    "test:kit:card-cta": "node examples/figma-plugin/dev/mock-card-cta-integration.cjs"
   },
   "dependencies": {
     "@babel/parser": "7.28.5",

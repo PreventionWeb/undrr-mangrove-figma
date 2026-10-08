@@ -90,3 +90,20 @@ In the native rehearsal, compare the changed source with the actual selected mai
 **Save results** downloads an operation report. Figma saving persists file edits. Neither action publishes the library. The plugin has no publication action.
 
 After the rehearsal and applicable review, perform the bounded canonical-library update with the same reviewed inputs and record its actual keys and links. Publish only the intended changed assets and required dependencies through Figma's publication UI. Clear the broader **Changes** selection each time, because Figma can reselect pending drafts. Accept the update in a genuine linked consumer and verify recorded overrides, properties, text, geometry, modes and links. For a publication rehearsal, restore source values, republish the same bounded assets and verify consumer restoration. A new family must demonstrate genuine consumer linkage after publication; a local recovery-copy instance does not satisfy this check.
+
+## Current Card and Editorial CTA integration
+
+The bounded integration in progress adds eight `horizontal-book-card` variants and updates the existing 23 `editorial-cta` variants in place. The existing `card-horizontal` and text `cta` families stay intact. This is a selected adapter task, not an expansion of the default 32-family exporter.
+
+`scripts/figma-card-cta-integration.cjs` prepares a finite candidate from the exact reviewed corrected source packet. It applies four linked-title width limits derived from the five brand allocations and gives the Book Card inset border its own effect-style identity. The dedicated style avoids changing the canonical `shadow.raised` style and its unrelated users. Existing Editorial CTA recipes, variables and text styles remain unchanged in the packet transform.
+
+Run `npm run test:kit:card-cta` for the focused transform checks. To prepare or check an output, supply the reviewed packet explicitly:
+
+```sh
+node scripts/figma-card-cta-integration.cjs reviewed-source-packet.json candidate-output.json
+node scripts/figma-card-cta-integration.cjs --check reviewed-source-packet.json candidate-output.json
+```
+
+The accepted input SHA256 is `5f677a0d3fdd25427afc1c1037ebf93333982388289242f60e9e3fae16913f1f`; the mapped output SHA256 is `3c15aa849e281ee2e42f73a99c435efad728a0546783ec2c51e0fee17f238de0`. The packet belongs to the preserved Card/CTA evidence workflow. It is not embedded in this checkout. This command does not extract new recipes from current Mangrove source, build components, admit a native update or publish assets. Restoring the reproducible source extraction closure remains a separate focused task.
+
+As of 8 October 2026, the four title limits passed finite cloud owning-instance edit and restoration checks in the unpublished Card rehearsal. Captured UNDRR defaults have a source/native visual review for seed exploration. Native corrected-title rendering, five-brand raster review, canonical-copy integration, repeat-build identity/geometry, scoped canonical publication and genuine consumer uptake remain pending. A fresh native canonical backup and a separate unpublished canonical-copy rehearsal were created; the main kit has not been changed by this integration attempt.
