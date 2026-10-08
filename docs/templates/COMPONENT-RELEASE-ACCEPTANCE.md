@@ -17,36 +17,36 @@ Status: pending. No gate passes until its actual result is recorded.
 
 Record one accepted before-state for each actual target. Reuse its comparison result throughout this release. A rehearsal-copy baseline does not authorize a canonical target.
 
-| Evidence | Actual result | Evidence location |
-| --- | --- | --- |
-| Native backup and accepted before-state | Pending | |
-| Selected native operation | Pending | |
-| Automatic full preservation comparison | Pending | |
-| Intended additions/changes and journal closure | Pending | |
-| Existing identities, keys, properties, modes, edits and links | Pending | |
-| Native fonts and source bindings for affected cases | Pending | |
+| Evidence                                                      | Actual result | Evidence location |
+| ------------------------------------------------------------- | ------------- | ----------------- |
+| Native backup and accepted before-state                       | Pending       |                   |
+| Selected native operation                                     | Pending       |                   |
+| Automatic full preservation comparison                        | Pending       |                   |
+| Intended additions/changes and journal closure                | Pending       |                   |
+| Existing identities, keys, properties, modes, edits and links | Pending       |                   |
+| Native fonts and source bindings for affected cases           | Pending       |                   |
 
 ## Native review and ordinary repeat
 
-| Evidence | Actual result | Evidence location |
-| --- | --- | --- |
-| Representative native renders and reviewed cases | Pending | |
-| Supported owning-property edit and restoration | Pending | |
-| Ordinary rebuild, review refresh off | Pending | |
-| Stable full recorded state and zero unexpected permanent creations | Pending | |
+| Evidence                                                           | Actual result | Evidence location |
+| ------------------------------------------------------------------ | ------------- | ----------------- |
+| Representative native renders and reviewed cases                   | Pending       |                   |
+| Supported owning-property edit and restoration                     | Pending       |                   |
+| Ordinary rebuild, review refresh off                               | Pending       |                   |
+| Stable full recorded state and zero unexpected permanent creations | Pending       |                   |
 
 Record observed approximations, visual differences and coverage limits here. Expand representative review only when the affected scope warrants it.
 
 ## Canonical release and genuine consumer
 
-| Evidence | Actual result | Evidence location |
-| --- | --- | --- |
-| Canonical selected operation and preservation comparison | Pending | |
-| Saved online, exact intended main identities | Pending | |
-| Scoped publication, actual assets/dependencies | Pending | |
-| Genuine remote consumer linkage/update uptake | Pending | |
-| Recorded consumer edits, properties, geometry, modes and links preserved | Pending | |
-| Required consumer restoration/readback | Pending | |
+| Evidence                                                                 | Actual result | Evidence location |
+| ------------------------------------------------------------------------ | ------------- | ----------------- |
+| Canonical selected operation and preservation comparison                 | Pending       |                   |
+| Saved online, exact intended main identities                             | Pending       |                   |
+| Scoped publication, actual assets/dependencies                           | Pending       |                   |
+| Genuine remote consumer linkage/update uptake                            | Pending       |                   |
+| Recorded consumer edits, properties, geometry, modes and links preserved | Pending       |                   |
+| Required consumer restoration/readback                                   | Pending       |                   |
 
 Publication, persistence and consumer uptake are separate results. A local copy instance or a source/mock test does not establish them.
 
