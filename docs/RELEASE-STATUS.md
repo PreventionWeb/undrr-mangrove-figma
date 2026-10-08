@@ -6,6 +6,8 @@ Updated 8 October 2026. This status describes the maintained toolkit. Detailed b
 
 Historical upstream Button and token update/publication/restoration rehearsals passed within their recorded scope. Token changes were restored. Historical extraction checks also preserved maintenance and bounded construction outputs. Those operations do not establish native acceptance of this repository's extracted plugin or the expanded catalogue.
 
+The separately reviewed Card/CTA integration on 8 October 2026 added and published eight Horizontal Book Card variants and initially published the existing 23 Editorial CTA variants. An ordinary canonical rebuild preserved exact recorded identity and geometry. Genuine consumer imports passed ten edited Title/reflow/restoration trials at two widths across five brands, preserving the original consumer scene, assets, pages and links. Eleven native images and a fresh full readback passed independent review. See [component maintenance](COMPONENT-MAINTENANCE.md#current-card-and-editorial-cta-integration) for receipts and finite coverage, and [the file guide](FIGMA-FILES.md) for the published masters and consumer review area. These selected-adapter results do not admit the profile into the default construction runtime or close future changed-publication and human handoff gates.
+
 ## Remaining gates for affected releases
 
 - Extracted-plugin execution in an unpublished rehearsal file, with source revisions and full operation reports recorded.
