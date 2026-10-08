@@ -1,31 +1,17 @@
-# Repository migration
+# Ownership and source boundary
 
-Mangrove owns its token engine, tokens, components, styles and authored media. This repository owns Figma export/import adapters, maintenance and construction plugins, recipe translation, supporting tests and operating documentation. Maintenance remains the default entry; normal construction and expanded export are optional commands.
+Mangrove owns its token engine, YAML tokens, components, styles and authored media. This repository owns the variable/style exporter and importer, maintenance interface, bounded construction recipes/runtime and relevant tests. Source reads use `MANGROVE_SOURCE_ROOT`; source tokens/styles are not copied here.
 
-## Supported source and preservation
+## Supported source
 
-The historical supported thin Mangrove checkpoint is `1639293738232ade132b442ab0fe983dec3d65d5`. Its four-path integration retains token-engine exports, the documentation link, Figma integration documentation and minimal workspace lock alignment. The original extraction revisions remain provenance in `source-lock.json`; they are not substituted for the actual source head during export.
+[source-lock.json](../source-lock.json) records the supported Mangrove revision `1639293738232ade132b442ab0fe983dec3d65d5`, original extraction provenance and the retained normal construction cohort. Normal construction contains 32 families and 383 variants. The historical FormAction source citation remains in its packet; the current helper is toolkit-owned as recorded in the lock.
 
-The complete upstream checkpoint `d5e790d3b0318730fdbd270279f340f35a2833ab` is preserved in a 3,161-path archive. Its checksum and limits are recorded in [the evidence index](../evidence/index.json). Git history and native backups remain separate. Inactive historical tooling is accounted for in [the ownership index](TOOLING-OWNERSHIP.md), rather than presented as an active workflow.
+Mangrove [PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319) merged into main as `5deafc2869a6a293c4019f42703f4f44c24f75ed`, adding only token-engine exports and integration documentation. It is independent of React Aria. The historical source branch remains preserved.
 
-## Compatibility
+Current main lacks `stories/assets/scss/_control-tokens.scss`, which the shared foundations exporter requires. Both maintained workflows therefore still use the supported historical source checkout. Main-source compatibility needs a reviewed adapter/source decision and output comparison; merging the bridge does not establish it. Manual designer-to-Mangrove work does not require this toolkit or its historical checkout.
 
-The normal kit contains 32 families and 383 finite variants. Its JSON and runtime retain their original bytes. Source reads use the explicit Mangrove checkout; compiler dependencies and Figma helpers belong to this toolkit. The historical FormAction source citation remains unchanged in the packet, while its guarded current helper is toolkit-owned; `source-lock.json` records that mapping.
+## Maintained versus preserved work
 
-The expanded catalogue contains 139 families and 2,269 variants. The migrated preserved-source packet matched the entire original file. The corrected private thin-source build differed only in the true `source.revision`. Reference inputs are checksum-pinned release assets; historical code proofs are nonexecuting members. Public retrieval and fresh whole-cache admission passed independent review.
+PR #1 is narrowed through ordinary commits after preserving the full toolkit checkpoint on an evidence branch. Maintenance, bounded construction and their dependency closure remain active. Expanded recipes, reference fetch/preparation, optional supporting-cohort commands, migration inventories and detailed receipts are available through [the evidence guide](EVIDENCE.md). Historical parity records remain tied to their exact revisions and are not relabelled as current native acceptance.
 
-Fresh remote clones at the supported source checkpoint and toolkit `e39d58f2e5d87698a6ea4e96d8fe9ad53a09c3a0` passed locked installation, source CSS generation and all six maintenance/normal commands. All retained output hashes matched. The separately guarded expanded preparation and full 1,270-member cache verification also passed.
-
-## Final review
-
-- Final remote expanded packet comparison: **passed independent review**, with only the actual top-level source revision changed.
-- Final remote 19-test supporting cohort: **all 19 passed independent review**, with unchanged protected inputs.
-- Repository split acceptance: **pending human review of the two PRs and final evidence**.
-
-The 63 historical contract documents and 119 remaining inactive reusable sources are accounted for; activating them is not a split acceptance gate. Native rendering, fonts, capacity, edited reflow, canonical integration, publication and consumer handoff remain separate [release gates](RELEASE-STATUS.md).
-
-## Main-targeted companion PR
-
-Mangrove PR #1319 now targets `main`. Its tree is current main plus the six token-engine exports and shared Storybook documentation; React Aria implementation/dependency changes and the earlier lock alignment are outside the diff. A normal merge preserves the old feature tip and main as parents, retaining historical source checkpoints without force-pushing. The main-targeted PR can be reviewed independently of React Aria.
-
-This changes the PR base, not the supported toolkit source. `1639293738232ade132b442ab0fe983dec3d65d5` remains the reviewed source checkpoint. Current main lacks `stories/assets/scss/_control-tokens.scss`, required by the toolkit resolver, and main-source native/export compatibility has not been established. Use a separate installed checkout at the recorded source revision for the existing toolkit; adopting current main requires explicit source/adapter/output review. No source pins, native keys, generated packets or publication evidence are changed by this retarget.
+Adopting a new family or source revision requires a focused compatibility review. Inactive experiments are not an implementation or merge prerequisite. Apply the [native gates](RELEASE-STATUS.md) when releasing affected assets.

@@ -17,11 +17,6 @@
     "prepare": "node scripts/setup-git-hooks.cjs",
     "hooks:install": "node scripts/setup-git-hooks.cjs",
     "test:hooks": "node scripts/test-git-hooks.cjs",
-    "prepare:expanded": "node scripts/prepare-figma-expanded.cjs",
-    "export:expanded": "node scripts/export-figma-expanded.cjs",
-    "fetch:references": "node scripts/fetch-figma-references.cjs",
-    "prepare:supporting:first19": "node scripts/prepare-supporting-cohort.cjs",
-    "test:supporting:first19": "node scripts/test-supporting-cohort.cjs",
     "test:kit:extraction": "node examples/figma-plugin/dev/mock-kit-migration.cjs",
     "test:kit:behavior": "node examples/figma-plugin/dev/mock-kit.cjs && node examples/figma-plugin/dev/mock-kit-layout.cjs && node examples/figma-plugin/dev/mock-kit-canvas-flow.cjs && node examples/figma-plugin/dev/mock-ui-layout.cjs && node examples/figma-plugin/dev/mock-review-export.cjs && node examples/figma-plugin/dev/mock-font-defaults-integration.cjs"
   },
@@ -29,11 +24,7 @@
     "@babel/parser": "7.28.5",
     "storybook": "10.6.0",
     "terser": "5.51.2",
-    "yaml": "2.9.1",
-    "@babel/core": "8.0.1",
-    "@babel/plugin-transform-modules-commonjs": "8.0.1",
-    "@babel/preset-react": "8.0.1",
-    "yaml-expanded": "npm:yaml@2.9.0"
+    "yaml": "2.9.1"
   },
   "devDependencies": {
     "jsdom": "26.1.0"

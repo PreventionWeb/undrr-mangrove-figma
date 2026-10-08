@@ -5,7 +5,6 @@
   "pullRequest": "https://github.com/unisdr/undrr-mangrove/pull/1319",
   "baseRevision": "f5792a9f1164b262ff5c5fc961395300bc7b17f0",
   "sourceCohort": [
-    "scripts/build-tokens.cjs",
     "scripts/build-figma-maintenance.cjs",
     "scripts/build-figma-maintenance-tokens.cjs",
     "scripts/build-figma-maintenance-plugin.cjs",
@@ -37,15 +36,14 @@
     "examples/figma-plugin/maintenance/ui.html",
     "examples/figma-plugin/dev/mock-variable-api.cjs",
     "examples/figma-plugin/dev/mock-maintenance.cjs",
-    "examples/figma-plugin/dev/mock-maintenance-export.cjs",
-    "examples/figma-plugin/MAINTENANCE.md",
-    "examples/figma-plugin/maintenance-merge-scope.json"
+    "examples/figma-plugin/dev/mock-maintenance-export.cjs"
   ],
   "notes": [
     "This is an initial curated extraction, not the complete spike or its Git history.",
     "The token engine, YAML tokens, SCSS, JSX and source media remain owned by Mangrove.",
     "Use MANGROVE_SOURCE_ROOT to select an installed source checkout; source guards still apply.",
-    "The revision field now selects the supported thin Mangrove integration. initialExtractionRevision and sourceCohort retain the original extraction provenance; sourceCohort is not the current input allowlist."
+    "The revision field now selects the supported thin Mangrove integration. initialExtractionRevision and sourceCohort retain the original extraction provenance; sourceCohort is not the current input allowlist.",
+    "Mangrove PR #1319 is merged. Its main bridge does not provide the control-token foundations required by this historical source profile; revision still selects the supported source checkout."
   ],
   "toolingCohorts": [
     {
@@ -138,209 +136,15 @@
           "note": "Preserved historical FormAction precision citation for packet byte compatibility; the current helper is toolkit-owned and independently guarded."
         }
       ]
-    },
-    {
-      "name": "expanded-recipes",
-      "extractedFromRevision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
-      "sourceCompatibilityRevision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
-      "families": 139,
-      "variants": 2269,
-      "dependencies": 6,
-      "expandedCatalogueIncluded": true,
-      "paths": [
-        "scripts/figma-landing-topic-index-recipes.cjs",
-        "scripts/figma-skip-link-recipes.cjs",
-        "scripts/figma-expanded-inputs.cjs",
-        "scripts/figma-range-recipes.cjs",
-        "scripts/figma-notification-state-recipes.cjs",
-        "scripts/figma-page-chrome-recipes.cjs",
-        "scripts/figma-page-pattern-recipes.cjs",
-        "scripts/figma-gallery-recipes.cjs",
-        "scripts/figma-accordion-recipes.cjs",
-        "scripts/figma-highlight-box-recipes.cjs",
-        "scripts/figma-news-article-recipes.cjs",
-        "scripts/figma-notice-recipes.cjs",
-        "scripts/figma-footer-recipes.cjs",
-        "scripts/figma-standalone-icon-recipes.cjs",
-        "scripts/figma-standalone-link-recipes.cjs",
-        "scripts/figma-search-widget-recipes.cjs",
-        "scripts/figma-author-image-recipes.cjs",
-        "scripts/figma-form-composition-recipes.cjs",
-        "scripts/figma-news-article-scene-recipes.cjs",
-        "scripts/figma-image-figure-recipes.cjs",
-        "scripts/figma-menu-items-recipes.cjs",
-        "scripts/figma-breadcrumb-recipes.cjs",
-        "scripts/figma-scroll-show-more-recipes.cjs",
-        "scripts/figma-arabic-landing-recipes.cjs",
-        "scripts/figma-semantic-code-recipes.cjs",
-        "scripts/figma-content-hub-recipes.cjs",
-        "scripts/figma-search-fixtures.cjs",
-        "scripts/figma-logo-recipes.cjs",
-        "scripts/figma-code-block-recipes.cjs",
-        "scripts/figma-copy-cite-recipes.cjs",
-        "scripts/figma-search-control-recipes.cjs",
-        "scripts/figma-tag-recipes.cjs",
-        "scripts/figma-error-page-recipes.cjs",
-        "scripts/figma-news-float-recipes.cjs",
-        "scripts/figma-cookie-consent-recipes.cjs",
-        "scripts/figma-drawer-recipes.cjs",
-        "scripts/figma-page-header-recipes.cjs",
-        "scripts/figma-card-content-recipes.cjs",
-        "scripts/figma-page-reading-recipes.cjs",
-        "scripts/figma-semantic-typography-recipes.cjs",
-        "scripts/figma-news-image-article-scene-recipes.cjs",
-        "scripts/figma-news-exclusion-recipes.cjs",
-        "scripts/figma-on-this-page-nav-recipes.cjs",
-        "scripts/figma-layout-foundations-recipes.cjs",
-        "scripts/figma-pager-recipes.cjs",
-        "scripts/figma-editorial-recipes.cjs",
-        "scripts/figma-gallery-html-recipes.cjs",
-        "scripts/figma-legend-recipes.cjs",
-        "scripts/figma-search-result-recipes.cjs",
-        "scripts/figma-tree-recipes.cjs",
-        "scripts/figma-user-feedback-recipes.cjs",
-        "scripts/figma-landing-report-recipes.cjs",
-        "scripts/figma-preview-access-recipes.cjs",
-        "scripts/figma-news-detail-recipes.cjs",
-        "scripts/build-figma-component-drafts.cjs",
-        "scripts/figma-stats-card-recipes.cjs",
-        "scripts/figma-reference-cache/destination-authority.cjs",
-        "scripts/figma-reference-cache/owned-cleanup.cjs",
-        "scripts/figma-reference-cache/reference-cache.cjs",
-        "scripts/figma-reference-cache/committed-cache.cjs",
-        "scripts/figma-reference-cache/multipart-cache.cjs",
-        "examples/figma-plugin/holistic/assets/author-image/recipes.cjs",
-        "examples/figma-plugin/holistic/assets/menu-items/source-plan.cjs",
-        "contracts/expanded-inputs.compact.json",
-        "contracts/expand-admission-sets.cjs"
-      ],
-      "compatibility": {
-        "packetBytes": 210368334,
-        "packetSHA256": "f01e9a8e2700e3506c77f7dd0659b7f944e41f1703d01e0e7231b83bfa235b18",
-        "variables": 79225,
-        "textDefinitions": 4063,
-        "effects": 337
-      },
-      "inputBoundary": {
-        "sourceInputs": 442,
-        "toolInputsIncludingNormalDTO": 105,
-        "nonexecutingReferenceInputs": 1270,
-        "referenceMemberBytes": 403167148,
-        "inputSites": 135,
-        "expandedManifestSHA256": "5b39332d69bdcf0e205bfc0666c46c9fbbe376e2398b9bb582512fe117e977d5",
-        "compactManifestSHA256": "dc7b905454a44ecf1addacd9f8d2f6a54942b16f9a3bb997fb33b979a90c6bbf",
-        "note": "Compact metadata expands to the exact reviewed manifest. Payloads remain external. Portable setup and supporting test cohorts are separate migration gates."
-      },
-      "acceptance": "Complete migrated packet is byte-identical to the preserved original in an installed source-only fixture with an admitted seven-part local cache. This does not establish public retrieval, final thin-source parity or native acceptance."
-    },
-    {
-      "name": "expanded-portable-commands",
-      "paths": [
-        "scripts/prepare-figma-expanded.cjs",
-        "scripts/export-figma-expanded.cjs",
-        "scripts/figma-expanded-compact.cjs",
-        "scripts/figma-expanded-inputs.cjs"
-      ],
-      "reviewedPrivateRevision": "R7",
-      "independentReviewSHA256": "72eb261553b020aab4f5ef45921b18a917c374724a46aad1b7eaff5dd74aa0b0",
-      "modeledExportBranches": 14,
-      "actualPortableExportVerified": true,
-      "notes": [
-        "Exact reviewed modules adopted; default maintenance and normal construction remain separate.",
-        "Thin integration checks actual Git HEAD and finite source content; final upstream revision remains pending."
-      ],
-      "actualThinSourceRevision": "4c81980a8d37ea877722421f22bb7d8f53feeb72",
-      "actualThinPacketSHA256": "9139038975e487300b9a976b6560a60c28ff97edc2343d0c4de52bf9c46d396c",
-      "actualThinNormalizedPacketSHA256": "f01e9a8e2700e3506c77f7dd0659b7f944e41f1703d01e0e7231b83bfa235b18",
-      "actualThinOnlyPacketDelta": "source.revision",
-      "actualThinIndependentReviewSHA256": "63bed84d55be141b91639d631be10588d975c65a21d025dce9d6f6d02748a183"
-    },
-    {
-      "name": "reference-fetch",
-      "paths": [
-        "scripts/fetch-figma-references.cjs",
-        "scripts/figma-reference-cache/download-provider.cjs",
-        "scripts/figma-reference-cache/run-local-admission.cjs",
-        "scripts/figma-reference-cache/published-reference-pins.json"
-      ],
-      "independentReviewSHA256": "8ddf2e724d766e97663717f62612cdf315e772275139c6b7d99e8937d9106220",
-      "offlineWrapperCases": 12,
-      "offlineProviderCases": 14,
-      "publicRetrievalVerified": true,
-      "referenceIndexSHA256": "32e9ad7bf5e256a0b283404f565aa1c9cb95ebce3238c71264c766013e3f6409",
-      "referenceProvenanceSidecarSHA256": "eb579c932b2b356cc141240acd568cfdf44935320221d219e7076036f3bd69dd",
-      "actualPublicRetrievalPeerSHA256": "f7cc66e3934e1f99ed52a7a62296e28d71fa39b9032be43e2e268bec9bebdb8e",
-      "releaseURL": "https://github.com/PreventionWeb/undrr-mangrove-figma/releases/tag/mangrove-observed-reference-d5e790d3-v1"
-    },
-    {
-      "name": "thin-authored-source-guard-compatibility",
-      "paths": [
-        "examples/figma-plugin/holistic/assets/author-image/recipes.cjs",
-        "scripts/figma-code-block-recipes.cjs",
-        "scripts/figma-expanded-inputs.cjs",
-        "scripts/figma-logo-recipes.cjs",
-        "scripts/prepare-figma-expanded.cjs",
-        "contracts/expanded-inputs.compact.json"
-      ],
-      "independentReviewSHA256": "4c9ed3752a6300b6deadcd6c8865a109fb1ed89df6c7da8b84f5061c85cb2740",
-      "sourcePinCases": 33,
-      "historicalBodyProofs": 62,
-      "actualInnerGuardSnippetCases": 6,
-      "changedManifestToolRows": 3,
-      "compactSHA256": "a71b7382d3a503da5d3b9c85ea3fe1ce6fdc0511509157cbcdd09742b22365a0",
-      "notes": [
-        "Admits only reviewed package/lock historical-to-current pairs under thin-integration after checking genuine current source bytes.",
-        "Reference font/licence guards and every other source comparison remain exact.",
-        "Immutable reference audit/provenance records remain historical. New actual thin-source export is required."
-      ]
-    },
-    {
-      "name": "supporting-first19",
-      "extractedFromRevision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
-      "advertisedTests": 19,
-      "dependencyHelperMainsActive": false,
-      "launcherReviewSHA256": "937ad30bc2af7a1d4d4247a548aa5b299a90c5ddeebd93618f453057821702bf",
-      "preparerReviewSHA256": "0d94fddd0b8e3e2b16d11f5ed944e52d79bbb8f6976ff65e785abee85d558174",
-      "actualPreparationReviewSHA256": "443967bae2479255a01d67c58df150e9d1eb6ed7f88ea369c9b31cb49de011ee",
-      "actualInstalledTestsVerified": true,
-      "paths": [
-        "scripts/prepare-supporting-cohort.cjs",
-        "scripts/test-supporting-cohort.cjs",
-        "scripts/figma-supporting-test-inputs.cjs",
-        "scripts/supporting-first19.json",
-        "scripts/supporting-first19-declarations.json"
-      ],
-      "notes": [
-        "Optional finite test cohort; default workflows unchanged.",
-        "Two imported fixture helper bodies are dependencies, not additional advertised tests.",
-        "Original failed preparation is retained; corrected actual preparation preserves all original 1817 inputs and adds the finite required closure.",
-        "All 19 installed tests passed independent review. Final remote checkout remains a separate gate."
-      ],
-      "actualInstalledRunReviewSHA256": "f754100e91f6971812b482fbb4c0b4611777af6f44a4ab38f49e5b2568606600"
     }
   ],
   "initialExtractionRevision": "a4bb46dafb7134a230e9c79fd26cd7306d2a6203",
   "supportedSourceProfile": "thin-integration",
-  "finalRemoteVerification": {
-    "sourceRevision": "1639293738232ade132b442ab0fe983dec3d65d5",
-    "toolExecutableRevision": "e39d58f2e5d87698a6ea4e96d8fe9ad53a09c3a0",
-    "sixCommandsVerified": true,
-    "sixCommandsAndExpandedPreparationReviewSHA256": "3a635e5b7600abf4e001146411a5a69d57e58ada010a2fa3495723f92dfa0963",
-    "node": "24.18.0",
-    "yarn": "4.17.0",
-    "referenceCacheScope": "Previously independently verified public retrieval; cache reused with fresh complete member verification.",
-    "referenceIndexSHA256": "32e9ad7bf5e256a0b283404f565aa1c9cb95ebce3238c71264c766013e3f6409",
-    "expandedExportVerified": true,
-    "supporting19Verified": true,
-    "nativeAcceptance": false,
-    "expandedPacketBytes": 210368334,
-    "expandedPacketSHA256": "da7e0071f07ae553e68bf74c4bbf937a4ebbce6d24f5369e190fe0617255a2a6",
-    "expandedNormalizedPacketSHA256": "f01e9a8e2700e3506c77f7dd0659b7f944e41f1703d01e0e7231b83bfa235b18",
-    "expandedOnlyPacketDelta": "Top-level source.revision",
-    "expandedExportReviewSHA256": "5253f78e47b82dd3b1d7b50f97be35503a593a3d5f3a5f39ef902a4a173e91f8",
-    "supporting19Passed": 19,
-    "supporting19ReviewSHA256": "a64c6ea2cf7a79d3000a479f0f69d47452625f16432d96ff3bd0a8b8c510824c",
-    "supportingInputRows": 1866,
-    "scope": "Local macOS source/tool migration validation. Native acceptance and reviewer merge acceptance remain separate."
-  }
+  "evidenceCheckpoint": {
+    "repository": "https://github.com/PreventionWeb/undrr-mangrove-figma",
+    "revision": "1222608b7c8fdc1a6769f4541044938255e1c07f",
+    "branch": "evidence/mangrove-full-spike-2026-10-08",
+    "scope": "Expanded recipes, historical input contracts, reference acquisition, supporting cohort and migration receipts. Not active commands in the maintained toolkit."
+  },
+  "upstreamIntegrationRevision": "5deafc2869a6a293c4019f42703f4f44c24f75ed"
 }

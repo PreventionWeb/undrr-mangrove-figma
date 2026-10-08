@@ -2,7 +2,7 @@
 
 Use this procedure to update one existing source-maintained family or develop one new finite family. Mangrove owns the component implementation, tokens, styles and authored media. This repository owns the Figma extraction helpers, recipes and plugin. A Storybook story is a source reference, not an automatic Figma component conversion.
 
-For variables and text/effect styles alone, use [variable/style maintenance](MAINTENANCE.md). For implementing a designer's Figma change in Mangrove, see [design to code](DESIGN-TO-CODE.md). Follow the [README setup](../README.md) and check the applicable [native release gates](RELEASE-STATUS.md) before publishing. The expanded/page catalogue is optional and is not required for a normal selected-family update.
+For variables and text/effect styles alone, use [variable/style maintenance](MAINTENANCE.md). For implementing a designer's Figma change in Mangrove, see [design to code](DESIGN-TO-CODE.md). Follow the [README setup](../README.md) and check the applicable [native release gates](RELEASE-STATUS.md) before publishing. Expanded/page experiments are preserved on the evidence branch and are outside this maintained checkout.
 
 ## Choose the source and adapter
 
@@ -20,7 +20,7 @@ Button is a concrete normal-kit example:
 
 Change component behaviour and appearance in Mangrove first. Inspect the corresponding toolkit helper and recipe: some changes flow through token/source extraction, while structural changes need an adapter change. A source-pattern refusal means the adapter contract needs review. Do not bypass the refusal or replace the existing family to make the build succeed.
 
-The default maintenance and normal exporters check required source files, token-engine exports and supported source shapes. These checks are not exhaustive Git-revision or byte-pin admission. The supported revision in `source-lock.json` is the reviewed compatibility policy; a different revision requires output comparison and review even if a build passes. The optional [expanded workflow](EXPANDED-WORKFLOW.md) separately checks the supplied actual Git revision and checksum-pinned finite input admission. Do not infer that its admission policy applies automatically to the default commands.
+The default maintenance and normal exporters check required source files, token-engine exports and supported source shapes. These checks are not exhaustive Git-revision or byte-pin admission. The supported revision in `source-lock.json` is the reviewed compatibility policy; a different revision requires output comparison and review even if a build passes. The [preserved expanded workflow](EVIDENCE.md) has separate revision/hash admission contracts; its commands are unavailable in this checkout. Do not infer that its admission policy applies to default commands.
 
 ## Intentional output changes and test baselines
 
@@ -79,7 +79,7 @@ A new Storybook story does not add a recipe automatically. For a normal-kit exte
 5. Review UI core/default presets and focused compatibility fixtures/tests where relevant. Do not add the family to the core preset just to expose it: loaded recipe families can be selected individually. Review intentional output changes rather than relabelling changed output as preserved extraction parity.
 6. For a deliberately new family, choose its target page and confirm that the family has not already been created elsewhere in the file. A null `setId` is expected only for that explicitly new scope, not existing dependencies. Run the normal local checks, then rehearse only the new family and its dependency closure. Record new IDs and verify that unrelated existing family identities and links remain intact.
 
-An expanded-only family is a separate adapter/admission task. Use the expanded workflow and its reviewed input contracts when necessary; do not turn an occasional normal update into a full expanded export or bypass its pins. There is no documented automatic one-family expanded export command.
+An expanded-only family requires a separate adapter/admission task. Consult the [evidence checkpoint](EVIDENCE.md) and restore only the reviewed dependency closure in a focused change; its commands are unavailable in this checkout. There is no automatic one-family expanded export command.
 
 ## Validate and release the bounded change
 

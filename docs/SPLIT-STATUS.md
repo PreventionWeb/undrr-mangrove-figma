@@ -1,35 +1,22 @@
-# Repository split status
+# Toolkit scope and acceptance
 
-Updated 7 October 2026. Repository split review remains pending. The current handoff now prioritises occasional maintenance and manual designer-to-Storybook changes; see the README request table. Native canvas changes and publication remain parked.
+Updated 8 October 2026.
 
-## Completed migration evidence
+## Completed
 
-- Maintenance is the default toolkit workflow. Normal construction is optional and contains 32 families and 383 finite variants; its retained JSON and runtime match exactly.
-- Expanded recipes are migrated with explicit source/tool/reference boundaries. The complete preserved-source packet contains 139 families, 2,269 variants, six dependencies, 79,225 variables, 4,063 text definitions and 337 effects. Its 210,368,334 bytes matched the original exporter output exactly. The corrected private thin-source export changed only the actual `source.revision`.
-- Public acquisition verified all nine release downloads and admitted all 1,270 members into a fresh cache. Licences, provenance and nonexecuting historical proof types are retained.
-- The installed finite supporting cohort passed all 19 tests with independent review. Other historical tooling remains explicitly accounted for in [the ownership index](TOOLING-OWNERSHIP.md); no all-tests claim is made.
-- The full 3,161-path upstream checkpoint, Git history and native backups are preserved separately. The thin source integration is pushed at `1639293738232ade132b442ab0fe983dec3d65d5`.
-- Fresh remote source and toolkit clones at that source head and `e39d58f2e5d87698a6ea4e96d8fe9ad53a09c3a0` passed their own locked dependency installation, source CSS generation and six maintenance/normal commands. Six output hashes are unchanged. Original and observed package bytes prove that only key ordering changed before restoration.
-- Final remote expanded preparation passed all 1,817 inputs and current module guards, using the actual source head. The committed cache verifier independently checked all 1,270 members under explicit cache reuse.
+- Mangrove PR #1319 merged into main as `5deafc2869a6a293c4019f42703f4f44c24f75ed`: six files, 99 additions and one deletion. Token-engine exports and shared Storybook documentation are upstream; React Aria changes are excluded.
+- The full toolkit checkpoint and history are preserved on the [evidence branch](EVIDENCE.md).
+- Toolkit PR #1 now targets a maintained scope: variable/style maintenance, bounded 32-family/383-variant construction, relevant tests and operating documentation.
+- Expanded recipes, page patterns, optional reference/supporting commands and detailed historical inventories are excluded from the maintained tree.
+- A clean locked install and all six maintained commands pass against the supported source; retained normal code and historical compatibility fixtures are unchanged. Independent scope/dependency review found no blockers.
+- Designer-to-code and selected component maintenance runbooks include ownership, recovery and review safeguards. Fresh-agent orientation passed previously; it does not establish human novice native acceptance.
 
-## Ready for review
+## Remaining acceptance
 
-The final remote expanded export and all 19 supporting tests passed independent review. The complete packet differs from the preserved original only in the actual top-level source revision. All source, toolkit and reference input guards remained intact. [Validation](VALIDATION.md), [source provenance](../source-lock.json) and [the evidence index](../evidence/index.json) record the checked commits, output hashes and review digests.
+- Review and merge toolkit PR #1 against its narrowed scope.
+- Establish compatibility against current Mangrove main. The supported historical source checkpoint remains required for both export workflows.
+- Perform one actual bounded designer/developer handoff and an extracted-plugin native rehearsal, then relevant publication/consumer checks.
+- Complete affected [native release gates](RELEASE-STATUS.md); source/mock checks do not close them.
+- Once toolkit documentation lands on main, update the upstream overview's immutable toolkit links to durable main links in a focused follow-up.
 
-Repository split implementation and local verification are complete. Human acceptance and merge of [toolkit PR #1](https://github.com/PreventionWeb/undrr-mangrove-figma/pull/1) and [Mangrove PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319) remain pending. Both PRs stay draft. The historical reduced Mangrove checkpoint had four paths on `spike/react-aria-surface`. The current companion PR targets `main` with token exports and shared Storybook documentation, excluding React Aria implementation and dependency changes.
-
-The inactive sources and historical contract documents are indexed rather than additional migration implementation gates. The earlier final documentation and metadata commits retain the verified executable bytes. The later workflow-hardening pass changes runbooks/navigation and one stale build-command diagnostic; all six local commands pass with retained generated-output pins. A fresh-agent read-only scenario dry-run passed, while human novice/native acceptance remains open.
-
-## Acceptance boundary
-
-The split establishes tooling ownership and reproducible source export. It does not establish expanded native rendering, native fonts, full-catalogue collection capacity, editable reflow, canonical integration, text/effect publication or consumer handoff. Those remain separate [release gates](RELEASE-STATUS.md). Existing connector payload-budget failures remain documented rather than waived.
-
-GitHub listing endpoints may be suppressed. Status uses exact-number PR requests, not empty listing responses. GitHub Actions are unavailable; verification is local.
-
-## Companion merge link handoff
-
-Upstream workflow links use an immutable toolkit commit during review so branch deletion does not break them. When the companion toolkit PR is merged and its docs exist on `main`, update those upstream links to the durable merged destination before accepting the upstream PR. This link handoff is separate from source compatibility and native acceptance.
-
-## Main retarget, 8 October 2026
-
-The companion PR is retargeted to main through a normal history-preserving merge. Its reviewed candidate contains six paths, with 99 additions and one deletion, relative to main; no lockfile change remains. Main's public-fork documentation conventions and newer documentation mappings are preserved. See [migration](MIGRATION.md#main-targeted-companion-pr) for the independent PR base and unchanged historical toolkit source dependency. Native acceptance and current-main toolkit compatibility are not established by retargeting.
+GitHub listing endpoints may be suppressed; status uses exact-number PR requests. Actions are unavailable, and Linux execution remains unverified. Local verification is recorded in [validation](VALIDATION.md).

@@ -79,7 +79,7 @@ Choose an optional toolkit workflow only when separately needed:
 
 - [Variable/style maintenance](MAINTENANCE.md) for source-backed foundation updates.
 - [Normal kit construction](../README.md#normal-kit-construction) for the bounded construction entry.
-- [Expanded recipe export](EXPANDED-WORKFLOW.md) for its separately admitted source/reference cohort.
+- [Preserved expanded experiments](EVIDENCE.md) for work outside the maintained toolkit.
 
 None of these exports designer edits back into Mangrove. Figma rebuilding or publication is not an implicit part of a manual Storybook request.
 
