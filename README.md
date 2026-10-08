@@ -4,6 +4,8 @@ Occasional Figma maintenance tooling for [Mangrove](https://github.com/unisdr/un
 
 The maintained toolkit contains variable/style maintenance and an optional bounded construction entry with 32 families and 383 variants. Expanded recipes and page patterns are preserved separately on the [evidence branch](docs/EVIDENCE.md). Export counts and source/mock checks do not establish native Figma acceptance.
 
+The canonical kit now includes published finite [Book Card/Editorial CTA and static Tag releases](docs/RELEASE-STATUS.md), with genuine consumer validation in their recorded scopes. Their selected source exporters are maintained; the selected native adapters remain evidence tools until the shared native runner is implemented. The default catalogue remains 32 families and 383 variants.
+
 ## Start with the requested change
 
 This is a seed kit with occasional maintenance. A designer can change Figma and ask a developer to implement the selected result manually in Mangrove. Code remains the executable source; an approved Figma checkpoint supplies design intent. There is no automatic reverse synchronisation.
