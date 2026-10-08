@@ -1,0 +1,372 @@
+{
+  "version": 1,
+  "kind": "Dated selected release observations",
+  "liveInventory": false,
+  "catalogueObservation": {
+    "observedOn": "2026-10-08",
+    "sourceEntries": 68,
+    "missingNativeFamily": 45,
+    "existingScaffoldWithRemainingCoverage": 21,
+    "publishedSelectedAdditionsWithRemainingLimits": 2,
+    "note": "Historical source-entry observation only, not a count derived from these three records or a live published-asset inventory."
+  },
+  "releases": [
+    {
+      "id": "tag",
+      "name": "Static Tag",
+      "observedOn": "2026-10-08",
+      "status": "published-finite",
+      "canonical": {
+        "fileKey": "Zgjq8pQ0FMT8d6dhw9M5bt",
+        "nodeId": "139:5083",
+        "setKey": "a3d00166e4505977f0ec2db5887ed07318c33ca0",
+        "members": [
+          {
+            "nodeId": "139:5082",
+            "key": "a0c06698a0d123f47eb67407fe5bcd27b01d8d9c",
+            "name": "Default"
+          },
+          {
+            "nodeId": "139:5085",
+            "key": "5690b55b4073d172baf7113683259fb89ff028ca",
+            "name": "Secondary"
+          },
+          {
+            "nodeId": "139:5087",
+            "key": "14550d9e017fe5479c59e032945af1644b10210a",
+            "name": "Outline"
+          },
+          {
+            "nodeId": "139:5089",
+            "key": "4a4b92633b71723f79c725f408d04199981b7d82",
+            "name": "Accent"
+          },
+          {
+            "nodeId": "139:5091",
+            "key": "b0efb910250dcd751e038caaa6c50379efc49d2e",
+            "name": "Subtle"
+          }
+        ],
+        "url": "https://www.figma.com/design/Zgjq8pQ0FMT8d6dhw9M5bt?node-id=139-5083"
+      },
+      "source": {
+        "revision": "1639293738232ade132b442ab0fe983dec3d65d5",
+        "profileSHA256": "81bca4b741fb6288beaa2388916389e9bde8ed26be23e06f95ceb193508b3ad6"
+      },
+      "documentation": "docs/COMPONENT-MAINTENANCE.md#published-static-tag-integration",
+      "scope": "Five intrinsic static Latin tones across five brands; owning Label restoration and genuine remote use.",
+      "limits": [
+        "Linked states, badges, grouped containers, constrained wrapping, RTL/Arabic and motion are unsupported.",
+        "Future changed token/style publication and uptake are unverified.",
+        "Human novice handoff and current-main source compatibility remain open.",
+        "Source/mock checks and this register do not admit a native runtime or prove pixel/font-byte equivalence."
+      ],
+      "gates": {
+        "source": "accepted",
+        "rehearsal": "accepted",
+        "canonical": "accepted",
+        "publication": "accepted",
+        "consumer": "accepted"
+      },
+      "evidence": {
+        "publication": {
+          "artifact": "tag-publication-receipt.json",
+          "sha256": "c221ffa31c1bcd47e3330cc9d543c5b887a09070516c99fa557db82e6cdd54ef",
+          "kind": "reviewed-native-publication",
+          "reviewedAcceptance": true
+        },
+        "consumer": {
+          "artifact": "mangrove-tag-genuine-consumer-full-report-20261008.json",
+          "sha256": "0a8c94f8bc561ae0cc7106ea823775d330e55dbd649a509c328beaf2b6cdb72b",
+          "kind": "reviewed-genuine-remote-consumer",
+          "reviewedAcceptance": true
+        }
+      },
+      "consumerURL": "https://www.figma.com/design/wOTLILmiXUI3uzG2BdPUxB?node-id=64-750",
+      "catalogueNotes": [
+        {
+          "nodeId": "30:5358",
+          "role": "status",
+          "text": "Published finite static Tag: 5 tones × 5 brands (observed 2026-10-08)."
+        },
+        {
+          "nodeId": "30:5359",
+          "role": "limits",
+          "text": "Intrinsic Latin Label only. Linked/badge/grouped/RTL/wrapping variants remain unsupported."
+        }
+      ]
+    },
+    {
+      "id": "horizontal-book-card",
+      "name": "Horizontal Book Card",
+      "observedOn": "2026-10-08",
+      "status": "published-finite",
+      "canonical": {
+        "fileKey": "Zgjq8pQ0FMT8d6dhw9M5bt",
+        "nodeId": "128:4670",
+        "setKey": "95dc9441c9b100a7fba6529d3e364cc108f69d9a",
+        "members": [
+          {
+            "nodeId": "128:4669",
+            "key": "c8baa3696b53f891d84c1fdbdd60033b5a31ca99",
+            "name": "Preset=Default, Width=640"
+          },
+          {
+            "nodeId": "128:4690",
+            "key": "780d3eeab62f8d5aca84dbe5fb88d9895a0cd41b",
+            "name": "Preset=NoImage, Width=640"
+          },
+          {
+            "nodeId": "128:4708",
+            "key": "09a62e10e2925f90f955526f19741d9756483056",
+            "name": "Preset=NoLink, Width=640"
+          },
+          {
+            "nodeId": "128:4720",
+            "key": "82a04e281a69c9117db9528c7393db1b58a73cfa",
+            "name": "Preset=ButtonOnly, Width=640"
+          },
+          {
+            "nodeId": "128:4736",
+            "key": "6258ff9321bfabc228ce6f977733c8c0969b9a1e",
+            "name": "Preset=Default, Width=390"
+          },
+          {
+            "nodeId": "128:4756",
+            "key": "40ebd293fe4eedb5de7e03284a1e19bb6e61b198",
+            "name": "Preset=NoImage, Width=390"
+          },
+          {
+            "nodeId": "128:4775",
+            "key": "2b80265b8684599eb082abe026c8b3510464ce46",
+            "name": "Preset=NoLink, Width=390"
+          },
+          {
+            "nodeId": "128:4787",
+            "key": "22a88d51254fbb3e9fd322624c0347408db6cc03",
+            "name": "Preset=ButtonOnly, Width=390"
+          }
+        ],
+        "url": "https://www.figma.com/design/Zgjq8pQ0FMT8d6dhw9M5bt?node-id=128-4670"
+      },
+      "source": {
+        "revision": "1639293738232ade132b442ab0fe983dec3d65d5",
+        "profileSHA256": "699346318e4e8c7187a92b38cb9d03faa7caa21f6a45352e5ed3f39dd8a7b6f3"
+      },
+      "documentation": "docs/COMPONENT-MAINTENANCE.md#current-card-and-editorial-cta-integration",
+      "scope": "Eight source-backed presets at 640/390 widths; Default edited Title restoration at both widths across five brands; 11 finite consumer renders including CTA.",
+      "limits": [
+        "All eight published members available; edited five-brand trials cover Default only, not every preset.",
+        "Multiline caret is a seed approximation; 95-character long states have geometry/restoration proof, not all-mode raster proof.",
+        "Future changed token/style publication and uptake are unverified.",
+        "Human novice handoff and current-main source compatibility remain open.",
+        "Source/mock checks and this register do not admit a native runtime or prove pixel/font-byte equivalence."
+      ],
+      "gates": {
+        "source": "accepted",
+        "rehearsal": "accepted",
+        "canonical": "accepted",
+        "publication": "accepted",
+        "consumer": "accepted"
+      },
+      "evidence": {
+        "publication": {
+          "artifact": "canonical-reviewed-actual-publication-receipt.json",
+          "sha256": "c44b17b21f9ae437c4bd6aa77b3eb52fb26a211203481d72b5d6b7cb2c1b7e2f",
+          "kind": "reviewed-native-publication",
+          "reviewedAcceptance": true
+        },
+        "consumer": {
+          "artifact": "consumer11-native-png-final-readback-full-report.json",
+          "sha256": "f4412658f162713d757482bc9c16b9651019f4e5dd4738267bc4384e9e95f8fb",
+          "kind": "reviewed-genuine-remote-consumer",
+          "reviewedAcceptance": true
+        }
+      },
+      "consumerURL": "https://www.figma.com/design/wOTLILmiXUI3uzG2BdPUxB?node-id=60-521",
+      "catalogueNotes": [
+        {
+          "nodeId": "30:5379",
+          "role": "status",
+          "text": "Published finite Horizontal Book Card: 8 variants at 640/390 (observed 2026-10-08)."
+        },
+        {
+          "nodeId": "30:5380",
+          "role": "limits",
+          "text": "Five-brand edited Title validation covers Default only. Other presets and multiline caret retain finite limits."
+        }
+      ]
+    },
+    {
+      "id": "editorial-cta",
+      "name": "Editorial CTA",
+      "observedOn": "2026-10-08",
+      "status": "published-finite",
+      "canonical": {
+        "fileKey": "Zgjq8pQ0FMT8d6dhw9M5bt",
+        "nodeId": "23:4308",
+        "setKey": "f8d496df2f17c24142736ca82df46a2306536f99",
+        "members": [
+          {
+            "nodeId": "23:4307",
+            "key": "53e8cfa77fd30f6f536a704abe12525305c5175c",
+            "name": "Context=Base, State=Default, Content=Short, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4312",
+            "key": "8f52a16493be347c805a948709957944f8e9e22f",
+            "name": "Context=Base, State=Focus, Content=Short, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4318",
+            "key": "477ac71d464e9ac6a66c094846a43b3acd3d7b9e",
+            "name": "Context=Base, State=Disabled, Content=Short, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4322",
+            "key": "24d03ed45d0070712e418be918991e953c08ceff",
+            "name": "Context=Base, State=Hover, Content=Short, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4326",
+            "key": "5541050507ef9e160932e28d5f3d084ff541123e",
+            "name": "Context=Base, State=Hover, Content=Short, Motion=Reduce"
+          },
+          {
+            "nodeId": "23:4330",
+            "key": "fc4740dedaf8270edbe2b8edca6219f6f5d29c5f",
+            "name": "Context=Base, State=Default, Content=Long, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4334",
+            "key": "a722e6f681189ad59b3ae64c1f307283c269c010",
+            "name": "Context=HeroPrimary, State=Default, Content=Short, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4338",
+            "key": "bfb15eab77bb0e512b727881d55b47f34634e639",
+            "name": "Context=HeroPrimary, State=Focus, Content=Short, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4344",
+            "key": "0a200433f27482f06de0be41a73ba46b8adf921b",
+            "name": "Context=HeroPrimary, State=Hover, Content=Short, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4348",
+            "key": "f55a07fcf6f474d5fb345d5b808c5930c5453e40",
+            "name": "Context=HeroPrimary, State=Hover, Content=Short, Motion=Reduce"
+          },
+          {
+            "nodeId": "23:4352",
+            "key": "ea1b0f20ea6bd7dae8549c088a4219ac20417970",
+            "name": "Context=HeroPrimary, State=Default, Content=Long, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4356",
+            "key": "ea22f6f1128875ff6aa7330e2b062e3d377c9aeb",
+            "name": "Context=HeroTertiary, State=Default, Content=Short, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4360",
+            "key": "3ccac98fff627c0b0ca67ce00c08ad078bb50dd2",
+            "name": "Context=HeroTertiary, State=Focus, Content=Short, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4366",
+            "key": "b0f2ffeb2de75631863436da4fc07062777c898c",
+            "name": "Context=HeroTertiary, State=Hover, Content=Short, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4370",
+            "key": "0de68adaa7aee6c0500f5d60470152a099c94599",
+            "name": "Context=HeroTertiary, State=Hover, Content=Short, Motion=Reduce"
+          },
+          {
+            "nodeId": "23:4374",
+            "key": "564f1dacea8370b15299c1a9d7b857694efc7338",
+            "name": "Context=HeroTertiary, State=Default, Content=Long, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4378",
+            "key": "e13ae2ede9f5038e56ff2be42441310adf532537",
+            "name": "Context=HeroQuaternary, State=Default, Content=Short, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4382",
+            "key": "24b9ee16181d31d11332fd0a9e22eb90103f851b",
+            "name": "Context=HeroQuaternary, State=Focus, Content=Short, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4388",
+            "key": "c983bae59a8ff9e971fccb9d4363a4eff095e24e",
+            "name": "Context=HeroQuaternary, State=Hover, Content=Short, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4392",
+            "key": "53c36d34bc30798dac01cd9e13b549b9bdce80f9",
+            "name": "Context=HeroQuaternary, State=Hover, Content=Short, Motion=Reduce"
+          },
+          {
+            "nodeId": "23:4396",
+            "key": "9a82eeb552b2ee7347f2a8ebc007e0055f192f9c",
+            "name": "Context=HeroQuaternary, State=Default, Content=Long, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4400",
+            "key": "3447999609053b6a37f7d597c17bfc039ce96bc7",
+            "name": "Context=Base, State=Hover, Content=Long, Motion=NoPreference"
+          },
+          {
+            "nodeId": "23:4404",
+            "key": "54e9e704dfa0d811c8f82a6ea766338f50c638ca",
+            "name": "Context=Base, State=Focus, Content=Long, Motion=NoPreference"
+          }
+        ],
+        "url": "https://www.figma.com/design/Zgjq8pQ0FMT8d6dhw9M5bt?node-id=23-4308"
+      },
+      "source": {
+        "revision": "1639293738232ade132b442ab0fe983dec3d65d5",
+        "profileSHA256": "699346318e4e8c7187a92b38cb9d03faa7caa21f6a45352e5ed3f39dd8a7b6f3"
+      },
+      "documentation": "docs/COMPONENT-MAINTENANCE.md#current-card-and-editorial-cta-integration",
+      "scope": "Existing 23 source-backed static Editorial CTA variants updated in place and initially published; genuine remote CTA readback within Card consumer scope.",
+      "limits": [
+        "Text CTA is a separate family and is not represented by this Editorial CTA record.",
+        "Interactive hover/focus/motion semantics and exhaustive 23-by-five-brand consumer trials are unverified.",
+        "Future changed token/style publication and uptake are unverified.",
+        "Human novice handoff and current-main source compatibility remain open.",
+        "Source/mock checks and this register do not admit a native runtime or prove pixel/font-byte equivalence."
+      ],
+      "gates": {
+        "source": "accepted",
+        "rehearsal": "accepted",
+        "canonical": "accepted",
+        "publication": "accepted",
+        "consumer": "accepted"
+      },
+      "evidence": {
+        "publication": {
+          "artifact": "canonical-reviewed-actual-publication-receipt.json",
+          "sha256": "c44b17b21f9ae437c4bd6aa77b3eb52fb26a211203481d72b5d6b7cb2c1b7e2f",
+          "kind": "reviewed-native-publication",
+          "reviewedAcceptance": true
+        },
+        "consumer": {
+          "artifact": "consumer11-native-png-final-readback-full-report.json",
+          "sha256": "f4412658f162713d757482bc9c16b9651019f4e5dd4738267bc4384e9e95f8fb",
+          "kind": "reviewed-genuine-remote-consumer",
+          "reviewedAcceptance": true
+        }
+      },
+      "consumerURL": "https://www.figma.com/design/wOTLILmiXUI3uzG2BdPUxB?node-id=60-521",
+      "catalogueNotes": [
+        {
+          "nodeId": "30:2803",
+          "role": "status",
+          "text": "Editorial CTA: existing 23 variants published in place; finite static seed acceptance (observed 2026-10-08). Interactive behavior remains unverified."
+        }
+      ]
+    }
+  ]
+}
