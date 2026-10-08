@@ -16,7 +16,7 @@ Updated 7 October 2026. Repository split review remains pending. The current han
 
 The final remote expanded export and all 19 supporting tests passed independent review. The complete packet differs from the preserved original only in the actual top-level source revision. All source, toolkit and reference input guards remained intact. [Validation](VALIDATION.md), [source provenance](../source-lock.json) and [the evidence index](../evidence/index.json) record the checked commits, output hashes and review digests.
 
-Repository split implementation and local verification are complete. Human acceptance and merge of [toolkit PR #1](https://github.com/PreventionWeb/undrr-mangrove-figma/pull/1) and [Mangrove PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319) remain pending. Both PRs stay draft. The Mangrove diff has four paths and retains its `spike/react-aria-surface` base.
+Repository split implementation and local verification are complete. Human acceptance and merge of [toolkit PR #1](https://github.com/PreventionWeb/undrr-mangrove-figma/pull/1) and [Mangrove PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319) remain pending. Both PRs stay draft. The historical reduced Mangrove checkpoint had four paths on `spike/react-aria-surface`. The current companion PR targets `main` with token exports and shared Storybook documentation, excluding React Aria implementation and dependency changes.
 
 The inactive sources and historical contract documents are indexed rather than additional migration implementation gates. The earlier final documentation and metadata commits retain the verified executable bytes. The later workflow-hardening pass changes runbooks/navigation and one stale build-command diagnostic; all six local commands pass with retained generated-output pins. A fresh-agent read-only scenario dry-run passed, while human novice/native acceptance remains open.
 
@@ -29,3 +29,7 @@ GitHub listing endpoints may be suppressed. Status uses exact-number PR requests
 ## Companion merge link handoff
 
 Upstream workflow links use an immutable toolkit commit during review so branch deletion does not break them. When the companion toolkit PR is merged and its docs exist on `main`, update those upstream links to the durable merged destination before accepting the upstream PR. This link handoff is separate from source compatibility and native acceptance.
+
+## Main retarget, 8 October 2026
+
+The companion PR is retargeted to main through a normal history-preserving merge. Its reviewed candidate contains six paths, with 99 additions and one deletion, relative to main; no lockfile change remains. Main's public-fork documentation conventions and newer documentation mappings are preserved. See [migration](MIGRATION.md#main-targeted-companion-pr) for the independent PR base and unchanged historical toolkit source dependency. Native acceptance and current-main toolkit compatibility are not established by retargeting.

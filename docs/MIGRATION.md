@@ -4,7 +4,7 @@ Mangrove owns its token engine, tokens, components, styles and authored media. T
 
 ## Supported source and preservation
 
-The pushed thin Mangrove checkpoint is `1639293738232ade132b442ab0fe983dec3d65d5`. Its four-path integration retains token-engine exports, the documentation link, Figma integration documentation and minimal workspace lock alignment. The original extraction revisions remain provenance in `source-lock.json`; they are not substituted for the actual source head during export.
+The historical supported thin Mangrove checkpoint is `1639293738232ade132b442ab0fe983dec3d65d5`. Its four-path integration retains token-engine exports, the documentation link, Figma integration documentation and minimal workspace lock alignment. The original extraction revisions remain provenance in `source-lock.json`; they are not substituted for the actual source head during export.
 
 The complete upstream checkpoint `d5e790d3b0318730fdbd270279f340f35a2833ab` is preserved in a 3,161-path archive. Its checksum and limits are recorded in [the evidence index](../evidence/index.json). Git history and native backups remain separate. Inactive historical tooling is accounted for in [the ownership index](TOOLING-OWNERSHIP.md), rather than presented as an active workflow.
 
@@ -23,3 +23,9 @@ Fresh remote clones at the supported source checkpoint and toolkit `e39d58f2e5d8
 - Repository split acceptance: **pending human review of the two PRs and final evidence**.
 
 The 63 historical contract documents and 119 remaining inactive reusable sources are accounted for; activating them is not a split acceptance gate. Native rendering, fonts, capacity, edited reflow, canonical integration, publication and consumer handoff remain separate [release gates](RELEASE-STATUS.md).
+
+## Main-targeted companion PR
+
+Mangrove PR #1319 now targets `main`. Its tree is current main plus the six token-engine exports and shared Storybook documentation; React Aria implementation/dependency changes and the earlier lock alignment are outside the diff. A normal merge preserves the old feature tip and main as parents, retaining historical source checkpoints without force-pushing. The main-targeted PR can be reviewed independently of React Aria.
+
+This changes the PR base, not the supported toolkit source. `1639293738232ade132b442ab0fe983dec3d65d5` remains the reviewed source checkpoint. Current main lacks `stories/assets/scss/_control-tokens.scss`, required by the toolkit resolver, and main-source native/export compatibility has not been established. Use a separate installed checkout at the recorded source revision for the existing toolkit; adopting current main requires explicit source/adapter/output review. No source pins, native keys, generated packets or publication evidence are changed by this retarget.

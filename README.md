@@ -32,6 +32,8 @@ npm run check
 npm test
 ```
 
+The companion Mangrove PR now targets `main` independently of React Aria. That thin bridge/documentation change does not make the toolkit compatible with a current main checkout: the supported source checkpoint above includes foundations absent from main. Use a separate checkout at the supported revision for existing builds; review source/output compatibility before adopting a newer revision.
+
 The source path is explicit: this project does not copy or maintain a second set of Mangrove tokens or component styles. The pin records the known compatible source checkpoint. Default maintenance/normal commands check required paths, token-engine exports and selected source representation guards; they do not enforce complete Git revision or source-lock hash equality. Selecting another revision is a deliberate compatibility review: record the candidate revision and intended output changes, keep unexpected differences unresolved, and update the supported pin only after review. Expanded preparation separately enforces its explicit revision and byte-admission contracts. Do not bypass a source guard or replace hashes simply to make a candidate pass.
 
 ## Figma maintenance plugin
@@ -66,7 +68,7 @@ The normal JSON and runtime match their preserved upstream bytes; this establish
 - This repository owns Figma export/import adapters, plugin code and relevant tests.
 - Small necessary fixtures can live in Git. Bulk evidence belongs in immutable release assets with checksums and source revisions.
 
-See [local validation](docs/VALIDATION.md), [the migration plan](docs/MIGRATION.md), [current split status](docs/SPLIT-STATUS.md), [evidence index](evidence/index.json) and [upstream parking point](https://github.com/unisdr/undrr-mangrove/blob/a4bb46dafb7134a230e9c79fd26cd7306d2a6203/examples/figma-plugin/holistic/PARKING-POINT-2026-10-07.md). The full upstream spike is preserved as an immutable historical checkpoint; the pushed Mangrove branch now contains the four-path source integration. The agreed destination is this repository for the bulk of that spike and occasional Figma updates, with a much thinner Mangrove PR for links, source contracts and necessary integration. Migration changes are reviewed in a PR against `main`; [current native release gates](docs/RELEASE-STATUS.md) remain separate.
+See [local validation](docs/VALIDATION.md), [the migration plan](docs/MIGRATION.md), [current split status](docs/SPLIT-STATUS.md), [evidence index](evidence/index.json) and [upstream parking point](https://github.com/unisdr/undrr-mangrove/blob/a4bb46dafb7134a230e9c79fd26cd7306d2a6203/examples/figma-plugin/holistic/PARKING-POINT-2026-10-07.md). The full upstream spike is preserved as an immutable historical checkpoint; the original four-path extraction checkpoint remains the supported source input. The current Mangrove PR has been retargeted to main with only token exports and shared Storybook documentation, preserving main's existing dependency/lock state. The agreed destination is this repository for the bulk of that spike and occasional Figma updates, with a much thinner Mangrove PR for links, source contracts and necessary integration. Migration changes are reviewed in a PR against `main`; [current native release gates](docs/RELEASE-STATUS.md) remain separate.
 
 Licensed under Apache-2.0; extracted source retains its upstream provenance.
 
