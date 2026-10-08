@@ -104,6 +104,24 @@ node scripts/figma-card-cta-integration.cjs reviewed-source-packet.json candidat
 node scripts/figma-card-cta-integration.cjs --check reviewed-source-packet.json candidate-output.json
 ```
 
-The accepted input SHA256 is `5f677a0d3fdd25427afc1c1037ebf93333982388289242f60e9e3fae16913f1f`; the mapped output SHA256 is `3c15aa849e281ee2e42f73a99c435efad728a0546783ec2c51e0fee17f238de0`. The packet belongs to the preserved Card/CTA evidence workflow. It is not embedded in this checkout. This command does not extract new recipes from current Mangrove source, build components, admit a native update or publish assets. Restoring the reproducible source extraction closure remains a separate focused task.
+The accepted input SHA256 is `5f677a0d3fdd25427afc1c1037ebf93333982388289242f60e9e3fae16913f1f`; the mapped output SHA256 is `3c15aa849e281ee2e42f73a99c435efad728a0546783ec2c51e0fee17f238de0`. The packet belongs to the preserved Card/CTA evidence workflow. It is not embedded in this checkout. This transform command does not extract new recipes, build components, admit a native update or publish assets. Use the separate selected source profile below to regenerate recipes.
 
-As of 8 October 2026, the four title limits passed finite cloud owning-instance edit and restoration checks in the unpublished Card rehearsal. Captured UNDRR defaults have a source/native visual review for seed exploration. Native corrected-title rendering, five-brand raster review, canonical-copy integration, repeat-build identity/geometry, scoped canonical publication and genuine consumer uptake remain pending. A fresh native canonical backup and a separate unpublished canonical-copy rehearsal were created; the main kit has not been changed by this integration attempt.
+As of 8 October 2026, the four title limits passed finite cloud owning-instance edit and restoration checks and 11 genuine native short/long/short trials in the unpublished Card rehearsal. Independent review accepted 16 actual native PNGs for the finite four-variant UNDRR/MCR and mobile Default five-brand matrix. A separate fresh native reader verified all 215 returned temporary IDs absent and the full recorded rehearsal scene/assets unchanged. Multiline caret centering and fractional allocation remain disclosed seed approximations; this is not full-catalogue pixel equivalence. Canonical-copy integration, repeat-build identity/geometry, scoped canonical publication and genuine consumer uptake remain pending. A fresh native canonical backup and a separate unpublished canonical-copy rehearsal were created; the main kit has not been changed by this integration attempt.
+
+### Regenerate the selected source profile
+
+The maintained `scripts/figma-horizontal-book-recipes.cjs` and `scripts/build-figma-card-cta.cjs` now extract only Horizontal Book Card eight variants and Editorial CTA 23 variants from the supported source checkout. The profile includes their transitive 70 variables, eight text styles and one dedicated effect. It reuses maintained asset helpers and excludes historical full-catalogue metadata and the expanded registry. Seven component/story/style input hashes and the official source image hash guard the finite source contract.
+
+Set `MANGROVE_SOURCE_ROOT` to the installed supported checkout, then run:
+
+```sh
+npm run build:kit:card-cta -- --fetch-media --output /tmp/mangrove-card-cta-source.json
+npm run build:kit:card-cta -- --check --output /tmp/mangrove-card-cta-source.json
+npm run test:kit:card-cta:source
+```
+
+The first command downloads the authored UNDRR story image only when its cache is missing and verifies SHA256 `4770262ae2ee8715facebeb0ff0c70b45ce8831e9fb36f79fafbeecfeed50370`. Later runs use the checked cache. Set `MANGROVE_CARD_CTA_MEDIA_CACHE` to choose another cache path; a mismatched image is refused, with no substitute. Output is explicit and does not overwrite the normal kit packet or runtime.
+
+The initial selected profile SHA256 is `699346318e4e8c7187a92b38cb9d03faa7caa21f6a45352e5ed3f39dd8a7b6f3`. Its collection, modes, variables, styles and every component recipe field exactly match the reviewed mapped packet above. Its full hash differs because it contains honest selected-profile provenance instead of unrelated historical catalogue metadata. Source/mode/media refusal tests and unchanged default 32-family extraction checks pass.
+
+**This profile exports recipes only.** Its required `source-effect-surface-v1` capability is not present in the default maintained construction runtime. Do not load it into that runtime and infer support. A separately reviewed selected native adapter and the affected release gates are still required. Neither this exporter nor its tests publish library assets. Deliberate source changes require reviewing input guards, output differences and the current native admission baseline.
