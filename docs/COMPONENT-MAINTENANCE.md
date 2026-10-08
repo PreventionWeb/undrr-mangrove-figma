@@ -4,6 +4,21 @@ Use this procedure to update one existing source-maintained family or develop on
 
 For variables and text/effect styles alone, use [variable/style maintenance](MAINTENANCE.md). For implementing a designer's Figma change in Mangrove, see [design to code](DESIGN-TO-CODE.md). Follow the [README setup](../README.md) and check the applicable [native release gates](RELEASE-STATUS.md) before publishing. Expanded/page experiments are preserved on the evidence branch and are outside this maintained checkout.
 
+## Routine selected maintenance
+
+Use one bounded release and the [component release acceptance template](templates/COMPONENT-RELEASE-ACCEPTANCE.md) for an occasional component update. Record the family, intended changes, source/toolkit revisions, supported properties and brand modes, target main IDs and affected shared assets. Reuse that record through rehearsal, publication and consumer validation; attach operation results and visual observations to it instead of creating separate approval documents for each capture or checksum.
+
+1. Save a native backup and capture the accepted before-state once for the selected target and affected users. Keep existing edits, geometry, modes, identities and links in that baseline.
+2. Build only the selected family through its supported adapter. Have the operation harness compare the full recorded before/after state automatically, allowing only the intended changes and journalled additions. A default plugin result alone does not provide this full comparison; use an adapter that supplies it before accepting preservation.
+3. Review representative actual native renders and exposed-property edits for the changed states and relevant brand differences. Expand the visual sample when the change affects more typography, geometry or shared users. Source/mock checks do not establish rendering.
+4. Run an ordinary rebuild with review refresh off. Require stable recorded state, existing identities and links, and zero unexpected permanent creations. Use the accepted result as the repeat baseline; do not recapture or request another independent approval when nothing changed.
+5. Apply the reviewed change to the canonical library, save it online and publish only the intended assets and required dependencies. Record the actual publication outcome in the same report.
+6. Verify a genuine linked consumer, preserving its recorded edits, properties, geometry, modes and links. For a changed existing asset, verify update uptake and the restoration needed by the release scope. For a new family, verify genuine remote linkage. Keep untested cases explicit.
+
+One reviewer should assess the consolidated evidence for the bounded release. Checksums and artifact pins belong in the report for reproducibility; routine operation should not require repeated manual hash approvals or duplicate expert reviews. Report a failure and its exact differences before retrying. A failed build is not an accepted baseline merely because the scene still looks correct.
+
+Use exhaustive recovery checks when changing the importer, layout algorithm, ownership/identity handling, source boundary or existing topology, or when a native failure leaves partial state. Preserve failed reports and backups, inspect the full affected closure and shared users, and rehearse in an unpublished copy. Require separately reviewed recovery and repeat evidence before releasing. These deeper checks diagnose a changed mechanism; they are not the default ceremony for every occasional component update.
+
 ## Choose the source and adapter
 
 Record the actual Mangrove and toolkit Git revisions, intended family and variants, brand modes, affected shared styles, and library/consumer checkpoints. Record the exact page containing the existing main set and its expected set/variant node IDs. Set `MANGROVE_SOURCE_ROOT` to the installed Mangrove checkout; do not copy its tokens or styles into this toolkit.
