@@ -21,7 +21,11 @@ node scripts/build-figma-selected.cjs --source /tmp/tag-source.json \
   --out /tmp/tag-target.json
 ```
 
-Import `/tmp/mangrove-selected-tag/manifest.json` as a development plugin. Open the intended file and page, load the configuration, confirm the file association, and capture one fresh baseline. Save it, derive the configuration again against those fresh bytes, then load both fresh inputs and rebuild. Save the single operation report. It contains the full before/after snapshots, all mutation attempts, any temporary probe IDs and honest errors. A failure checkpoint is also downloadable before the final capture. Do not edit an installed bundle while it runs because Figma development plugins hot reload.
+Import `/tmp/mangrove-selected-tag/manifest.json` as a development plugin. Open the intended file and page, load the configuration, and confirm the visible file association. Choose **Capture session baseline**. The plugin keeps the full fresh baseline in memory and derives its matching configuration internally. Review the returned target, source checksum and inventory counts, then explicitly approve **Rebuild captured session**. The session token is consumed before execution; another execution requires a fresh capture.
+
+The rebuild returns a small automatic recorded-check summary. **Save summary** retains that result; **Download full report** explicitly exports the complete evidence. Keep the full report for release review. It contains the full before/after snapshots, all mutation attempts, any temporary probe IDs and honest errors. A failure checkpoint is also downloadable before the final capture. The summary does not establish visual parity, human acceptance or publication. The advanced uploaded-baseline path remains available for recovery. Do not edit an installed bundle while it runs because Figma development plugins hot reload.
+
+The single-session workflow passed two ordinary native executions of the same frozen candidate in the retained unpublished Tag rehearsal on 2026-10-09. Independent review confirmed exact full recorded preservation, repeat geometry and truthful summaries. See [session acceptance and report pins](../../docs/COMPONENT-MAINTENANCE.md#single-session-tag-workflow). See [local automation research and efficiency measurements](../../docs/AUTOMATION.md).
 
 The target fence requires the page, local collection key, Tag set key and every ordered member ID/key. When native `fileKey` is unavailable, checking the fresh visible URL remains necessary. Configuration has no canonical-file bypass. Keep manifest ID `mangrove-tokens-exploratory` unchanged; use a distinct display name when necessary. Private plugin data belongs to that ID. When native `pluginId` is available, a different ID refuses before reading metadata or rebuilding. Reports distinguish the observed ID from the expected scope and explicitly record when it is unavailable.
 
@@ -32,6 +36,15 @@ The shared producer rebuilds only the existing Tag masters and source specimens.
 ```sh
 MANGROVE_SOURCE_ROOT=/path/to/locked/mangrove npm run test:selected
 ```
+
+To independently regenerate the recorded-check summary from a saved raw receipt and its exact source packet:
+
+```sh
+node scripts/summarize-figma-selected.cjs --report /path/to/full-report.json \
+  --source /tmp/tag-source.json --out /path/to/new-summary.json
+```
+
+The CLI retains the raw report and records its checksum. It refuses an existing output path and exits unsuccessfully when recorded checks do not pass. It cannot establish native rendering or human acceptance from JSON alone.
 
 Tests compare normal compiler output byte for byte, exercise the real shared producer and verify foreign mutations, immutable native data, failure journaling and preservation refusals. Models do not establish native font, geometry or raster equivalence.
 

@@ -253,26 +253,28 @@ async function run(kind) {
       assert.equal(context.rendererCalls, 0, kind + " reached renderer");
   }
 }
-(async () => {
-  for (const kind of [
-    "success",
-    "wrong-plugin",
-    "wrong-file",
-    "source-change",
-    "first",
-    "bytes-change",
-    "foreign-member",
-    "fresh-drift",
-    "scene-drift",
-    "asset-drift",
-    "other-page-drift",
-    "permanent",
-  ])
-    await run(kind);
-  console.log(
-    "PASS full-runner orchestration: one successful modeled rebuild; prewrite target/source/input/member/drift refusals; scene/asset/other-page drift and permanent creation fail; traversal flag restored. Mock orchestration only.",
-  );
-})().catch((e) => {
-  console.error(e);
-  process.exitCode = 1;
-});
+module.exports = { fixture };
+if (require.main === module)
+  (async () => {
+    for (const kind of [
+      "success",
+      "wrong-plugin",
+      "wrong-file",
+      "source-change",
+      "first",
+      "bytes-change",
+      "foreign-member",
+      "fresh-drift",
+      "scene-drift",
+      "asset-drift",
+      "other-page-drift",
+      "permanent",
+    ])
+      await run(kind);
+    console.log(
+      "PASS full-runner orchestration: one successful modeled rebuild; prewrite target/source/input/member/drift refusals; scene/asset/other-page drift and permanent creation fail; traversal flag restored. Mock orchestration only.",
+    );
+  })().catch((e) => {
+    console.error(e);
+    process.exitCode = 1;
+  });

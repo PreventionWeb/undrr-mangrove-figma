@@ -31,6 +31,23 @@ The native reports remain in `Mangrove kit handoff/Maintained Tag runner 2026-10
 
 An initial changed-plugin-ID attempt refused with zero journal entries and exact before/after preservation. Its private metadata visibility differed; no fields were waived and its capture was not adopted as a baseline. The final entry keeps the original manifest ID, explicitly guards the observed namespace and shows input/checksum progress. Raw report acceptance flags remain unchanged; the acceptance decision is recorded separately. No publication, first construction, changed-source/style propagation or human handoff acceptance follows from these unchanged-source rebuilds.
 
+### Single-session Tag workflow
+
+The single-session controller keeps the fresh full baseline in plugin memory, derives matching target configuration internally and returns an automatic recorded-check summary. The operator reviews the target and counts before approving the rebuild. A session token is consumed before execution; another run needs a fresh capture. Full reports remain available on explicit request. See the [selected entry instructions](../examples/figma-selected/README.md) and [local automation research](AUTOMATION.md).
+
+Two ordinary executions of the same frozen candidate passed independent finite review in the retained unpublished Tag rehearsal on 2026-10-09. Both matched the prior accepted state and each other exactly across full recorded scenes, geometry, local assets, links, pages, identities and font records. Each had 610 journal entries within the 100-node selected closure, 44 updated selected nodes, five masters and 25 brand/Tone cases, with zero permanent creation or variable/style changes. Independently recomputed summaries matched the saved automatic results. Each summary is 1,261 bytes; each full report is 66,007,136 bytes. This reduces handling and transfers, not a measured native-runtime or model-token benchmark.
+
+Evidence is retained in `Mangrove kit handoff/Single-session Tag maintenance 2026-10-08/` (the preparation folder date precedes execution):
+
+| Artifact                                                         | SHA256                                                             |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `mangrove-selected-tag-session-first-full-report-20261009.json`  | `2217fd632500c3a774dc5ec665f26b2543953fa2038ebf8a26cb23b9251eda8e` |
+| `mangrove-selected-tag-session-repeat-full-report-20261009.json` | `464122bfa7fe32aa9f6d097ed277c651e1a16dffe296e860aab0665a09fa2a76` |
+| `independent-single-session-tag-verdict-20261009.json`           | `6ec254aa9e7f353196863947742e5cd1a9a3f1b46df07084cf5ed00fa67e1cd7` |
+| Frozen compiled `native-candidate/code.js`                       | `f3deba540e7c07444ca011099a981e217fd2e6293e2f4d376cf691bb72944b37` |
+
+The source packet remains pinned to SHA256 `81bca4b741fb6288beaa2388916389e9bde8ed26be23e06f95ceb193508b3ad6`. Native cache checksums are reported and guarded by the runner; cached baseline bytes were not exported for independent hashing. Actual original plugin namespace was observed in both receipts. Raw producer acceptance flags remain unchanged, with this finite decision recorded separately. No new raster parity, human handoff, changed-source/style propagation, first construction, asset migration, Card/CTA support or publication acceptance follows. The canonical kit was unchanged.
+
 ## Choose the source and adapter
 
 Record the actual Mangrove and toolkit Git revisions, intended family and variants, brand modes, affected shared styles, and library/consumer checkpoints. Record the exact page containing the existing main set and its expected set/variant node IDs. Set `MANGROVE_SOURCE_ROOT` to the installed Mangrove checkout; do not copy its tokens or styles into this toolkit.
