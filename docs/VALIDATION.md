@@ -10,6 +10,23 @@ The retained maintenance tests verify five-brand alias closure, isolated generat
 
 Bounded construction tests retain original DTO/runtime hashes and 32-family/383-variant assertions, plus builder/layout/flow/UI/export/font behaviour. `test:kit:extraction` and `test:kit:behavior` partition the existing aggregate without altering its assertions.
 
+## Current checks, 9 October 2026
+
+Against the supported source checkout, the current maintenance build/check/tests, selected compiler/controller/session/summary suite, construction build/freshness checks, construction behavioural suite and page-layout refusal test passed locally. This focused run reused installed dependencies; the clean-install evidence below belongs to the earlier narrowing checkpoint.
+
+For current construction checks, run:
+
+```sh
+npm run build:kit
+npm run check:kit
+npm run test:kit:behavior
+npm run test:page-layout
+```
+
+The default registry remains 32 families and 383 variants. The full-plugin entry now refuses writes in a page-organised file. That intentional runtime change fails the preserved historical hash in `test:kit:extraction`, and consequently `test:kit` stops before its behavioural suites. This is a disclosed historical parity difference, not a passing aggregate. The fixture remains unchanged. Run historical parity against its recorded toolkit revision; use the commands above for current behaviour.
+
+Touched-file formatting, local documentation links and diff checks passed. Native selected-release and Pages evidence, including its finite scope and remaining limits, is recorded in [release status](RELEASE-STATUS.md). Mock checks do not establish native acceptance. Verification is local macOS; Linux remains unverified and Actions are unavailable.
+
 ## Narrowed PR checks, 8 October 2026
 
 On Node.js 24.18.0, a clean `npm ci` using the pruned lockfile passed (122 installed packages). The six maintained commands passed against the installed supported source checkout:

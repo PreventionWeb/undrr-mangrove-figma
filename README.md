@@ -17,7 +17,7 @@ This is a seed kit with occasional maintenance. A designer can change Figma and 
 | Check selected published releases                       | [Release register](docs/RELEASE-REGISTER.md)                                                                     | Dated Tag, Book Card and Editorial CTA scope, evidence and remaining limits.                  |
 | Designer changed a component or proposed a new one      | [Design-to-code handoff](docs/DESIGN-TO-CODE.md) and [request template](docs/templates/DESIGN-CHANGE-REQUEST.md) | Implement and review in Mangrove Storybook; no Figma rebuild required                         |
 | Update source-backed variables or styles                | [Maintenance runbook](docs/MAINTENANCE.md)                                                                       | `npm run build`, `npm run check`, `npm test`; maintenance plugin                              |
-| Bring an existing supported component change into Figma | [Selected component maintenance](docs/COMPONENT-MAINTENANCE.md)                                                  | `npm run build:kit`, `npm run check:kit`, `npm run test:kit`; explicitly selected families    |
+| Bring an existing supported component change into Figma | [Selected component maintenance](docs/COMPONENT-MAINTENANCE.md)                                                  | Selected adapter, behavioural checks and native rehearsal; see the runbook                    |
 | Introduce a new Figma family                            | [Adapter extension checklist](docs/COMPONENT-MAINTENANCE.md)                                                     | A finite reviewed recipe and native rehearsal; stories alone do not generate a family         |
 | Rebuild an existing unchanged static Tag library        | [Maintained selected runner](examples/figma-selected/README.md)                                                  | `npm run build:selected`; fresh target configuration and full native baseline; no publication |
 | Prepare the selected static Tag source profile          | [Selected Tag profile](docs/COMPONENT-MAINTENANCE.md#selected-tag-source-profile)                                | `npm run build:kit:tag -- --output /tmp/mangrove-tag-source.json`; source preparation only    |
@@ -52,12 +52,13 @@ The supported seed exporter produces 520 variables, 102 text definitions and eig
 ```sh
 npm run build:kit
 npm run check:kit
-npm run test:kit
+npm run test:kit:behavior
+npm run test:page-layout
 ```
 
-Import `examples/figma-plugin/manifest.json` and use generated `examples/figma-plugin/mangrove-variables.json`. Select only intended families. Construction and component ownership safeguards are described in [component maintenance](docs/COMPONENT-MAINTENANCE.md). The normal catalogue is 32 families and 383 variants, with original extraction hashes retained.
+For a compatible single-page rehearsal, import `examples/figma-plugin/manifest.json` and use generated `examples/figma-plugin/mangrove-variables.json`. Select only intended families. The canonical [four-page kit](docs/FIGMA-FILES.md#four-page-organisation) blocks writes through this full-plugin UI; use standalone foundations maintenance or the selected unchanged-source Tag entry on Library. Construction and component ownership safeguards are described in [component maintenance](docs/COMPONENT-MAINTENANCE.md). The normal catalogue is 32 families and 383 variants, with original extraction hashes retained.
 
-For intentional future output changes, distinguish `test:kit:extraction` historical parity from `test:kit:behavior` behavioural checks as described in the runbook. Neither replaces relevant native checks.
+`npm run test:kit` and `test:kit:extraction` retain the original whole-runtime hash and currently fail at the intentional page-layout guard change. Preserve that historical fixture. The behavioural and page-layout checks above validate the current implementation; neither establishes native acceptance. See [current validation](docs/VALIDATION.md).
 
 ## Validation and contribution
 

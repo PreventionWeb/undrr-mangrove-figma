@@ -52,7 +52,7 @@ The source packet remains pinned to SHA256 `81bca4b741fb6288beaa2388916389e9bde8
 
 During the unpublished four-page rehearsal, the first selected session refused before mutation because its cached initial baseline differed from the fresh preflight capture. The journal was empty and the saved operation before/after state matched exactly. The current summary compares that operation before-state with its after-state; the initial cached capture was not exported, so the exact cached-to-preflight field differences are unavailable and the cause is unknown. The failed receipt remains preserved. One strict advanced retry using the separately reviewed exact saved after-state passed independent finite review, with full recorded preservation and zero permanent creation. The frozen R2 runner and equality checks were unchanged.
 
-The canonical page migration was then applied with no unexpected differences in the bounded cloud field projection. Library remains page `0:1`; the full Tag and Book Card masters/review subtrees stay together. Private data, asset shared metadata and omitted cloud text fields remain unverified. This migration did not execute a canonical Tag rebuild, publish assets or reconnect consumers; Before and after named checkpoints were read back in native Version history. Desktop still reports a reconnect warning, so completion of its local sync queue is not established.
+The canonical page migration was then applied with no unexpected differences in the bounded cloud field projection. Library remains page `0:1`; the full Tag and Book Card masters/review subtrees stay together. Private data, asset shared metadata and omitted cloud text fields remain unverified. This migration did not execute a canonical Tag rebuild, publish assets or reconnect consumers. Before and after named checkpoints were read back in native Version history. Desktop still reports a reconnect warning, so completion of its local sync queue is not established.
 
 Evidence is retained in `Mangrove kit handoff/Pages migration 2026-10-09/`: the native refusal SHA256 is `6961d4730eb4f087958bf86d31cb9830ab272042ccaa4ccec019a4b2c2d60a96`, the exact retry baseline is `39aab379418c587331a8322e3659a826795551631407e8be88457ab6a9a3c96e`, and the successful full retry report is `79b59e8051138e43ef23957249bdbc43edb3f7d49105295d622669d4c30e7f9f`. `canonical-migration.json` records the separate bounded canonical operation and its unsupported fields. The source remains the pinned static Tag packet above.
 
@@ -99,7 +99,8 @@ Install source dependencies using Mangrove's own instructions and install this t
 export MANGROVE_SOURCE_ROOT=/absolute/path/to/undrr-mangrove
 npm run build:kit
 npm run check:kit
-npm run test:kit
+npm run test:kit:behavior
+npm run test:page-layout
 ```
 
 These commands prepare and check the normal catalogue and runtime locally. They do not build all components in a Figma file. For changes to the shared maintenance implementation, also run `npm run build`, `npm run check` and `npm test`, as required by this repository's agent instructions. Keep generated JSON and bundles out of commits.
