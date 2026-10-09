@@ -48,6 +48,16 @@ Evidence is retained in `Mangrove kit handoff/Single-session Tag maintenance 202
 
 The source packet remains pinned to SHA256 `81bca4b741fb6288beaa2388916389e9bde8ed26be23e06f95ceb193508b3ad6`. Native cache checksums are reported and guarded by the runner; cached baseline bytes were not exported for independent hashing. Actual original plugin namespace was observed in both receipts. Raw producer acceptance flags remain unchanged, with this finite decision recorded separately. No new raster parity, human handoff, changed-source/style propagation, first construction, asset migration, Card/CTA support or publication acceptance follows. The canonical kit was unchanged.
 
+### Four-page rehearsal and diagnostic follow-up
+
+During the unpublished four-page rehearsal, the first selected session refused before mutation because its cached initial baseline differed from the fresh preflight capture. The journal was empty and the saved operation before/after state matched exactly. The current summary compares that operation before-state with its after-state; the initial cached capture was not exported, so the exact cached-to-preflight field differences are unavailable and the cause is unknown. The failed receipt remains preserved. One strict advanced retry using the separately reviewed exact saved after-state passed independent finite review, with full recorded preservation and zero permanent creation. The frozen R2 runner and equality checks were unchanged.
+
+The canonical page migration was then applied with no unexpected differences in the bounded cloud field projection. Library remains page `0:1`; the full Tag and Book Card masters/review subtrees stay together. Private data, asset shared metadata and omitted cloud text fields remain unverified. This migration did not execute a canonical Tag rebuild, publish assets or reconnect consumers; Before and after named checkpoints were read back in native Version history. Desktop still reports a reconnect warning, so completion of its local sync queue is not established.
+
+Evidence is retained in `Mangrove kit handoff/Pages migration 2026-10-09/`: the native refusal SHA256 is `6961d4730eb4f087958bf86d31cb9830ab272042ccaa4ccec019a4b2c2d60a96`, the exact retry baseline is `39aab379418c587331a8322e3659a826795551631407e8be88457ab6a9a3c96e`, and the successful full retry report is `79b59e8051138e43ef23957249bdbc43edb3f7d49105295d622669d4c30e7f9f`. `canonical-migration.json` records the separate bounded canonical operation and its unsupported fields. The source remains the pinned static Tag packet above.
+
+A bounded follow-up is to report category, node ID and changed fields for cached-to-preflight differences on refusal only. Keep the full equality checks and explicit failure intact. This diagnostic should not introduce routine full-baseline exports, silently adopt a changed baseline or weaken preservation requirements.
+
 ## Choose the source and adapter
 
 Record the actual Mangrove and toolkit Git revisions, intended family and variants, brand modes, affected shared styles, and library/consumer checkpoints. Record the exact page containing the existing main set and its expected set/variant node IDs. Set `MANGROVE_SOURCE_ROOT` to the installed Mangrove checkout; do not copy its tokens or styles into this toolkit.
@@ -80,6 +90,8 @@ For a deliberate source/adapter update, first record the accepted baseline revis
 New normal families also require reviewing the historical test's fixed count assumptions in that separate current-baseline check. A new hash or count is not enough to establish identity compatibility or native acceptance. Native rehearsal and publication gates below still apply to the affected assets.
 
 ## Prepare a selected-family rehearsal
+
+The default construction steps below apply to a compatible single-page seed rehearsal. They are unsupported in a page-organised canonical file: the updated UI refuses writes when the shared page-layout marker is nonempty. Use the [selected Tag entry](../examples/figma-selected/README.md) on **01 Library** for its accepted unchanged-source scope, or [standalone maintenance](MAINTENANCE.md) for variables/styles. Install the current toolkit build before relying on its guard; older installed bundles do not gain protection automatically. Direct connector/builder calls are outside the UI guard and must not rebuild the organised canonical file.
 
 Install source dependencies using Mangrove's own instructions and install this toolkit as described in the README. Run these commands in this repository after setting the explicit source path:
 

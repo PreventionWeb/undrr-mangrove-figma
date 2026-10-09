@@ -19,6 +19,24 @@ figma.ui.onmessage = async msg => {
     return;
   }
   try {
+    // Page-organised files retain their original identities, but the whole-kit
+    // constructor and layout still index one current page. Refuse before dispatch.
+    const pageLayout = figma.root.getSharedPluginData(
+      'orgundrrmangrove',
+      'mgPageLayout'
+    );
+    const pageLayoutReadOnly = new Set([
+      'inspect',
+      'kit-navigation-state',
+      'read-maintenance-policy',
+      'export-review',
+      'font-diagnostics',
+      'inspect-capability-probes',
+    ]);
+    if (pageLayout && !pageLayoutReadOnly.has(msg.type))
+      throw new Error(
+        'This file uses a page-organised Mangrove layout. Whole-kit construction and layout are unsupported. Use standalone token maintenance, or the selected component entry on the Library page.'
+      );
     if (msg.type === 'kit-navigation-state') {
       let result;
       try {
