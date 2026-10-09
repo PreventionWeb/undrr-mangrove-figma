@@ -1,0 +1,59 @@
+# Figma file orientation
+
+Inventory checked 7 October 2026. All 13 recorded files were accessible through the online connector. Named history checkpoints were verified for the five open desktop files: canonical kit, recovery checkpoint, earlier Horizontal Card, source Card rehearsal and latest combined rehearsal. Older desktop tabs also displayed intermittent reconnect warnings; this is not proof that every local sync queue is empty. Saving online is separate from publishing a library. The canonical and finite consumer Card/CTA and static Tag status below was updated on 8 October 2026 after scoped publication and consumer review; the broader inventory observation remains dated 7 October.
+
+## Primary review files
+
+| File                                                                                      | Purpose and limit                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Canonical kit](https://www.figma.com/design/Zgjq8pQ0FMT8d6dhw9M5bt?node-id=30-2701)      | Existing foundations, components, examples and maintenance guidance. The retained **01 Library** page (`0:1`) contains 34 component sets, including the saved online and published Book Card/Editorial CTA and static Tag scopes. This is not the complete expanded source catalogue.                                                                                                                                                        |
+| [Consumer validation](https://www.figma.com/design/wOTLILmiXUI3uzG2BdPUxB?node-id=60-521) | Accepted finite published Card/CTA consumer proof in stage `60:521`: Default 640/390 across five brands, genuine owning Title edits and exact restoration, plus existing Editorial CTA reuse. Published static Tag proof is also retained in stage `64:750`: five tones across five brands with genuine owning Label edits and exact restoration. Original edited instances and links were preserved. This is not full-catalogue acceptance. |
+
+Open the published canonical masters directly: [Horizontal Book Card, eight variants, main set `128:4670`](https://www.figma.com/design/Zgjq8pQ0FMT8d6dhw9M5bt?node-id=128-4670) and [Editorial CTA, 23 variants, main set `23:4308`](https://www.figma.com/design/Zgjq8pQ0FMT8d6dhw9M5bt?node-id=23-4308).
+
+Open [static Tag, five tones, main set `139:5083`](https://www.figma.com/design/Zgjq8pQ0FMT8d6dhw9M5bt?node-id=139-5083) and [genuine published Tag consumer stage `64:750`](https://www.figma.com/design/wOTLILmiXUI3uzG2BdPUxB?node-id=64-750). Its 25 edited Labels, genuine published links and five modes passed online readback. Native History checkpoints `Published static Tag verified 2026-10-08` and `Published Tag consumer verified 2026-10-08` were saved and read back; checksummed local `.fig` backups were retained.
+
+The 8 October release checkpoints were saved and read back in native Version history: `Published Book Card and Editorial CTA verified 2026-10-08` in the canonical file and `Published Card CTA consumer verified 2026-10-08` in the consumer file. Final local `.fig` backups were also retained.
+
+[Earlier Tag, Section Header and search-state experiment](https://www.figma.com/design/GbVTvFbuWjoJr6Bf5t4fhg) remains an exploratory artifact. Use the published canonical Tag above; Section Header and search-state integration remain pending. It contains only a small native subset, not the full 139-family recipe catalogue.
+
+## Four-page organisation
+
+On 9 October 2026, the rehearsed four-page organisation was applied to the canonical kit. The original page ID `0:1` remains **01 Library**:
+
+- [**00 Start here**](https://www.figma.com/design/Zgjq8pQ0FMT8d6dhw9M5bt?node-id=155-4784): orientation and designer guidance.
+- [**01 Library**](https://www.figma.com/design/Zgjq8pQ0FMT8d6dhw9M5bt?node-id=0-1): foundations and existing component source subtrees. Tag masters and their complete finite review remain together here, as do Book Card masters and their review.
+- [**02 Examples**](https://www.figma.com/design/Zgjq8pQ0FMT8d6dhw9M5bt?node-id=155-4785): examples guidance and a practice workspace. The reviewed designer pilot remains in the separate consumer file.
+- [**90 Maintenance and validation**](https://www.figma.com/design/Zgjq8pQ0FMT8d6dhw9M5bt?node-id=45-4496): coverage catalogue, gaps and technical specimens.
+
+Use named pages and exact node links rather than assuming masters occupy the first page. Keeping each selected family and its review together preserves the selected Tag entry's current single-page contract; this organisation does not add cross-page construction support.
+
+The default full-plugin UI checks the document's shared `orgundrrmangrove/mgPageLayout` marker and refuses writes when it is nonempty. This guard protects that UI dispatch only; direct connector or builder calls have no corresponding protection. Whole-kit page adaptation remains unsupported. Use standalone token maintenance for foundations or the selected Tag entry on Library for its accepted unchanged-source scope. The bounded cloud migration comparison retained node IDs, keys and recorded fields with no unexpected differences; private plugin data, asset shared metadata and omitted text fields remain unverified by that bridge. One strict unchanged-source Tag rebuild passed in the unpublished page rehearsal after an empty-journal prewrite refusal. No canonical Tag rebuild, publication or consumer reconnection was performed as part of this migration. Before and after named checkpoints were read back in native Version history. Desktop still reports a reconnect warning, so completion of its local sync queue is not established.
+
+## Designer pilot
+
+The consumer file now has a separate [Designer pilot / PreventionWeb resources page](https://www.figma.com/design/wOTLILmiXUI3uzG2BdPUxB?node-id=68-432), with editable desktop and phone compositions using genuine published Book Card, Tag and Editorial CTA instances. Its copy and cover images are illustrative. Human usability and design approval remain pending; follow the [pilot brief](DESIGNER-PILOT.md). Existing finite validation stages remain on Page 1 and keep their recorded acceptance scope.
+
+## Retired rehearsals and status labels
+
+On 8 October 2026, four superseded Card/CTA rehearsals were retired from active use in place. Their Figma file names now start with `ARCHIVED` and include `use main kit Zgjq8pQ0FMT8d6dhw9M5bt`. The labels were verified in the refreshed online file manager. Use the canonical kit and consumer validation file above for current work.
+
+- [Combined Card/CTA rehearsal](https://www.figma.com/design/VCwJs8fTYXU8007BYYqqwp?node-id=2-87): historical unpublished visual proof for eight Book Card and 23 Editorial CTA variants. Its `Online review checkpoint 2026-10-07` remains preserved.
+- [Earlier Horizontal Card experiment](https://www.figma.com/design/uEoniqMXfDJ0vcGrnPKWp3): superseded Card/CTA proof.
+- [Source Card rehearsal](https://www.figma.com/design/2Q22kppvaeByI4l5lnq4pH): source asset staging and earlier Book Card proof.
+- [Card/CTA integration rehearsal](https://www.figma.com/design/blfPMOjKbUbVHv6DDSsFDa): unpublished copy used to verify the selected integration before applying it to the canonical kit.
+
+Archival here is a file-name and documentation status, not deletion or a move to another project. File keys, existing links, content, sharing and native History were retained; local `.fig` backups and the evidence archives remain preserved. No library was published or consumer reconnected as part of this cleanup.
+
+The recovery file is labelled `RECOVERY - Mangrove Professional checkpoint 2026-10-05 - UNPUBLISHED`. The source Tag rehearsal is labelled `PENDING - Mangrove source Tag rehearsal - UNPUBLISHED`. Diagnostics and the Tag/Section Header/search-state experiment remain preserved under their existing names with the statuses below.
+
+## Preserved recovery, pending experiments and diagnostics
+
+- [Recovery checkpoint](https://www.figma.com/design/JF29fJWi9LzUHeOObGL3nB): `RECOVERY - Mangrove Professional checkpoint 2026-10-05 - UNPUBLISHED`. Use for bounded recovery/layout experiments. Keep it unpublished and do not reconnect canonical consumers to its new library keys.
+- [Source Tag rehearsal](https://www.figma.com/design/LviBfm8By4lHVQmldaa94u): historical source preparation for the now published finite Tag scope; use the canonical Tag set for current design work.
+- [Unpublished Tag integration rehearsal](https://www.figma.com/design/vMj2breVovj6vKdvpFJ2MV?node-id=2009-4910): retained finite construction, visual, restoration and repeat evidence. It remains unpublished and is not a consumer library.
+- Diagnostics: [gradients](https://www.figma.com/design/fEC9dKtEVbJ5tZFEyLm3vO), [variable collections](https://www.figma.com/design/4cphvmjWpM6umE8qrpjyQa), [rich text](https://www.figma.com/design/3PbB1KO6fY7vdYLvHsQdXP), [SVG sizing](https://www.figma.com/design/QyeEnYS4hfV7gMRhjWNckJ) and [semantic lists](https://www.figma.com/design/yQERTnAg95ysOZoSyPXr0j). The semantic-list file was empty at inspection.
+
+## Starting another maintenance session
+
+Use the exact file and node links in the change request. Record the actual current checkpoint, tool/source revisions, asset identities and intended operation rather than assuming this dated inventory is current acceptance. Preserve native backups and History. Do not publish or replace a recovery/diagnostic file just to tidy this inventory. Consult [release status](RELEASE-STATUS.md) before treating a family or publication path as accepted.

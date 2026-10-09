@@ -1,11 +1,10 @@
 {
   "version": 1,
   "repository": "https://github.com/unisdr/undrr-mangrove",
-  "revision": "a4bb46dafb7134a230e9c79fd26cd7306d2a6203",
+  "revision": "1639293738232ade132b442ab0fe983dec3d65d5",
   "pullRequest": "https://github.com/unisdr/undrr-mangrove/pull/1319",
   "baseRevision": "f5792a9f1164b262ff5c5fc961395300bc7b17f0",
   "sourceCohort": [
-    "scripts/build-tokens.cjs",
     "scripts/build-figma-maintenance.cjs",
     "scripts/build-figma-maintenance-tokens.cjs",
     "scripts/build-figma-maintenance-plugin.cjs",
@@ -37,13 +36,115 @@
     "examples/figma-plugin/maintenance/ui.html",
     "examples/figma-plugin/dev/mock-variable-api.cjs",
     "examples/figma-plugin/dev/mock-maintenance.cjs",
-    "examples/figma-plugin/dev/mock-maintenance-export.cjs",
-    "examples/figma-plugin/MAINTENANCE.md",
-    "examples/figma-plugin/maintenance-merge-scope.json"
+    "examples/figma-plugin/dev/mock-maintenance-export.cjs"
   ],
   "notes": [
     "This is an initial curated extraction, not the complete spike or its Git history.",
     "The token engine, YAML tokens, SCSS, JSX and source media remain owned by Mangrove.",
-    "Use MANGROVE_SOURCE_ROOT to select an installed source checkout; source guards still apply."
-  ]
+    "Use MANGROVE_SOURCE_ROOT to select an installed source checkout; source guards still apply.",
+    "The revision field now selects the supported thin Mangrove integration. initialExtractionRevision and sourceCohort retain the original extraction provenance; sourceCohort is not the current input allowlist.",
+    "Mangrove PR #1319 is merged. Its main bridge does not provide the control-token foundations required by this historical source profile; revision still selects the supported source checkout."
+  ],
+  "toolingCohorts": [
+    {
+      "name": "normal-construction",
+      "extractedFromRevision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
+      "sourceCompatibilityRevision": "a4bb46dafb7134a230e9c79fd26cd7306d2a6203",
+      "families": 32,
+      "variants": 383,
+      "expandedCatalogueIncluded": false,
+      "paths": [
+        "examples/figma-plugin/code.js",
+        "examples/figma-plugin/dev/construction-compatibility.json",
+        "examples/figma-plugin/dev/mock-figma.cjs",
+        "examples/figma-plugin/dev/mock-font-defaults-integration.cjs",
+        "examples/figma-plugin/dev/mock-kit-canvas-flow.cjs",
+        "examples/figma-plugin/dev/mock-kit-layout.cjs",
+        "examples/figma-plugin/dev/mock-kit-migration.cjs",
+        "examples/figma-plugin/dev/mock-kit.cjs",
+        "examples/figma-plugin/dev/mock-review-export.cjs",
+        "examples/figma-plugin/dev/mock-rich-text-integration.cjs",
+        "examples/figma-plugin/dev/mock-svg.cjs",
+        "examples/figma-plugin/dev/mock-ui-layout.cjs",
+        "examples/figma-plugin/font-diagnostics.js",
+        "examples/figma-plugin/kit-acceptance.js",
+        "examples/figma-plugin/kit-alpha-mask.js",
+        "examples/figma-plugin/kit-builder.js",
+        "examples/figma-plugin/kit-capabilities.js",
+        "examples/figma-plugin/kit-core-content-capabilities.js",
+        "examples/figma-plugin/kit-editorial-acceptance.js",
+        "examples/figma-plugin/kit-font-defaults.js",
+        "examples/figma-plugin/kit-form-action-capabilities.js",
+        "examples/figma-plugin/kit-form-action-optional-capabilities.js",
+        "examples/figma-plugin/kit-frozen-source-line.js",
+        "examples/figma-plugin/kit-gradient-transform.js",
+        "examples/figma-plugin/kit-inspection.js",
+        "examples/figma-plugin/kit-layout.js",
+        "examples/figma-plugin/kit-native-collections.js",
+        "examples/figma-plugin/kit-navigation.js",
+        "examples/figma-plugin/kit-rich-text.js",
+        "examples/figma-plugin/kit-segmented-canonical-capabilities.js",
+        "examples/figma-plugin/kit-segmented-capabilities.js",
+        "examples/figma-plugin/kit-segmented-focus-capabilities.js",
+        "examples/figma-plugin/kit-segmented-leaves-capabilities.js",
+        "examples/figma-plugin/kit-segmented-wrapper-capabilities.js",
+        "examples/figma-plugin/kit-svg-sizing.js",
+        "examples/figma-plugin/kit-text-thickness.js",
+        "examples/figma-plugin/kit-welcome.js",
+        "examples/figma-plugin/manifest.json",
+        "examples/figma-plugin/ui.html",
+        "scripts/build-figma-connector.cjs",
+        "scripts/build-figma-plugin.cjs",
+        "scripts/build-figma-tokens.cjs",
+        "scripts/figma-card-hero-recipes.cjs",
+        "scripts/figma-checkbox-recipes.cjs",
+        "scripts/figma-chip-recipes.cjs",
+        "scripts/figma-choice-recipes.cjs",
+        "scripts/figma-component-recipes.cjs",
+        "scripts/figma-cta-recipes.cjs",
+        "scripts/figma-details-recipes.cjs",
+        "scripts/figma-editorial-cta-recipes.cjs",
+        "scripts/figma-empty-state-recipes.cjs",
+        "scripts/figma-experiment-target.cjs",
+        "scripts/figma-form-action-probe.cjs",
+        "scripts/figma-form-summary-recipes.cjs",
+        "scripts/figma-kit-guidance.cjs",
+        "scripts/figma-loader-recipes.cjs",
+        "scripts/figma-planned-inventory.cjs",
+        "scripts/figma-segmented-probe.cjs",
+        "scripts/figma-segmented-recipes.cjs",
+        "scripts/figma-segmented-wrapper-recipes.cjs",
+        "scripts/figma-select-recipes.cjs",
+        "scripts/figma-status-label-recipes.cjs",
+        "scripts/figma-switch-recipes.cjs",
+        "scripts/figma-toc-recipes.cjs",
+        "scripts/figma-tool-dependencies.cjs"
+      ],
+      "compatibility": {
+        "normalJSONBytes": 14776426,
+        "normalJSONSHA256": "4525e54bda48ecf28fc2503e534a132658ebc4ab7f26d8845be07713bc965943",
+        "runtimeBytes": 1051949,
+        "runtimeSHA256": "0954833c96b7ae710fc6876469e3bc72ba7c892dd03d4292e809bc4abf5082fd"
+      },
+      "historicalSourceReferenceMapping": [
+        {
+          "packetFile": "scripts/figma-maintenance-foundations.cjs",
+          "packetLine": 20,
+          "owner": "this-toolkit",
+          "currentFile": "scripts/figma-maintenance-foundations.cjs",
+          "currentLine": 21,
+          "note": "Preserved historical FormAction precision citation for packet byte compatibility; the current helper is toolkit-owned and independently guarded."
+        }
+      ]
+    }
+  ],
+  "initialExtractionRevision": "a4bb46dafb7134a230e9c79fd26cd7306d2a6203",
+  "supportedSourceProfile": "thin-integration",
+  "evidenceCheckpoint": {
+    "repository": "https://github.com/PreventionWeb/undrr-mangrove-figma",
+    "revision": "1222608b7c8fdc1a6769f4541044938255e1c07f",
+    "branch": "evidence/mangrove-full-spike-2026-10-08",
+    "scope": "Expanded recipes, historical input contracts, reference acquisition, supporting cohort and migration receipts. Not active commands in the maintained toolkit."
+  },
+  "upstreamIntegrationRevision": "5deafc2869a6a293c4019f42703f4f44c24f75ed"
 }

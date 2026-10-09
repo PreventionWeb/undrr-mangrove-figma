@@ -1,0 +1,47 @@
+{
+  "cases": [
+    {
+      "request": {
+        "operation": "build",
+        "brandId": "undrr",
+        "familyIds": [
+          "button"
+        ]
+      },
+      "bytes": 47869,
+      "sha256": "2f34d975e1b91ccbfbbbe4bc7f889316bebe3b90b1f65cd3f7efcffaf8258065"
+    },
+    {
+      "request": {
+        "operation": "inspect",
+        "brandId": "undrr"
+      },
+      "bytes": 8053,
+      "sha256": "5cbd1f1c08c1950b40b1c77d7bc8c75e895bb36b9390c0a44b703429046a9d31"
+    },
+    {
+      "request": {
+        "operation": "import",
+        "brandId": "undrr",
+        "styleIds": [
+          "shadow.raised"
+        ]
+      },
+      "bytes": 13891,
+      "sha256": "8e327d6fa10e51195f69f18b939a5c6d83ff9ebdfaeb7b5038e4f1738cd05d7e"
+    }
+  ],
+  "explicitUpstreamToolkitComparisonOnly": true,
+  "noProductionFallback": true,
+  "normalDTO": {
+    "bytes": 14776426,
+    "sha256": "4525e54bda48ecf28fc2503e534a132658ebc4ab7f26d8845be07713bc965943"
+  },
+  "runtime": {
+    "bytes": 1051949,
+    "sha256": "0954833c96b7ae710fc6876469e3bc72ba7c892dd03d4292e809bc4abf5082fd"
+  },
+  "upstreamRevision": "d5e790d3b0318730fdbd270279f340f35a2833ab",
+  "maintenanceSourceLockUnchanged": "a4bb46dafb7134a230e9c79fd26cd7306d2a6203",
+  "scope": "Initial normal32/383 construction extraction compatibility only. No bulk139/native/clean-source-download/maintenance publication acceptance."
+}

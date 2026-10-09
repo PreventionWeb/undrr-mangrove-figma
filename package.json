@@ -5,17 +5,34 @@
   "description": "Source-backed Figma maintenance tooling for the UNDRR Mangrove design system",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=22"
+    "node": "^22.18.0 || >=24.11.0"
   },
   "scripts": {
     "build": "node scripts/build-figma-maintenance.cjs",
     "check": "node scripts/build-figma-maintenance.cjs --check",
     "test": "node examples/figma-plugin/dev/mock-maintenance-export.cjs && node examples/figma-plugin/dev/mock-maintenance.cjs && npm run test:hooks",
+    "build:kit": "node scripts/build-figma-tokens.cjs",
+    "check:kit": "node scripts/build-figma-tokens.cjs --check",
+    "test:kit": "npm run test:kit:source && npm run test:kit:behavior && npm run test:page-layout",
     "prepare": "node scripts/setup-git-hooks.cjs",
     "hooks:install": "node scripts/setup-git-hooks.cjs",
-    "test:hooks": "node scripts/test-git-hooks.cjs"
+    "test:hooks": "node scripts/test-git-hooks.cjs",
+    "test:kit:extraction": "node examples/figma-plugin/dev/mock-kit-migration.cjs",
+    "test:kit:behavior": "node examples/figma-plugin/dev/mock-kit.cjs && node examples/figma-plugin/dev/mock-kit-layout.cjs && node examples/figma-plugin/dev/mock-kit-canvas-flow.cjs && node examples/figma-plugin/dev/mock-ui-layout.cjs && node examples/figma-plugin/dev/mock-review-export.cjs && node examples/figma-plugin/dev/mock-font-defaults-integration.cjs",
+    "test:kit:card-cta": "node examples/figma-plugin/dev/mock-card-cta-integration.cjs",
+    "build:kit:card-cta": "node scripts/build-figma-card-cta.cjs",
+    "test:kit:card-cta:source": "node examples/figma-plugin/dev/mock-card-cta-source.cjs",
+    "build:kit:tag": "node scripts/build-figma-tag.cjs",
+    "test:kit:tag:source": "node examples/figma-plugin/dev/mock-tag-source.cjs",
+    "build:selected": "node scripts/build-figma-selected.cjs",
+    "test:selected": "node examples/figma-selected/test.cjs && node examples/figma-selected/controller-model.test.cjs && node examples/figma-selected/progress.test.cjs && node examples/figma-selected/session.test.cjs && node examples/figma-selected/summary.test.cjs",
+    "test:page-layout": "node examples/figma-plugin/dev/mock-page-layout-entry.cjs",
+    "test:kit:source": "node examples/figma-plugin/dev/mock-kit-source-contract.cjs"
   },
   "dependencies": {
+    "@babel/parser": "7.28.5",
+    "storybook": "10.6.0",
+    "terser": "5.51.2",
     "yaml": "2.9.1"
   },
   "devDependencies": {

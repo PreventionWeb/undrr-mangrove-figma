@@ -1,43 +1,68 @@
 # UNDRR Mangrove Figma
 
-Source-backed Figma maintenance tooling for [Mangrove](https://github.com/unisdr/undrr-mangrove).
+Occasional Figma maintenance tooling for [Mangrove](https://github.com/unisdr/undrr-mangrove). Mangrove owns executable components, tokens, styles and media; this repository owns Figma adapters, plugins and their tests.
 
-This initial scaffold extracts the reduced variable/style maintenance implementation from [draft PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319), pinned in [source-lock.json](source-lock.json). It includes the exporter, importer, maintenance interface and focused mock tests. The full component builder, expanded catalogue and bulk evidence have not been migrated. This extraction does not establish new native Figma acceptance or publication.
+The maintained toolkit contains variable/style maintenance and an optional bounded construction entry with 32 families and 383 variants. Expanded recipes and page patterns are preserved separately on the [evidence branch](docs/EVIDENCE.md). Export counts and source/mock checks do not establish native Figma acceptance.
 
-## Setup
+The canonical kit now includes published finite [Book Card/Editorial CTA and static Tag releases](docs/RELEASE-STATUS.md), with genuine consumer validation in their recorded scopes. Their selected source exporters are maintained. The [optional shared native Tag runner](examples/figma-selected/README.md) is now accepted for existing unchanged-source static Tag rebuilds; Card/CTA native adapters remain evidence tools. The default catalogue remains 32 families and 383 variants.
 
-Use Node.js 22 or later. Prepare an installed Mangrove source checkout at the revision in `source-lock.json`. That checkout owns its token engine and source dependencies; follow its installation instructions. You can keep it beside this repository.
+## Start with the requested change
+
+This is a seed kit with occasional maintenance. A designer can change Figma and ask a developer to implement the selected result manually in Mangrove. Code remains the executable source; an approved Figma checkpoint supplies design intent. There is no automatic reverse synchronisation.
+
+| Request                                                 | Start here                                                                                                       | Tooling needed                                                                                |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| Try the kit as a designer                               | [Designer pilot](docs/DESIGNER-PILOT.md)                                                                         | Use the published linked desktop/phone resource compositions; record human feedback           |
+| Improve local maintenance efficiency                    | [Local automation and efficiency](docs/AUTOMATION.md)                                                            | Deterministic operations, small summaries and local transport research                        |
+| Check selected published releases                       | [Release register](docs/RELEASE-REGISTER.md)                                                                     | Dated Tag, Book Card and Editorial CTA scope, evidence and remaining limits.                  |
+| Designer changed a component or proposed a new one      | [Design-to-code handoff](docs/DESIGN-TO-CODE.md) and [request template](docs/templates/DESIGN-CHANGE-REQUEST.md) | Implement and review in Mangrove Storybook; no Figma rebuild required                         |
+| Update source-backed variables or styles                | [Maintenance runbook](docs/MAINTENANCE.md)                                                                       | `npm run build`, `npm run check`, `npm test`; maintenance plugin                              |
+| Bring an existing supported component change into Figma | [Selected component maintenance](docs/COMPONENT-MAINTENANCE.md)                                                  | Selected adapter, behavioural checks and native rehearsal; see the runbook                    |
+| Introduce a new Figma family                            | [Adapter extension checklist](docs/COMPONENT-MAINTENANCE.md)                                                     | A finite reviewed recipe and native rehearsal; stories alone do not generate a family         |
+| Rebuild an existing unchanged static Tag library        | [Maintained selected runner](examples/figma-selected/README.md)                                                  | `npm run build:selected`; fresh target configuration and full native baseline; no publication |
+| Prepare the selected static Tag source profile          | [Selected Tag profile](docs/COMPONENT-MAINTENANCE.md#selected-tag-source-profile)                                | `npm run build:kit:tag -- --output /tmp/mangrove-tag-source.json`; source preparation only    |
+| Explore expanded families or page patterns              | [Evidence checkpoint](docs/EVIDENCE.md)                                                                          | Separate experimental branch and its documented setup                                         |
+
+Use [Figma file orientation](docs/FIGMA-FILES.md) to distinguish the canonical kit, consumer, rehearsal and artifacts. New agents should read `AGENTS.md`, this table and the applicable runbook. Record repository revisions, exact nodes/story IDs, scope and ownership in the request template.
+
+## Setup and source compatibility
+
+Use Node.js 22.18 or later within the 22 series, or Node.js 24.11 or later. Prepare an installed Mangrove checkout at supported revision `1639293738232ade132b442ab0fe983dec3d65d5`, recorded in [source-lock.json](source-lock.json). That source checkout owns its dependencies and generated CSS; follow its installation instructions.
 
 ```sh
 npm ci
-export MANGROVE_SOURCE_ROOT=/absolute/path/to/undrr-mangrove
+export MANGROVE_SOURCE_ROOT=/absolute/path/to/compatible/undrr-mangrove
 npm run build
 npm run check
 npm test
 ```
 
-The source path is explicit: this project does not copy or maintain a second set of Mangrove tokens or component styles. Existing source guards report incompatible inputs. The pin records the initial compatible checkpoint; selecting another revision requires output comparison and review.
+[Mangrove PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319) merged into main as `5deafc2869a6a293c4019f42703f4f44c24f75ed`. It supplies token-engine exports and the shared Storybook overview. Current main still lacks the control-token foundations required by this toolkit. **Both maintenance and construction require the historical supported checkout above.** Establishing current-main compatibility is an explicit next gate; do not copy missing source styles here or invent defaults to pass a build.
 
-## Figma maintenance plugin
+Default commands check required files, token-engine exports and selected source representations, not exhaustive Git revision/hash equality. A different source revision requires reviewed output comparisons and a recorded compatibility decision even when a build passes. Do not bypass guards or replace baseline hashes simply to admit a candidate.
 
-After building, import `examples/figma-plugin/maintenance/manifest.json` as a development plugin in the Figma desktop app. Use the generated `examples/figma-plugin/mangrove-maintenance-tokens.json` for variables/styles maintenance. Generated data and runtime bundles are ignored by Git.
+## Variable/style maintenance
 
-The exporter currently produces 520 variables, 102 text definitions and eight effects across five brands. These are source-definition counts, not a claim that every asset has native rendering or publication acceptance. Mock tests verify exporter and importer behaviour; they do not verify native Figma rendering or consumer updates.
+After building, import `examples/figma-plugin/maintenance/manifest.json` as a development plugin in Figma desktop. Use generated `examples/figma-plugin/mangrove-maintenance-tokens.json`. Generated packets and bundles are ignored by Git.
 
-## Ownership and migration
+The supported seed exporter produces 520 variables, 102 text definitions and eight effects across five brands. Follow the [maintenance runbook](docs/MAINTENANCE.md) for inspection, saved reports, recovery rehearsal and bounded publication/consumer checks.
 
-- Mangrove owns components, source tokens, styles and the token engine.
-- This repository owns Figma export/import adapters, plugin code and relevant tests.
-- Small necessary fixtures can live in Git. Bulk evidence belongs in immutable release assets with checksums and source revisions.
+## Bounded component construction
 
-See [local validation](docs/VALIDATION.md), [the migration plan](docs/MIGRATION.md), [evidence index](evidence/index.json) and [upstream parking point](https://github.com/unisdr/undrr-mangrove/blob/a4bb46dafb7134a230e9c79fd26cd7306d2a6203/examples/figma-plugin/holistic/PARKING-POINT-2026-10-07.md). The upstream spike remains the historical reference until migration is complete.
+```sh
+npm run build:kit
+npm run check:kit
+npm run test:kit
+```
 
-Licensed under Apache-2.0; extracted source retains its upstream provenance.
+For a compatible single-page rehearsal, import `examples/figma-plugin/manifest.json` and use generated `examples/figma-plugin/mangrove-variables.json`. Select only intended families. The canonical [four-page kit](docs/FIGMA-FILES.md#four-page-organisation) blocks writes through this full-plugin UI; use standalone foundations maintenance or the selected unchanged-source Tag entry on Library. Construction and component ownership safeguards are described in [component maintenance](docs/COMPONENT-MAINTENANCE.md). The normal catalogue is 32 families and 383 variants, with original extraction hashes retained.
 
-## Contribution commits
+`npm run test:kit` runs the current source-contract, behavioural and page-layout checks. `test:kit:extraction` separately retains the original whole-runtime hash and fails at the intentional page-layout guard change; preserve that historical fixture. Neither command establishes native acceptance. See [current validation](docs/VALIDATION.md).
 
-Pull requests merge by squash only. Use a Conventional Commit subject, for example `fix(importer): preserve style identities`. The squash title defaults to the PR title and its message includes the constituent commit messages.
+## Validation and contribution
 
-`npm install` / `npm ci` install the checked-in `commit-msg` hook through the `prepare` script. If lifecycle scripts are disabled, run `npm run hooks:install` manually. The hook validates the subject while allowing human and AI attribution lines unchanged, including `Co-authored-by: Claude …`, `Co-authored-by: Codex …`, `AI-Contributed-by: …`, generated-by lines and session references. Attribution is optional and is never inferred or injected. Run `npm run test:hooks` to check this policy.
+See [current validation](docs/VALIDATION.md), [acceptance status](docs/SPLIT-STATUS.md), [native release gates](docs/RELEASE-STATUS.md), [ownership/source boundaries](docs/MIGRATION.md) and [historical evidence](docs/EVIDENCE.md). This toolkit is not a claim that every source family is imported, accepted or published in Figma.
 
-Local hooks do not run when GitHub creates a squash commit; review the final squash message to retain the desired contribution lines.
+Pull requests merge by squash. Use Conventional Commit subjects. `npm ci` installs the checked-in commit-message hook; if lifecycle scripts are disabled, run `npm run hooks:install`. Run `npm run test:hooks` when changing commit policy. Attribution is optional and never inferred or injected; review the actual squash message before merging.
+
+Licensed under Apache-2.0; extracted source retains upstream provenance.

@@ -1,20 +1,17 @@
-# Migration plan
+# Ownership and source boundary
 
-## Initial extraction
+Mangrove owns its token engine, YAML tokens, components, styles and authored media. This repository owns the variable/style exporter and importer, maintenance interface, bounded construction recipes/runtime and relevant tests. Source reads use `MANGROVE_SOURCE_ROOT`; source tokens/styles are not copied here.
 
-The reduced maintenance implementation has been copied from the exact upstream checkpoint in `source-lock.json`. The only source-boundary changes are an explicit `MANGROVE_SOURCE_ROOT` adapter and separating generated output paths from source input paths. The upstream token engine stays upstream. The exporter test's runtime prefix assertion now includes the native-collections flag already emitted by the original bundle.
+## Supported source
 
-The upstream maintenance merge manifest is retained as provenance in `source-lock.json`, not as an assertion that those files should also land in the component repository.
+[source-lock.json](../source-lock.json) records the supported Mangrove revision `1639293738232ade132b442ab0fe983dec3d65d5`, original extraction provenance and the retained normal construction cohort. Normal construction contains 32 families and 383 variants. The historical FormAction source citation remains in its packet; the current helper is toolkit-owned as recorded in the lock.
 
-## Next steps
+Mangrove [PR #1319](https://github.com/unisdr/undrr-mangrove/pull/1319) merged into main as `5deafc2869a6a293c4019f42703f4f44c24f75ed`, adding only token-engine exports and integration documentation. It is independent of React Aria. The historical source branch remains preserved.
 
-1. Complete a clean-download source/reference workflow and native acceptance for the extracted maintenance entry. Keep the complete output comparison as a migration gate for later cohorts.
-2. Preserve an immutable complete upstream spike checkpoint and independently verify an archive before changing or removing its branch.
-3. Audit full builder dependencies and classify captured files as required inputs, small test fixtures, reproducible outputs or historical evidence. Some source-footprint captures are executable recipe inputs and cannot simply be deleted.
-4. Migrate the builder and recipes in independently reviewable cohorts. Keep experimental catalogue work separate from the maintenance entry.
-5. Package required bulk reference inputs as release assets. Index exact file names, byte sizes, SHA256 digests, source revisions, provenance and retrieval URLs. Verify downloading and building from a clean checkout before claiming portability.
-6. Reduce upstream PR #1319 to necessary source/export changes, with links to this repository and the preserved checkpoint. Reconcile the intended base with the separate React Aria work.
+Current main lacks `stories/assets/scss/_control-tokens.scss`, which the shared foundations exporter requires. Both maintained workflows therefore still use the supported historical source checkout. Main-source compatibility needs a reviewed adapter/source decision and output comparison; merging the bridge does not establish it. Manual designer-to-Mangrove work does not require this toolkit or its historical checkout.
 
-## Acceptance limits
+## Maintained versus preserved work
 
-Extraction and passing mocks do not establish native library acceptance. Outstanding upstream gates include changed text/effect-style publication, composite consumer updates and novice handoff. The expanded catalogue also retains native font, rendering, capacity and page-assembly gates. No Figma file is mutated or published by scaffolding this repository.
+PR #1 is narrowed through ordinary commits after preserving the full toolkit checkpoint on an evidence branch. Maintenance, bounded construction and their dependency closure remain active. Expanded recipes, reference fetch/preparation, optional supporting-cohort commands, migration inventories and detailed receipts are available through [the evidence guide](EVIDENCE.md). Historical parity records remain tied to their exact revisions and are not relabelled as current native acceptance.
+
+Adopting a new family or source revision requires a focused compatibility review. Inactive experiments are not an implementation or merge prerequisite. Apply the [native gates](RELEASE-STATUS.md) when releasing affected assets.

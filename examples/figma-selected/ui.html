@@ -1,0 +1,227 @@
+<!doctype html><meta charset="utf-8" /><style>
+  body {
+    font: 13px system-ui;
+    margin: 20px;
+  }
+  label {
+    display: block;
+    margin: 14px 0;
+  }
+  button {
+    margin: 6px 8px 6px 0;
+  }
+  pre {
+    white-space: pre-wrap;
+    max-height: 160px;
+    overflow: auto;
+  }
+  summary {
+    cursor: pointer;
+    margin-top: 14px;
+  }
+</style>
+<h2>Selected Tag rebuild</h2>
+<p>
+  Load the target once, capture its full baseline, review the summary, then
+  rebuild. The baseline stays in this plugin session. The rebuild checks every
+  recorded page, asset and link. It does not publish.
+</p>
+<label
+  >Target configuration <input id="config" type="file" accept=".json"
+/></label>
+<label
+  ><input id="association" type="checkbox" /> I checked the current file URL and
+  page against this target.</label
+>
+<button id="capture">Capture session baseline</button>
+<pre id="session">No active session</pre>
+<label
+  ><input id="approval" type="checkbox" /> I reviewed the session target and
+  counts. Rebuild this unchanged-source Tag only.</label
+>
+<button id="run" disabled>Rebuild captured session</button>
+<button id="save-summary" disabled>Save summary</button
+><button id="save" disabled>Download full report</button
+><button id="checkpoint" disabled>Save checkpoint</button>
+<details>
+  <summary>Advanced recovery: uploaded baseline</summary>
+  <p>
+    Use a target configuration derived from the exact uploaded baseline. This
+    clears the current session.
+  </p>
+  <label
+    >Full native baseline
+    <input id="baseline" type="file" accept=".json" /></label
+  ><button id="advanced-capture">Capture downloadable baseline</button
+  ><button id="advanced-run">Rebuild uploaded baseline</button>
+</details>
+<button id="close">Close</button>
+<pre id="status">Ready</pre>
+<script>
+  let sessionId = null,
+    summary = null,
+    checkpoint = null,
+    busy = false;
+  const el = (id) => document.getElementById(id),
+    post = (m) => parent.postMessage({ pluginMessage: m }, "*");
+  function save(value, name) {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(
+      new Blob([JSON.stringify(value)], { type: "application/json" }),
+    );
+    a.download = name;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+  function setBusy(value) {
+    busy = value;
+    for (const id of [
+      "config",
+      "baseline",
+      "capture",
+      "advanced-capture",
+      "advanced-run",
+      "close",
+    ])
+      el(id).disabled = value;
+    el("run").disabled = value || !sessionId;
+  }
+  function clearOutputs() {
+    summary = null;
+    checkpoint = null;
+    for (const id of ["save-summary", "save", "checkpoint"])
+      el(id).disabled = true;
+  }
+  function invalidate() {
+    clearOutputs();
+    sessionId = null;
+    el("approval").checked = false;
+    el("run").disabled = true;
+    el("session").textContent = "No active session";
+    post({ type: "selected-session-invalidate" });
+  }
+  el("config").onchange = () => {
+    el("association").checked = false;
+    invalidate();
+  };
+  async function configuration() {
+    const c = el("config").files[0];
+    if (!c || !el("association").checked)
+      throw Error("Choose the target and confirm the current file/page.");
+    el("status").textContent =
+      "Reading target configuration (" + c.size + " bytes)";
+    return c.text();
+  }
+  async function send(type, extra = {}) {
+    clearOutputs();
+    setBusy(true);
+    try {
+      const configRaw = await configuration();
+      el("status").textContent = "Sending request; waiting for Figma";
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      post({ type, configRaw, associationConfirmed: true, ...extra });
+    } catch (error) {
+      el("status").textContent = String(error);
+      setBusy(false);
+    }
+  }
+  el("capture").onclick = () => {
+    sessionId = null;
+    el("approval").checked = false;
+    el("session").textContent = "Capturing full baseline";
+    return send("selected-session-capture");
+  };
+  el("run").onclick = () => {
+    if (!sessionId || !el("approval").checked || !el("association").checked) {
+      el("status").textContent =
+        "Capture a session, review its target and approve this rebuild.";
+      return;
+    }
+    clearOutputs();
+    const approvedSession = sessionId;
+    sessionId = null;
+    el("approval").checked = false;
+    setBusy(true);
+    el("status").textContent = "Sending approved session rebuild";
+    post({
+      type: "selected-session-rebuild",
+      sessionId: approvedSession,
+      rebuildApproved: true,
+      associationConfirmed: true,
+    });
+  };
+  el("advanced-capture").onclick = () => {
+    invalidate();
+    return send("selected-tag-capture");
+  };
+  el("advanced-run").onclick = async () => {
+    try {
+      if (!el("approval").checked)
+        throw Error("Approve the unchanged-source rebuild.");
+      const b = el("baseline").files[0];
+      if (!b) throw Error("Choose a full baseline.");
+      invalidate();
+      setBusy(true);
+      const configRaw = await configuration();
+      el("status").textContent =
+        "Reading baseline (" + (b.size / 1048576).toFixed(1) + " MiB)";
+      const baselineRaw = await b.text();
+      el("status").textContent = "Sending inputs; waiting for Figma validation";
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      post({
+        type: "selected-tag-rebuild",
+        configRaw,
+        baselineRaw,
+        rebuildApproved: true,
+        associationConfirmed: true,
+      });
+    } catch (error) {
+      el("status").textContent = String(error);
+      setBusy(false);
+    }
+  };
+  el("save-summary").onclick = () =>
+    save(summary, "mangrove-selected-tag-summary.json");
+  el("save").onclick = () => {
+    el("status").textContent =
+      "Requesting full report; large reports can take time";
+    post({ type: "selected-report-request" });
+  };
+  el("checkpoint").onclick = () =>
+    save(checkpoint, "mangrove-selected-tag-checkpoint.json");
+  el("close").onclick = () => post({ type: "close" });
+  onmessage = ({ data }) => {
+    const m = data.pluginMessage;
+    if (!m) return;
+    if (m.type === "stage")
+      el("status").textContent = m.stage + (m.nodes ? " " + m.nodes : "");
+    if (m.type === "session-invalidated" && !busy) {
+      sessionId = null;
+      el("run").disabled = true;
+    }
+    if (m.type === "checkpoint") {
+      checkpoint = m.report;
+      el("checkpoint").disabled = false;
+    }
+    if (m.type === "session-ready") {
+      sessionId = m.summary.sessionId;
+      el("session").textContent = JSON.stringify(m.summary, null, 2);
+      el("status").textContent =
+        "Fresh baseline cached. Review the target/counts and approve the rebuild.";
+      setBusy(false);
+    }
+    if (m.type === "report-summary" || m.type === "snapshot-summary") {
+      summary = m.summary;
+      sessionId = null;
+      el("approval").checked = false;
+      el("save-summary").disabled = false;
+      el("save").disabled = false;
+      el("status").textContent = JSON.stringify(summary, null, 2);
+      setBusy(false);
+    }
+    if (m.type === "full-report") {
+      save(m.report, "mangrove-selected-tag-full-report.json");
+      el("status").textContent = "Full report downloaded. No fields omitted.";
+    }
+  };
+</script>
