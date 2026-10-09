@@ -52,13 +52,12 @@ The supported seed exporter produces 520 variables, 102 text definitions and eig
 ```sh
 npm run build:kit
 npm run check:kit
-npm run test:kit:behavior
-npm run test:page-layout
+npm run test:kit
 ```
 
 For a compatible single-page rehearsal, import `examples/figma-plugin/manifest.json` and use generated `examples/figma-plugin/mangrove-variables.json`. Select only intended families. The canonical [four-page kit](docs/FIGMA-FILES.md#four-page-organisation) blocks writes through this full-plugin UI; use standalone foundations maintenance or the selected unchanged-source Tag entry on Library. Construction and component ownership safeguards are described in [component maintenance](docs/COMPONENT-MAINTENANCE.md). The normal catalogue is 32 families and 383 variants, with original extraction hashes retained.
 
-`npm run test:kit` and `test:kit:extraction` retain the original whole-runtime hash and currently fail at the intentional page-layout guard change. Preserve that historical fixture. The behavioural and page-layout checks above validate the current implementation; neither establishes native acceptance. See [current validation](docs/VALIDATION.md).
+`npm run test:kit` runs the current source-contract, behavioural and page-layout checks. `test:kit:extraction` separately retains the original whole-runtime hash and fails at the intentional page-layout guard change; preserve that historical fixture. Neither command establishes native acceptance. See [current validation](docs/VALIDATION.md).
 
 ## Validation and contribution
 

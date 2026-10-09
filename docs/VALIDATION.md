@@ -8,7 +8,7 @@ Supported Mangrove source revision: `1639293738232ade132b442ab0fe983dec3d65d5`. 
 
 The retained maintenance tests verify five-brand alias closure, isolated generation/freshness, source mutation/refusal, repeat importer identity, selected-brand switching, controller concurrency/refusal and interface routing. The seed asset-record SHA256 is `7bc8ab098383dc5ac6c008d46e5a15f1ef440c66cc028d44203fe554f271a04c`.
 
-Bounded construction tests retain original DTO/runtime hashes and 32-family/383-variant assertions, plus builder/layout/flow/UI/export/font behaviour. `test:kit:extraction` and `test:kit:behavior` partition the existing aggregate without altering its assertions.
+Bounded construction tests retain original DTO/runtime hashes and 32-family/383-variant assertions, plus builder/layout/flow/UI/export/font behaviour. The current aggregate runs source-contract, behavioural and page-layout checks. Historical runtime parity remains a separate explicit command.
 
 ## Current checks, 9 October 2026
 
@@ -19,11 +19,10 @@ For current construction checks, run:
 ```sh
 npm run build:kit
 npm run check:kit
-npm run test:kit:behavior
-npm run test:page-layout
+npm run test:kit
 ```
 
-The default registry remains 32 families and 383 variants. The full-plugin entry now refuses writes in a page-organised file. That intentional runtime change fails the preserved historical hash in `test:kit:extraction`, and consequently `test:kit` stops before its behavioural suites. This is a disclosed historical parity difference, not a passing aggregate. The fixture remains unchanged. Run historical parity against its recorded toolkit revision; use the commands above for current behaviour.
+The default registry remains 32 families and 383 variants. The full-plugin entry now refuses writes in a page-organised file. That intentional runtime change fails the preserved historical hash in `test:kit:extraction`, while `test:kit` runs current contracts and behaviour independently. The source-contract suite retains the original DTO hash/counts, source-only generation, missing/wrong-source refusals, precision guards and toolkit-local dependency checks. This is a disclosed historical runtime parity difference, not a passing historical extraction check. The fixture remains unchanged. Run historical parity against its recorded toolkit revision; use the commands above for current behaviour.
 
 Touched-file formatting, local documentation links and diff checks passed. Native selected-release and Pages evidence, including its finite scope and remaining limits, is recorded in [release status](RELEASE-STATUS.md). Mock checks do not establish native acceptance. Verification is local macOS; Linux remains unverified and Actions are unavailable.
 

@@ -78,14 +78,15 @@ The default maintenance and normal exporters check required source files, token-
 
 ## Intentional output changes and test baselines
 
-`npm run test:kit` remains the aggregate seed/extraction check. It starts with the historical whole-packet/runtime hashes and fixed 32-family/383-variant counts, so an intended appearance, runtime or family change can fail that extraction check before behavioural tests run. The historical fixture `examples/figma-plugin/dev/construction-compatibility.json` and its test describe the initial extraction, not a baseline to overwrite for each maintenance change.
+`npm run test:kit` runs the current source-contract, behavioural and page-layout checks. The source contract retains the original packet hash and fixed 32-family/383-variant counts, plus isolation, refusal, precision and dependency checks. Historical runtime parity is separate, so the intentional page-layout guard does not prevent current checks from running. The historical fixture `examples/figma-plugin/dev/construction-compatibility.json` and its test describe the initial extraction, not a baseline to overwrite for each maintenance change.
 
 Use the explicit routes:
 
-- `npm run test:kit:extraction`: historical extraction parity and isolation/refusal checks. Run against the recorded compatible seed source and toolkit revisions; an intentional packet/runtime difference is not extraction parity.
+- `npm run test:kit:source`: current source contract, original packet hash/counts and isolation/refusal/precision/dependency checks.
+- `npm run test:kit:extraction`: the same source contract plus historical runtime parity. Run against the recorded compatible seed source and toolkit revisions; an intentional packet/runtime difference is not extraction parity.
 - `npm run test:kit:behavior`: the existing builder, layout, flow, UI, export and font mock suites without the historical migration hash gate. Assertions still require review when the supported component contract changes; this is not a skip-all-validation route or native acceptance.
 
-For a deliberate source/adapter update, first record the accepted baseline revisions and packet/runtime hashes. Build and freshness-check the candidate, compare the actual selected source/recipe/output differences, and identify unrelated differences or identity changes. Review and extend behavioural fixtures for the intended contract, including refusals and unchanged-family behaviour, then run `test:kit:behavior`. Preserve the historical extraction fixture and receipts unchanged. Add a separately named current compatibility fixture/check if accepting a new supported output baseline; record its source/tool revisions and reviewer decision before updating the supported source policy. Do not claim the candidate passed historical extraction merely because its behavioural checks pass. The existing aggregate command can continue to fail for that candidate; report the intentional extraction difference and maintenance evidence separately.
+For a deliberate source/adapter update, first record the accepted baseline revisions and packet/runtime hashes. Build and freshness-check the candidate, compare the actual selected source/recipe/output differences, and identify unrelated differences or identity changes. Review and extend behavioural fixtures for the intended contract, including refusals and unchanged-family behaviour, then run `test:kit:behavior`. Preserve the historical extraction fixture and receipts unchanged. Add a separately named current compatibility fixture/check if accepting a new supported output baseline; record its source/tool revisions and reviewer decision before updating the supported source policy. Do not claim the candidate passed historical extraction merely because its behavioural checks pass. An intended packet/count change still needs a reviewed current source-contract update; moving runtime parity to a separate command does not waive that contract. Report historical extraction differences and current maintenance evidence separately.
 
 New normal families also require reviewing the historical test's fixed count assumptions in that separate current-baseline check. A new hash or count is not enough to establish identity compatibility or native acceptance. Native rehearsal and publication gates below still apply to the affected assets.
 
@@ -99,8 +100,7 @@ Install source dependencies using Mangrove's own instructions and install this t
 export MANGROVE_SOURCE_ROOT=/absolute/path/to/undrr-mangrove
 npm run build:kit
 npm run check:kit
-npm run test:kit:behavior
-npm run test:page-layout
+npm run test:kit
 ```
 
 These commands prepare and check the normal catalogue and runtime locally. They do not build all components in a Figma file. For changes to the shared maintenance implementation, also run `npm run build`, `npm run check` and `npm test`, as required by this repository's agent instructions. Keep generated JSON and bundles out of commits.
